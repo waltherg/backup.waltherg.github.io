@@ -9,7 +9,7 @@ A list of all domains registered by British academic institutions and
 [learned societies](http://en.wikipedia.org/wiki/Learned_society) was
 provided by [JANET](http://en.wikipedia.org/wiki/JANET) back in 2011:
 
-[https://www.whatdotheyknow.com/request/list_of_acuk_domain_names]
+(https://www.whatdotheyknow.com/request/list_of_acuk_domain_names)
 
 Since this is 2013 and domain registration probably changes fast we
 may want to renew the above freedom of information request.
