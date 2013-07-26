@@ -20,9 +20,9 @@ the title of that page.
 
 As an example, the source code of [this article](http://www.ncbi.nlm.nih.gov/pubmed/23880940) on PubMed shows that the title is located in an `<h1>` element:
 
-```html
+{% highlight html %}
 <h1>Par6 is phosphorylated by aPKC to facilitate EMT.</h1>
-```
+{% endhighlight %}
 
 Further inspection of the same page tells us that there are two `<h1>` elements
 and looking at a small sample of articles on PubMed convinces us that the title
@@ -31,12 +31,12 @@ new [PubReader](http://www.ncbi.nlm.nih.gov/pmc/about/pubreader/)).
 Translating this to JavaScript code, we can get a pointer to the title element
 of articles posted to PubMed as follows:
 
-```js
+{% highlight js %}
 if (hostname.indexOf("ncbi.nlm.nih.gov") != -1){
      var h1 = document.getElementsByTagName('h1');
      title = h1[1];
 }     
-```
+{% endhighlight %}
 
 The `indexOf` method invoked on `hostname` (`hostname` is an String object)
 checks if there is any overlap between the string stored in `hostname` and
@@ -54,7 +54,7 @@ configuration file.
 Let's encode a more robust variant of the above procedure in a `json` structure 
 and add a procedure for PLoS journals:
 
-```json
+{% highlight js %}
 json_hosts = {
   "names": [
         "ncbi.nlm.nih.gov", 
@@ -74,11 +74,11 @@ json_hosts = {
         "title = h1[1];"
    ] 
 };
-```
+{% endhighlight %}
 
 Then we can extract the title element like so:
 
-```js
+{% highlight js %}
 function get_title_element(hostname){
     var title = null;
     var host = null;
@@ -96,7 +96,7 @@ function get_title_element(hostname){
 
 	return title;
 }
-```
+{% endhighlight %}
 
 The above method is very simple:
 first retrieve the `host` label we defined in `json_hosts`, then
