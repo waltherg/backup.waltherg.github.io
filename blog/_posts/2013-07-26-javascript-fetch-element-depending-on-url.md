@@ -122,4 +122,4 @@ I would be delighted to hear from you!
 In the meantime, please feel free to extend the list of journals and hosts
 that are supported by [articlEnhancer](http://waltherg.github.io/articlEnhancer/)
 by editing [the hosts file](https://github.com/waltherg/articlEnhancer/blob/master/hosts.js)
-as shown here.
+as shown in the above example.
