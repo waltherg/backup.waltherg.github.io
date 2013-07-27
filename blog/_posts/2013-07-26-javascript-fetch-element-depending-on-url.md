@@ -40,7 +40,7 @@ if (hostname.indexOf("ncbi.nlm.nih.gov") != -1){
 
 The `indexOf` method invoked on `hostname` (`hostname` is an String object)
 checks if there is any overlap between the string stored in `hostname` and
-`ncbi.nlm.nih.gov`. If there is not overlap then we know we are not looking
+`ncbi.nlm.nih.gov`. If there is no overlap then we know we are not looking
 at a PubMed page and `indexOf` returns the value -1.
 
 This procedure varies of course between different journals, and in fact, even
