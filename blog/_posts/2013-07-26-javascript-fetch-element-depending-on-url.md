@@ -26,8 +26,8 @@ As an example, the source code of [this article](http://www.ncbi.nlm.nih.gov/pub
 
 Further inspection of the same page tells us that there are two `<h1>` elements
 and looking at a small sample of articles on PubMed convinces us that the title
-is always found in the second `<h1>` element (this different for PubMed's
-new [PubReader](http://www.ncbi.nlm.nih.gov/pmc/about/pubreader/)).
+is always found in the second `<h1>` element (this is different for PubMed's
+new [PubReader](http://www.ncbi.nlm.nih.gov/pmc/about/pubreader/) format).
 Translating this to JavaScript code, we can get a pointer to the title element
 of articles posted to PubMed as follows:
 
