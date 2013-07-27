@@ -116,7 +116,8 @@ up a compiler making `eval` expensive computationally.
 In my current solution, `eval` is only run once we are certain that the
 current page is an article -- so `eval` is only evoked when it really needs to be.
 
-If there is an alternative solution that does not use `eval` is yet to be seen.
+If there is an alternative solution that does not use `eval`
+I would be delighted to hear from you!
 
 In the meantime, please feel free to extend the list of journals and hosts
 that are supported by [articlEnhancer](http://waltherg.github.io/articlEnhancer/)
