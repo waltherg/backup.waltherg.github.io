@@ -107,10 +107,14 @@ At last, execute the assembled command with `eval` and return the
 retrieved title element.
 
 Yes, my current solution for this problem uses `eval` and
-[I should probably be ashamed of myself](http://blogs.msdn.com/b/ericlippert/archive/2003/11/01/53329.aspx).
+[I should probably not be happy with myself](http://blogs.msdn.com/b/ericlippert/archive/2003/11/01/53329.aspx).
 However, we know exactly what commands will be executed by `eval` --
 i.e. those defined in `json_hosts`. So from a security point of view,
 using `eval` should be fine here.
+Performance-wise, the above reference points out that evoking `eval` starts
+up a compiler making `eval` expensive computationally.
+In my current solution, `eval` is only run once we are certain that the
+current page is an article -- so `eval` is only evoked when it really needs to be.
 
 If there is an alternative solution that does not use `eval` is yet to be seen.
 
