@@ -50,7 +50,7 @@ PubReader).
 My goal here is simple:
 Modularize this procedure so that the hostname check and the commands
 necessary to retrieve a pointer to the title element can be stored in a
-configuration file.
+configuration file separate from the main code of this project.
 
 Let's encode a more robust variant of the above procedure in a `json` structure 
 and add a procedure for PLoS journals:
