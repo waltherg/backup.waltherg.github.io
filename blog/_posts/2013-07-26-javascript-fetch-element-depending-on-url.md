@@ -44,7 +44,8 @@ checks if there is any overlap between the string stored in `hostname` and
 at a PubMed page and `indexOf` returns the value -1.
 
 This procedure varies of course between different journals, and in fact, even
-varies for different sorts of views of PubMed articles.
+varies for different views of PubMed articles (see the above reference to
+PubReader).
 
 My goal here is simple:
 Modularize this procedure so that the hostname check and the commands
