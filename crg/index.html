@@ -113,6 +113,8 @@
           Ruhul Amin and Marc Roussel used GraTeLPy to show that a
           delay-free version of their model of photsynthesis and
           photorespiration does not have the potential for oscillations.</p>
+        </div>
+        <div class="row">
           <h3>Reversible Substrate Inhibition</h3>
           <p>A generic model for reversible substrate inhibition that was
           analyzed by Mincheva and Roussel is an example where parameter
@@ -188,7 +190,40 @@
                 <img src="assets/reversible_substrate_inhibition_order_3_frag_0_sg_2.png" alt="">
               </a>
             </div>
-            
+          </div>
+          <div class="row">
+            <h3>Double-Layer MAPK Mechanism</h3>
+            <p>Biochemical mechanisms often encompass many chemical species
+              and reactions, making the analysis of large chemical
+              reaction networks highly desirable.
+              GraTeLPy can be deployed on both shared-memory multiprocessor
+              computers and distributed-memory setups (clusters).
+              Distribution across compute clusters is optimized to
+              minimize communication between computers and maximize work done
+              by each computer individually - thus the running time of
+              GraTeLPy on clusters scales very well with the number of
+              compute nodes used.
+            </p>
+            <p>A 
+              <a href="https://github.com/gratelpy/gratelpy-supplementary-information/blob/master/double_layer_mapk_system/double_layer_mapk_mechanism.txt">double-layer MAPK mechanism</a> 
+              that we discuss in our
+              forthcoming software article has 12 chemical species and
+              18 reactions. 
+              To the best of our knowledge, this is the biggest 
+              reaction network analyzed with the
+              graph-theoretic framework underlying GraTeLPy.
+              This analysis took GraTeLPy just several hours when we deployed
+              computations to a mid-sized cluster of about 300 nodes.
+            </p>
+            <p>
+              Our forthcoming software article discusses this network in
+              more detail and our
+              <a href="https://github.com/gratelpy/gratelpy-supplementary-information">data repository</a>
+              provides detailed results of our analysis for this and other
+              mechanisms.
+            </p>
+
+
           </div>
       </div> <!-- /div class=bs-docs-section -->
 
