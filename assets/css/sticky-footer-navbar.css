@@ -52,3 +52,6 @@ body {
 code {
   font-size: 80%;
 }
+
+/* MatJax */
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
