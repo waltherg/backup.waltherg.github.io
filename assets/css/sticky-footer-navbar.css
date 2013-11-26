@@ -28,6 +28,10 @@ body {
   background-color: #f5f5f5;
 }
 
+#disqus_thread {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 /* Custom page CSS
 -------------------------------------------------- */
@@ -43,11 +47,6 @@ body {
 #footer > .container {
   padding-left: 15px;
   padding-right: 15px;
-}
-
-#disqus_thread > .container {
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 code {
