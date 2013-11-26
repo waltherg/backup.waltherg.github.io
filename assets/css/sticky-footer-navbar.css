@@ -45,6 +45,11 @@ body {
   padding-right: 15px;
 }
 
+#disqus_thread > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 code {
   font-size: 80%;
 }
