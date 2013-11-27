@@ -32,6 +32,44 @@
       ga('send', 'pageview');
     </script>
 
+    <!-- MathJax -->
+    <!-- config from 
+         https://groups.google.com/forum/#!topic/mathjax-users/Zcq0hTp0VHY
+      -->
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+      jax: ["input/TeX","output/HTML-CSS"], 
+      extensions: ["tex2jax.js"], 
+      tex2jax: { 
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ], 
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 
+      processEscapes: true 
+      }, 
+      }); 
+    </script> 
+
+    <!-- config from
+         http://cwoebker.com/posts/latex-math-magic
+      -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+      });
+
+      MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+      });
+    </script>
+
+    <!-- the following loads MathJax; place at bottom to improve overall
+         page load speed but delay LaTeX rendering -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+
   </head>
 
   <body>
@@ -56,23 +94,6 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-    <!-- MathJax -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
-
-    <script type="text/javascript">
-      MathJax.Hub.Config({
-      tex2jax: {
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-      }
-      });
-
-      MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-      });
-    </script>
 
     <div id="container">
     <div id="disqus_thread"></div>
