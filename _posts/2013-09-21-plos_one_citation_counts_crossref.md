@@ -6,9 +6,14 @@ tags: wip
 ---
 
 **This post is work in progress**
+
 This blog post is based on an IPython Notebook that I sketched out on
 [GitHub](https://gist.github.com/waltherg/6645140) some time ago.
 You can find accompanying data there.
+
+This post is work in progress conversion from my original
+IPython Notebook to Markdown (for this post) produced some glitches
+that I need to amend.
 
 # PLoS ONE Citation Counts
 
