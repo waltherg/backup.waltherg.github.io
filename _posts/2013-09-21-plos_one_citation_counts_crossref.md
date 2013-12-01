@@ -182,7 +182,7 @@ https://gist.github.com/waltherg/6645140.
 
 
 
-![png](plos_one_citation_counts_crossref_openurl_files/plos_one_citation_counts_crossref_openurl_15_1.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_citation_counts_crossref_openurl_files/plos_one_citation_counts_crossref_openurl_15_1.png)
 
 
 
@@ -253,7 +253,7 @@ https://gist.github.com/waltherg/6645140.
 
 
 
-![png](plos_one_citation_counts_crossref_openurl_files/plos_one_citation_counts_crossref_openurl_16_1.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_citation_counts_crossref_openurl_files/plos_one_citation_counts_crossref_openurl_16_1.png)
 
 
 
