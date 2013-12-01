@@ -209,7 +209,7 @@ Graphically, this data looks as follows:
     pl.show()
 
 
-![png](plos_one_files/plos_one_15_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_files/plos_one_15_0.png)
 
 
 There seems to be a widening gap between the number of articles published (red
@@ -228,7 +228,7 @@ over the years.
     pl.show()
 
 
-![png](plos_one_files/plos_one_17_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_files/plos_one_17_0.png)
 
 
 In the above plot we show the median number of days between submission and
@@ -266,7 +266,7 @@ publication.
     pl.show()
 
 
-![png](plos_one_files/plos_one_21_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_files/plos_one_21_0.png)
 
 
 
@@ -325,7 +325,7 @@ scaled over time.
     pl.show()
 
 
-![png](plos_one_files/plos_one_29_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_files/plos_one_29_0.png)
 
 
 
@@ -389,7 +389,7 @@ of the median total time (per editor).
     pl.show()
 
 
-![png](plos_one_files/plos_one_37_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_files/plos_one_37_0.png)
 
 
 
@@ -412,7 +412,7 @@ Let us visualize the spread of the median total times in a scatter plot:
     pl.show()
 
 
-![png](plos_one_files/plos_one_41_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_files/plos_one_41_0.png)
 
 
 It is surprising to see that **for some editors** the **median total time to
@@ -504,7 +504,7 @@ a box plot.
     pl.show()
 
 
-![png](plos_one_files/plos_one_52_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_files/plos_one_52_0.png)
 
 
 Apart from the aforementioned negative total time (DOI:
@@ -532,7 +532,7 @@ and 1,000 days. Let us zoom into this time frame:
     pl.show()
 
 
-![png](plos_one_files/plos_one_54_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_files/plos_one_54_0.png)
 
 
 This boxplot suggests that there is no clear correlation between the number of
@@ -573,7 +573,7 @@ dataset.
 
 
 
-![png](plos_one_files/plos_one_59_1.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_files/plos_one_59_1.png)
 
 
 The median total time to publication for editor 977 is 102 days over the 441
@@ -591,7 +591,7 @@ editors irrespective of the number of submissions handled?
     pl.show()
 
 
-![png](plos_one_files/plos_one_62_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_files/plos_one_62_0.png)
 
 
 Here we plot the median total time to publication for each editor in our
@@ -640,7 +640,7 @@ just have too many curves to look at.
 
 
 
-![png](plos_one_files/plos_one_64_1.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_one_files/plos_one_64_1.png)
 
 
 Visualizing the median total time to publication for this narrow band of editor
