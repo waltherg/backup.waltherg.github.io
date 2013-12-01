@@ -90,15 +90,6 @@ https://gist.github.com/waltherg/6645140.
     '10.1371/journal.pone.0011195'
 
 
-
-**Don't run the following cell if you're interested in citation counts for 2010
---
-these are provided as file 'plos_one_accepted_2010_crossref_citations.dict' in
-this repository.**
-
-
-    # Skip this cell if you already have citations for the year 2010
-    # (provided in this repository as 'plos_one_accepted_2010_crossref_citations.dict')
     
     # We'll use the CrossRef OpenURL service
     # register your email here: http://www.crossref.org/requestaccount/
