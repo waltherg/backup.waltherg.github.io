@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "PLoS ONE Citation Counts Recorded in CrossRef"
+title: "PLoS ONE Time to Publication"
 date: 2013-08-12
 tags: wip
 ---
