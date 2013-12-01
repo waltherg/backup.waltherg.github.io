@@ -132,19 +132,19 @@ the amount of time elapsed between submission and publication.
     show()
 
 
-![png](https://dl.dropboxusercontent.com/u/129945779/plos_time_to_publication_files/plos_time_to_publication_12_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_time_to_publication_files/plos_time_to_publication_12_0.png)
 
 
 
-![png](https://dl.dropboxusercontent.com/u/129945779/plos_time_to_publication_files/plos_time_to_publication_12_1.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_time_to_publication_files/plos_time_to_publication_12_1.png)
 
 
 
-![png](https://dl.dropboxusercontent.com/u/129945779/plos_time_to_publication_files/plos_time_to_publication_12_2.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_time_to_publication_files/plos_time_to_publication_12_2.png)
 
 
 
-![png](https://dl.dropboxusercontent.com/u/129945779/plos_time_to_publication_files/plos_time_to_publication_12_3.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_time_to_publication_files/plos_time_to_publication_12_3.png)
 
 
 
@@ -172,11 +172,11 @@ the amount of time elapsed between submission and publication.
     show()
 
 
-![png](https://dl.dropboxusercontent.com/u/129945779/plos_time_to_publication_files/plos_time_to_publication_13_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_time_to_publication_files/plos_time_to_publication_13_0.png)
 
 
 
-![png](https://dl.dropboxusercontent.com/u/129945779/plos_time_to_publication_files/plos_time_to_publication_13_1.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_time_to_publication_files/plos_time_to_publication_13_1.png)
 
 
 ## Editorial Influence in Time to Publication
@@ -248,17 +248,17 @@ Let's see if we observe similar trends in the other PLoS journals.
     show()
 
 
-![png](https://dl.dropboxusercontent.com/u/129945779/plos_time_to_publication_files/plos_time_to_publication_18_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_time_to_publication_files/plos_time_to_publication_18_0.png)
 
 
 
-![png](https://dl.dropboxusercontent.com/u/129945779/plos_time_to_publication_files/plos_time_to_publication_18_1.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_time_to_publication_files/plos_time_to_publication_18_1.png)
 
 
 
-![png](https://dl.dropboxusercontent.com/u/129945779/plos_time_to_publication_files/plos_time_to_publication_18_2.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_time_to_publication_files/plos_time_to_publication_18_2.png)
 
 
 
-![png](https://dl.dropboxusercontent.com/u/129945779/plos_time_to_publication_files/plos_time_to_publication_18_3.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/plos_time_to_publication_files/plos_time_to_publication_18_3.png)
 
