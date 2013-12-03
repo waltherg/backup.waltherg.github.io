@@ -490,7 +490,7 @@ Let us take a look at the numerical solution we attain after `N` time steps.
 
 And here is a [kymograph](http://en.wikipedia.org/wiki/Kymograph) of the values
 of `U`.
-This plot shows concisely the behaviour of `U` over time and we can clear
+This plot shows concisely the behaviour of `U` over time and we can
 observe the wave-pinning
 behaviour described by [Mori *et
 al.*](http://www.sciencedirect.com/science/article/pii/S0006349508704442).
