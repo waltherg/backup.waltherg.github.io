@@ -165,52 +165,53 @@ U_J^{n+1}$.
 Let us reinterpret our numerical approximation of the line concentration of $u$
 in a fixed point in time as a vector $\mathbf{U}^n$:
 
-$$\mathbf{U}^n = \left[U_0^n, \ldots, U_{J-1}^n\right]^T.$$
+$$\mathbf{U}^n =
+\begin{bmatrix} U_0^n \\ \vdots \\ U_{J-1}^n \end{bmatrix}.$$
 
 Using this notation we can now write our above approximation for a fixed point
 in time, $t = n \Delta t$, compactly as a linear system:
 
 $$
-\left[\begin{matrix}
+\begin{bmatrix}
 1+\sigma & -\sigma & 0 & 0 & 0 & \cdots & 0 & 0 & 0 & 0\\
 0 & -\sigma & 1+2\sigma & -\sigma & 0 & \cdots & 0 & 0 & 0 & 0 \\
 0 & 0 & -\sigma & 1+2\sigma & -\sigma & \cdots & 0 & 0 & 0 & 0 \\
 0 & 0 & \ddots & \ddots & \ddots & \ddots & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & -\sigma & 1+2\sigma & -\sigma & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -\sigma & 1+\sigma
-\end{matrix}\right]
-\left[\begin{matrix}
+\end{bmatrix}
+\begin{bmatrix}
 U_0^{n+1} \\
 U_1^{n+1} \\
 U_2^{n+1} \\
 \vdots \\
 U_{J-2}^{n+1} \\
 U_{J-1}^{n+1}
-\end{matrix}\right] =
-\left[\begin{matrix}
+\end{bmatrix} =
+\begin{bmatrix}
 1-\sigma & \sigma & 0 & 0 & 0 & \cdots & 0 & 0 & 0 & 0\\
 0 & \sigma & 1-2\sigma & \sigma & 0 & \cdots & 0 & 0 & 0 & 0 \\
 0 & 0 & \sigma & 1-2\sigma & \sigma & \cdots & 0 & 0 & 0 & 0 \\
 0 & 0 & \ddots & \ddots & \ddots & \ddots & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & \sigma & 1-2\sigma & \sigma & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \sigma & 1-\sigma
-\end{matrix}\right]
-\left[\begin{matrix}
+\end{bmatrix}
+\begin{bmatrix}
 U_0^{n} \\
 U_1^{n} \\
 U_2^{n} \\
 \vdots \\
 U_{J-2}^{n} \\
 U_{J-1}^{n}
-\end{matrix}\right] +
-\left[\begin{matrix}
+\end{bmatrix} +
+\begin{bmatrix}
 \Delta t f(U_0^n) \\
 \Delta t f(U_1^n) \\
 \Delta t f(U_2^n) \\
 \vdots \\
 \Delta t f(U_{J-2}^n) \\
 \Delta t f(U_{J-1}^n)
-\end{matrix}\right].
+\end{bmatrix}.
 $$
 
 Note that since our numerical integration starts with a well-defined initial
