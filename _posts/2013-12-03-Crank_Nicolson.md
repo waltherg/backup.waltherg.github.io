@@ -364,7 +364,7 @@ Let us plot our initial condition for confirmation:
     pyplot.plot(x_grid, V)
     pyplot.show()
 
-![png](https://dl.dropboxusercontent.com/u/129945779/georgio/2013-12-03-Crank_Nicolson_files/2013-12-03-Crank_Nicolson_files/2013-12-03-Crank_Nicolson_28_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/2013-12-03-Crank_Nicolson_files/2013-12-03-Crank_Nicolson_28_0.png)
 
 
 The blue curve is the initial condition for $U$, stored in Python variable `U`,
@@ -486,7 +486,7 @@ Let us take a look at the numerical solution we attain after `N` time steps.
     pyplot.plot(x_grid, V)
     pyplot.show()
 
-![png](https://dl.dropboxusercontent.com/u/129945779/georgio/2013-12-03-Crank_Nicolson_files/2013-12-03-Crank_Nicolson_files/2013-12-03-Crank_Nicolson_48_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/2013-12-03-Crank_Nicolson_files/2013-12-03-Crank_Nicolson_48_0.png)
 
 And here is a [kymograph](http://en.wikipedia.org/wiki/Kymograph) of the values
 of `U`.
@@ -505,4 +505,4 @@ conclude that this wave pattern is a stable steady state of our system.
     xlabel('x'); ylabel('t')
     heatmap = ax.pcolor(x_grid, t_grid, U_record, vmin=0., vmax=1.2)
 
-![png](https://dl.dropboxusercontent.com/u/129945779/georgio/2013-12-03-Crank_Nicolson_files/2013-12-03-Crank_Nicolson_files/2013-12-03-Crank_Nicolson_50_0.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/2013-12-03-Crank_Nicolson_files/2013-12-03-Crank_Nicolson_50_0.png)
