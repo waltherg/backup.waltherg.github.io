@@ -1,11 +1,10 @@
+
 ---
 layout: default
+date: 2013-12-02
 title: "Structuring PLoS API Data"
-date: 2013-12-03
-tags: wip
+tags: Python XML OpenData PLoS
 ---
-
-**This post is work in progress**
 
 # Structuring PLoS API Data
 
@@ -31,7 +30,7 @@ Python module that encapsulates all of these steps and that I can reuse.
 Python modules that do exactly this probably exist already - but reinventing the
 wheel is part of the learning process ... right?
 
-Nevertheless, a some of the Python modules I should probably look into are:
+Nevertheless, some of the Python modules I should probably look into are:
 
 * https://code.google.com/p/plos-search/
 
@@ -78,6 +77,8 @@ of this file.
     f_content = f.read()
     f.close()
 
+Let us print the first 1,000 characters of the content of this file.
+
 
     print f_content[:1000]
 
@@ -108,14 +109,21 @@ all articles stored in this XML document through this tag.
 
     docs_list = f_xml.findAll('doc')
 
+The variable `docs_list` holds a list of `BeautifulSoup.Tag` variables that each
+encompass one `doc` tag of the XML document.
 
-    len(docs_list)
+
+    print type(docs_list[0])
+
+    <class 'BeautifulSoup.Tag'>
 
 
+Let us see how many articles we have in this one XML document.
 
+
+    print len(docs_list)
 
     100
-
 
 
 As we can see, this one XML document contains 100 articles.
@@ -137,6 +145,10 @@ the children of the `doc` tag in the parse tree.
 
 
     children = doc.findChildren()
+
+Let us print out a number of the children we find.
+
+
     print children[:30:2]
 
     [<str name="id">10.1371/journal.pone.0067899</str>, <str>/Biology and life sciences/Genetics/Genomics/Animal genomics/Mammalian genomics</str>, <str>/Computer and information sciences/Artificial intelligence/Machine learning</str>, <str>/Physical sciences/Mathematics/Statistics (mathematics)/Statistical methods/Regression analysis/Linear regression analysis</str>, <str>/Biology and life sciences/Genetics/Genetic loci</str>, <str>/Research and analysis methods/Mathematical and statistical techniques/Statistical methods/Regression analysis/Linear regression analysis</str>, <str name="journal">PLoS ONE</str>, <date name="received_date">2012-12-13T00:00:00Z</date>, <int name="pagecount">9</int>, <str>Tao Huang</str>, <arr name="editor_facet"><str>Xinping Cui</str></arr>, <arr name="editor_display"><str>Xinping Cui</str></arr>, <arr name="author_affiliate"><str>Institute of Systems Biology, Shanghai University, Shanghai, P. R. China</str><str>Department of Genetics and Genomic Sciences, Mount Sinai School of Medicine, New York, New York, United States of America</str></arr>, <str>Department of Genetics and Genomic Sciences, Mount Sinai School of Medicine, New York, New York, United States of America</str>, <str>University of California, Riverside, United States of America</str>]
@@ -151,13 +163,13 @@ metadata that describe each article.
 
 
     identifiers = []
-
-
     for child in children:
         try:
             identifiers = identifiers + [child['name']]
         except KeyError:
             continue
+
+These are the `identifiers` we find:
 
 
     identifiers
@@ -192,6 +204,10 @@ article.
 
 
     doi = doc.find(True, {'name': 'id'}).contents[0]
+
+And this is the DOI of this particular article:
+
+
     print doi
 
     10.1371/journal.pone.0067899
@@ -202,14 +218,14 @@ apropriately.
 
 
     docs = {}
-
-
     for ident in identifiers:
-        docs[ident] = doc.find(True, {'name': ident}).contents[0]
+        docs[ident] = doc.find(True, {'name': ident}).contents
 
 The resultant dictionary is easy and intutive to query but some of the saved
 values, for instance in `docs['abstract']` still contain XML tags `<str>` that
 we should remove.
+
+These are the keys of the dictionary `docs`:
 
 
     docs.keys()
@@ -234,15 +250,22 @@ we should remove.
 
 
 
+We can query for the DOI of the article easily:
+
 
     docs['id']
 
 
 
 
-    u'10.1371/journal.pone.0067899'
+    [u'10.1371/journal.pone.0067899']
 
 
+
+Other data such as the abstract is also avaiable. Note, however, the XML tag
+`<str>` that we carried through and is now stored in our dictionary. We find the
+same superfluous tag in other article properties,
+such as `docs['subject_facet']`.
 
 
     docs['abstract']
@@ -250,8 +273,144 @@ we should remove.
 
 
 
-    <str>
+    [<str>
     Expression Quantitative Trait Locus (eQTL) analysis is a powerful tool to study the biological mechanisms linking the genotype with gene expression. Such analyses can identify genomic locations where genotypic variants influence the expression of genes, both in close proximity to the variant (cis-eQTL), and on other chromosomes (trans-eQTL). Many traditional eQTL methods are based on a linear regression model. In this study, we propose a novel method by which to identify eQTL associations with information theory and machine learning approaches. Mutual Information (MI) is used to describe the association between genetic marker and gene expression. MI can detect both linear and non-linear associations. What’s more, it can capture the heterogeneity of the population. Advanced feature selection methods, Maximum Relevance Minimum Redundancy (mRMR) and Incremental Feature Selection (IFS), were applied to optimize the selection of the affected genes by the genetic marker. When we applied our method to a study of apoE-deficient mice, it was found that the cis-acting eQTLs are stronger than trans-acting eQTLs but there are more trans-acting eQTLs than cis-acting eQTLs. We compared our results (mRMR.eQTL) with R/qtl, and MatrixEQTL (modelLINEAR and modelANOVA). In female mice, 67.9% of mRMR.eQTL results can be confirmed by at least two other methods while only 14.4% of R/qtl result can be confirmed by at least two other methods. In male mice, 74.1% of mRMR.eQTL results can be confirmed by at least two other methods while only 18.2% of R/qtl result can be confirmed by at least two other methods. Our methods provide a new way to identify the association between genetic markers and gene expression. Our software is available from supporting information.
-    </str>
+    </str>]
+
+
+
+Based on our previous assumptions about named and unnamed tags, a robust method
+of removing these superfluous
+`<str>` tags probably involves checking for and removing unnamed `<str>` tags
+from our original XML data in `f_xml`.
+
+
+    unnamed_str = f_xml.findAll('str', {'name': None})
+
+Here is one of those unnamed `<str>` tags:
+
+
+    unnamed_str[0]
+
+
+
+
+    <str>/Biology and life sciences/Genetics/Genomics/Animal genomics/Mammalian genomics</str>
+
+
+
+However, to go down that road we would need to modify the parse tree stored in
+`f_xml`.
+
+Let us make life easier for ourselves and just remove the offending `<str>` and
+`</str>` tags from the resultant
+strings stored in our dictionary's values.
+
+
+    docs['subject_facet']
+
+
+
+
+    [<str>/Biology and life sciences/Genetics/Genomics/Animal genomics/Mammalian genomics</str>,
+     <str>/Biology and life sciences/Genetics/Alleles</str>,
+     <str>/Computer and information sciences/Artificial intelligence/Machine learning</str>,
+     <str>/Biology and life sciences/Neuroscience/Cognitive science/Artificial intelligence/Machine learning</str>,
+     <str>/Physical sciences/Mathematics/Statistics (mathematics)/Statistical methods/Regression analysis/Linear regression analysis</str>,
+     <str>/Biology and life sciences/Genetics/Gene expression</str>,
+     <str>/Biology and life sciences/Genetics/Genetic loci</str>,
+     <str>/Physical sciences/Physics/Thermodynamics/Entropy</str>,
+     <str>/Research and analysis methods/Mathematical and statistical techniques/Statistical methods/Regression analysis/Linear regression analysis</str>,
+     <str>/Biology and life sciences/Genetics/Heredity/Genetic mapping/Variant genotypes</str>]
+
+
+
+To remove the `<str>` and `</str>` we replace these substrings with empty
+strings.
+
+The replace method is defined in the standard Python module
+[`string`](http://docs.python.org/2/library/string.html#string.replace).
+
+
+    str(docs['subject_facet'][0]).replace('<str>', '').replace('</str>', '')
+
+
+
+
+    '/Biology and life sciences/Genetics/Genomics/Animal genomics/Mammalian genomics'
+
+
+
+## Wrap Up
+
+Let us now put everything that we worked out into a comprehensive class.
+
+We will want to be able to pass the path to a PLoS XML file into this class and
+receive a list
+of dictionaries, one per article contained within the XML file.
+
+
+    class PlosXml:
+        from BeautifulSoup import BeautifulSoup
+        
+        def __init__(self, path):
+            self.raw = None
+            with open(path, 'rb') as f:
+                self.raw = f.read()
+                
+            self.xml = BeautifulSoup(self.raw)
+            docs_list = self.xml.findAll('doc')
+            
+            self.docs = []
+            
+            for doc in docs_list:
+                doc_dict = {}
+                children = doc.findChildren()
+                
+                identifiers = []
+                for child in children:
+                    try:
+                        identifiers = identifiers + [child['name']]
+                    except KeyError:
+                        continue
+                
+                for ident in identifiers:
+                    contents = doc.find(True, {'name': ident}).contents
+                    contents = [str(cont).replace('<str>', '').replace('</str>', '') for cont in contents]
+                    doc_dict[ident] = contents
+                    
+                self.docs = self.docs + [doc_dict]
+
+Let us test this class with one of our XML files.
+
+
+    docs = PlosXml(files[1])
+
+This XML file also contains 100 articles:
+
+
+    len(docs.docs)
+
+
+
+
+    100
+
+
+
+And here are the DOIs of some of the articles stored in this particular XML
+file:
+
+
+    [doc['id'] for doc in docs.docs[:5]]
+
+
+
+
+    [['10.1371/journal.pone.0010777'],
+     ['10.1371/journal.pone.0057451'],
+     ['10.1371/journal.pone.0016395'],
+     ['10.1371/journal.pone.0060403'],
+     ['10.1371/journal.pone.0057450']]
 
 
