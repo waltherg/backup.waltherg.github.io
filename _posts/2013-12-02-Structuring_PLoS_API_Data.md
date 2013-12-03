@@ -1,4 +1,3 @@
-
 ---
 layout: default
 date: 2013-12-02
