@@ -1,8 +1,7 @@
-
 ---
 layout: default
+title: "Structuring PLoS API Data"
 date: 2013-12-03
-title: Structuring PLoS API Data
 tags: wip
 ---
 
