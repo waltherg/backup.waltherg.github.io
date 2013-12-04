@@ -14,9 +14,12 @@ constant grid parameters, $\Delta t$ and $\Delta x$, and system parameters
 (including diffusion coefficients $D_u$ and $D_v$).
 
 When we keep all of these parameters constant, 
-we can define constants $\sigma_u = \frac{D_u \Delta t}{2 \Delta x^2}$
-and $\sigma_v = \frac{D_v \Delta t}{2 \Delta x^2}$ that
-define the non-zero entries of
+we can define constants 
+
+$$\sigma_u = \frac{D_u \Delta t}{2 \Delta x^2},$$
+$$\sigma_v = \frac{D_v \Delta t}{2 \Delta x^2},$$ 
+
+that define the non-zero entries of
 [the two tridiagonal matrices](http://georg.io/2013/12/03/Crank_Nicolson.html#re
 ordering_stencil_into_linear_system) defined by
 [the CN stencil](http://georg.io/2013/12/03/Crank_Nicolson.html#the_cranknicolso
