@@ -504,5 +504,6 @@ conclude that this wave pattern is a stable steady state of our system.
     fig, ax = pyplot.subplots()
     pyplot.xlabel('x'); pyplot.ylabel('t')
     heatmap = ax.pcolor(x_grid, t_grid, U_record, vmin=0., vmax=1.2)
-
+    colorbar = pyplot.colorbar(heatmap)
+    
 ![png](https://dl.dropboxusercontent.com/u/129945779/georgio/2013-12-03-Crank_Nicolson_files/2013-12-03-Crank_Nicolson_50_0.png)
