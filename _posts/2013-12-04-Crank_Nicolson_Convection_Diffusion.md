@@ -5,9 +5,6 @@ title: "The Crank-Nicolson Method for Convection-Diffusion Systems"
 tags: Python Numpy Numerical-Analysis Partial-Differential-Equation
 ---
 
-**This post is work in progress**
-(I need to resolve a bug in the Python code at the bottom of this page)
-
 # The Crank-Nicolson Method for Convection-Diffusion Systems
 
 Here we extend [our discussion and
@@ -43,9 +40,8 @@ enters or leaves our domain.
 
 We use the same grid as [we defined earlier](http://georg.io/2013/12/03/Crank_Ni
 colson.html#finite_difference_methods).
-Also see 
-[our earlier discussion](http://georg.io/2013/12/03/Crank_Nicolson.html#the_cranknicolson_stencil) 
-of finite difference stencils.
+Also see [our earlier discussion](http://georg.io/2013/12/03/Crank_Nicolson.html
+#the_cranknicolson_stencil) of finite difference stencils.
 
 As described, for instance, in [Trefethen Table
 3.2.1](http://people.maths.ox.ac.uk/trefethen/3all.pdf) the Crank-Nicolson
@@ -74,9 +70,9 @@ we define $\sigma = \frac{D \Delta t}{2 \Delta x^2}$ and $\rho = \frac{a \Delta
 t}{4 \Delta x}$ and rearrange the above approximation
 of our advection-diffusion equation:
 
-$$-(\sigma+\rho) U_{j-1}^{n+1} + (1+2\sigma) U_j^{n+1} -(\sigma+\rho)
+$$(-\sigma+\rho) U_{j-1}^{n+1} + (1+2\sigma) U_j^{n+1} -(\sigma+\rho)
 U_{j+1}^{n+1} =
-(\sigma+\rho) U_{j-1}^n + (1-2\sigma) U_j^n + (\sigma+\rho) U_{j+1}^n + \Delta t
+(\sigma-\rho) U_{j-1}^n + (1-2\sigma) U_j^n + (\sigma+\rho) U_{j+1}^n + \Delta t
 f(U_j^n),~j=1,\ldots,J-2$$
 
 This equation holds for all grid points with spatial indices $j=1,\ldots,J-2$.
@@ -87,11 +83,11 @@ $$U_{-1}^n = U_0^n,~U_{J-1}^n = U_J^n,~n=0,1,\ldots,$$
 
 resulting in the following amended expressions for $j=0$ and $j=J-1$:
 
-$$j=0:~ (1+\sigma-\rho) U_0^{n+1} -(\sigma+\rho) U_{1}^{n+1} =
-(1-\sigma+\rho) U_0^n + (\sigma+\rho) U_{1}^n + \Delta t f(U_0^n),$$
+$$j=0:~ (1+\sigma+\rho) U_0^{n+1} -(\sigma+\rho) U_{1}^{n+1} =
+(1-\sigma-\rho) U_0^n + (\sigma+\rho) U_{1}^n + \Delta t f(U_0^n),$$
 
-$$j=J-1:~ -(\sigma+\rho) U_{J-2}^{n+1} + (1+\sigma-\rho) U_{J-1}^{n+1} =
-(\sigma+\rho) U_{J-2}^n + (1-\sigma+\rho) U_{J-1}^n + \Delta t f(U_{J-1}^n).$$
+$$j=J-1:~ (-\sigma+\rho) U_{J-2}^{n+1} + (1+\sigma-\rho) U_{J-1}^{n+1} =
+(\sigma-\rho) U_{J-2}^n + (1-\sigma+\rho) U_{J-1}^n + \Delta t f(U_{J-1}^n).$$
 
 We use the same vector notation, $\mathbf{U}^n$ and $\mathbf{f}^n$, and matrix
 names $A$ and $B$
@@ -104,24 +100,34 @@ $$A \mathbf{U}^{n+1} = B \mathbf{U}^n + \mathbf{f}^n,$$
 where the tridiagonal matrix $A$ has the following vector of length $J$ on its
 diagonal
 
-$$\begin{bmatrix} 1+\sigma-\rho, & 1+2\sigma, & \ldots, & 1+2\sigma, &
+$$\begin{bmatrix} 1+\sigma+\rho, & 1+2\sigma, & \ldots, & 1+2\sigma, &
 1+\sigma-\rho \end{bmatrix},$$
 
-and the following vector of length $J-1$ on both its first [sub- and
-superdiagonal](http://en.wikipedia.org/wiki/Diagonal#Matrices)
+the following vector of length $J-1$ on its first
+[superdiagonal](http://en.wikipedia.org/wiki/Diagonal#Matrices)
 
-$$\begin{bmatrix} -(\sigma+\rho), & \ldots, & -(\sigma+\rho) \end{bmatrix}.$$
+$$\begin{bmatrix} -(\sigma+\rho), & \ldots, & -(\sigma+\rho) \end{bmatrix},$$
+
+and the following vector of length $J-1$ on its first
+[subdiagonal](http://en.wikipedia.org/wiki/Diagonal#Matrices):
+
+$$\begin{bmatrix} (-\sigma+\rho), & \ldots, & (-\sigma+\rho) \end{bmatrix}.$$
 
 The tridiagonal matrix $B$ has the following vector of length $J$ on its
 diagonal
 
-$$\begin{bmatrix} 1-\sigma+\rho, & 1+2\sigma, & \ldots, & 1+2\sigma, &
+$$\begin{bmatrix} 1-\sigma-\rho, & 1-2\sigma, & \ldots, & 1+2\sigma, &
 1-\sigma+\rho \end{bmatrix},$$
 
-and the following vector of length $J-1$ on both its first [sub- and
-superdiagonal](http://en.wikipedia.org/wiki/Diagonal#Matrices)
+the following vector of length $J-1$ on its first
+[superdiagonal](http://en.wikipedia.org/wiki/Diagonal#Matrices)
 
-$$\begin{bmatrix} (\sigma+\rho), & \ldots, & (\sigma+\rho) \end{bmatrix}.$$
+$$\begin{bmatrix} (\sigma+\rho), & \ldots, & (\sigma+\rho) \end{bmatrix},$$
+
+the following vector of length $J-1$ on its first
+[subdiagonal](http://en.wikipedia.org/wiki/Diagonal#Matrices)
+
+$$\begin{bmatrix} (\sigma-\rho), & \ldots, & (\sigma-\rho) \end{bmatrix},$$
 
 ## An Example in Python
 
@@ -140,7 +146,7 @@ and amend merely matrices `A_u`, `B_u`, `A_v`, and `B_v` as described above.
 
 ### Our Python Code
 
-Here is just a copy and paste of
+Here is just a copy-and-paste of
 [our previous code](http://georg.io/2013/12/03/Crank_Nicolson.html#a_cranknicols
 on_example_in_python).
 Refer to that post for explanations.
@@ -149,6 +155,7 @@ All that changes in this code segment compared with [before](http://georg.io/201
 3/12/03/Crank_Nicolson.html#a_cranknicolson_example_in_python)
 are our definition of `rho` and construction of matrices `A_u`, `B_u`, `A_v`,
 `B_v`.
+(We actually also change `J` and `N` - see comment below)
 
 Note that `rho` is the same for both protein species `U` and `V`.
 
@@ -160,12 +167,12 @@ proteins `U` and `V` flows from right to left.
     numpy.set_printoptions(precision=3)
     
     L = 1.
-    J = 100
+    J = 500
     dx = float(L)/float(J-1)
     x_grid = numpy.array([j*dx for j in range(J)])
     
     T = 200
-    N = 1000
+    N = 2000
     dt = float(T)/float(N-1)
     t_grid = numpy.array([n*dt for n in range(N)])
     
@@ -175,13 +182,12 @@ proteins `U` and `V` flows from right to left.
     k0 = 0.067
     f_vec = lambda U, V: numpy.multiply(dt, numpy.subtract(numpy.multiply(V, 
                          numpy.add(k0, numpy.divide(numpy.multiply(U,U), numpy.add(1., numpy.multiply(U,U))))), U))
-    g = lambda u, v: -f(u,v)
      
     sigma_u = float(D_u*dt)/float(2.*dx*dx)
     sigma_v = float(D_v*dt)/float(2.*dx*dx)
     
-    a = -0.00001
-    rho = float(a*dt)/float(4*dx)
+    a = -0.0003
+    rho = float(a*dt)/float(4.*dx)
     
     total_protein = 2.26
     
@@ -189,20 +195,20 @@ proteins `U` and `V` flows from right to left.
     U = numpy.array([0.1 for i in range(no_high,J)] + [2. for i in range(0,no_high)])
     V = numpy.array([float(total_protein-dx*sum(U))/float(J*dx) for i in range(0,J)])
     
-    A_u = numpy.diagflat([-(sigma_u+rho) for i in range(J-1)], -1) +\
-          numpy.diagflat([1.+sigma_u-rho]+[1.+2.*sigma_u for i in range(J-2)]+[1.+sigma_u-rho]) +\
+    A_u = numpy.diagflat([-sigma_u+rho for i in range(J-1)], -1) +\
+          numpy.diagflat([1.+sigma_u+rho]+[1.+2.*sigma_u for i in range(J-2)]+[1.+sigma_u-rho]) +\
           numpy.diagflat([-(sigma_u+rho) for i in range(J-1)], 1)
             
-    B_u = numpy.diagflat([sigma_u+rho for i in range(J-1)], -1) +\
-          numpy.diagflat([1.-sigma_u+rho]+[1.-2.*sigma_u for i in range(J-2)]+[1.-sigma_u+rho]) +\
+    B_u = numpy.diagflat([sigma_u-rho for i in range(J-1)], -1) +\
+          numpy.diagflat([1.-sigma_u-rho]+[1.-2.*sigma_u for i in range(J-2)]+[1.-sigma_u+rho]) +\
           numpy.diagflat([sigma_u+rho for i in range(J-1)], 1)
             
-    A_v = numpy.diagflat([-(sigma_v+rho) for i in range(J-1)], -1) +\
-          numpy.diagflat([1.+sigma_v-rho]+[1.+2.*sigma_v for i in range(J-2)]+[1.+sigma_v-rho]) +\
+    A_v = numpy.diagflat([-sigma_v+rho for i in range(J-1)], -1) +\
+          numpy.diagflat([1.+sigma_v+rho]+[1.+2.*sigma_v for i in range(J-2)]+[1.+sigma_v-rho]) +\
           numpy.diagflat([-(sigma_v+rho) for i in range(J-1)], 1)
             
-    B_v = numpy.diagflat([sigma_v+rho for i in range(J-1)], -1) +\
-          numpy.diagflat([1.-sigma_v+rho]+[1.-2.*sigma_v for i in range(J-2)]+[1.-sigma_v+rho]) +\
+    B_v = numpy.diagflat([sigma_v-rho for i in range(J-1)], -1) +\
+          numpy.diagflat([1.-sigma_v-rho]+[1.-2.*sigma_v for i in range(J-2)]+[1.-sigma_v+rho]) +\
           numpy.diagflat([sigma_v+rho for i in range(J-1)], 1)
             
     U_record = []
@@ -222,23 +228,43 @@ proteins `U` and `V` flows from right to left.
         V_record.append(V)
 
 
-Apparently, we lose protein mass which should not happen given our Neumann
-boundary conditions.
+We notice that the numerical stability of this scheme is greatly dependent on
+the magnitude of `a`.
+
+As was discussed by [Walther *et
+al.*](http://link.springer.com/article/10.1007%2Fs11538-012-9766-5),
+preservation of total protein mass in a certain regime near `total_protein =
+2.26` is important to
+preserve the pattern-forming pattern of the
+[original system (excluding the advection term)](http://georg.io/2013/12/03/Cran
+k_Nicolson.html#a_cranknicolson_example_in_python).
+
+Notice that even though we increased `J = 500` and `N = 2000` for a much finer
+numerical grid
+compared with
+[before](http://georg.io/2013/12/03/Crank_Nicolson.html#specify_grid)
+(`J = 100`, `N = 1000`), we still lose some protein mass to numerical errors.
 
 Initial protein mass:
 
-
     sum(numpy.multiply(dx,U_record[0]) + numpy.multiply(dx,V_record[0]))
 
-    2.2599999999999998
+    2.259999999999998
 
 Protein mass at the end of the simulation:
 
     sum(numpy.multiply(dx,U_record[-1]) + numpy.multiply(dx,V_record[-1]))
 
-    1.8540358669233128
+    2.2064888602225103
 
-Kymograph showing time and space behaviour of `U`.
+We can reduce the loss of protein mass by reducing the magnitude of `a` or
+refining our grid even further
+by increasing both `J` and `N`.
+
+An important question to answer would be how much numerical accuracy we gain by
+increasing `J` and `N`.
+
+And here is a kymograph showing the time and space behaviour of `U`.
 
     U_record = numpy.array(U_record)
     V_record = numpy.array(V_record)
@@ -248,7 +274,6 @@ Kymograph showing time and space behaviour of `U`.
     heatmap = ax.pcolor(x_grid, t_grid, U_record, vmin=0., vmax=1.2)
     colorbar = pyplot.colorbar(heatmap)
     colorbar.set_label('concentration U')
-
 
 ![png](https://dl.dropboxusercontent.com/u/129945779/georgio/2013-12-04-Crank_Nicolson_Convection_Diffusion_files/2013-12-04-Crank_Nicolson_Convection_Diffusion_21_0.png)
 
