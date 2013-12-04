@@ -43,8 +43,9 @@ enters or leaves our domain.
 
 We use the same grid as [we defined earlier](http://georg.io/2013/12/03/Crank_Ni
 colson.html#finite_difference_methods).
-Also see [our earlier discussion](http://georg.io/2013/12/03/Crank_Nicolson.html
-#the_cranknicolson_stencil) of finite difference stencils.
+Also see 
+[our earlier discussion](http://georg.io/2013/12/03/Crank_Nicolson.html#the_cranknicolson_stencil) 
+of finite difference stencils.
 
 As described, for instance, in [Trefethen Table
 3.2.1](http://people.maths.ox.ac.uk/trefethen/3all.pdf) the Crank-Nicolson
