@@ -7,14 +7,14 @@ tags: Python Numpy Numerical-Analysis Partial-Differential-Equation
 
 # Crank-Nicolson with Variable Diffusivity
 
-We [have implemented](http://georg.io/2013/12/03/Crank_Nicolson.html#a_cranknico
-lson_example_in_python)
+We 
+[have implemented](http://georg.io/2013/12/03/Crank_Nicolson.html#a_cranknicolson_example_in_python)
 the Crank-Nicolson (CN) method for a two-variable reaction-diffusion system with
 constant grid parameters, $\Delta t$ and $\Delta x$, and system parameters
 (including diffusion coefficients $D_u$ and $D_v$).
 
-When we keep all of these parameters constant, we can define constants $\sigma_u
-= \frac{D_u \Delta t}{2 \Delta x^2}$
+When we keep all of these parameters constant, 
+we can define constants $\sigma_u = \frac{D_u \Delta t}{2 \Delta x^2}$
 and $\sigma_v = \frac{D_v \Delta t}{2 \Delta x^2}$ that
 define the non-zero entries of
 [the two tridiagonal matrices](http://georg.io/2013/12/03/Crank_Nicolson.html#re
