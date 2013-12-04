@@ -348,7 +348,7 @@ Here, we initialize $u$ with a step-like heterogeneity:
 
     no_high = 10
     U =  numpy.array([0.1 for i in range(no_high,J)] + [2. for i in range(0,no_high)])
-    V = numpy.array([float(total_protein-dx*sum(u))/float(J*dx) for i in range(0,J)])
+    V = numpy.array([float(total_protein-dx*sum(U))/float(J*dx) for i in range(0,J)])
 
 Note that we make certain that total protein amounts equal a certain value,
 `total_protein`.
