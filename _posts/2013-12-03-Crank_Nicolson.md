@@ -61,9 +61,9 @@ respectively.
 $\Delta t$ and $\Delta x$ are the time step and space step respectively and
 defined as follows:
 
-$$\Delta t = T / N,$$
+$$\Delta t = T / (N-1),$$
 
-$$\Delta x = L / J,$$
+$$\Delta x = L / (J-1),$$
 
 where $T$ is the point in time up to which we will integrate $u$ numerically.
 
