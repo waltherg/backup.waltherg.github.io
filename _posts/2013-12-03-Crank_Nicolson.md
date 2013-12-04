@@ -501,8 +501,8 @@ conclude that this wave pattern is a stable steady state of our system.
     U_record = numpy.array(U_record)
     V_record = numpy.array(V_record)
     
-    fig, ax = subplots()
-    xlabel('x'); ylabel('t')
+    fig, ax = pyplot.subplots()
+    pyplot.xlabel('x'); pyplot.ylabel('t')
     heatmap = ax.pcolor(x_grid, t_grid, U_record, vmin=0., vmax=1.2)
 
 ![png](https://dl.dropboxusercontent.com/u/129945779/georgio/2013-12-03-Crank_Nicolson_files/2013-12-03-Crank_Nicolson_50_0.png)
