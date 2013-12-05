@@ -197,42 +197,237 @@ d) v
 ) finite difference stencils) alternatingely -
 inspiring the name of the ADI method:
 
-$$U_{j,i}^{n+1/2} - U_{j,i}^n =
-\sigma_x \left( U_{j+1,i}^{n+1/2} - 2 U_{j,i}^{n+1/2} + U_{j-1,i}^{n+1/2}
-\right) +
-\sigma_y \left( U_{j,i+1}^n - 2 U_{j,i}^n + U_{j,i-1}^n \right) +
+$$\frac{U_{j,i}^{n+1/2} - U_{j,i}^n}{\Delta t / 2} =
+\frac{D}{2 \Delta x^2} \left( U_{j+1,i}^{n+1/2} - 2 U_{j,i}^{n+1/2} +
+U_{j-1,i}^{n+1/2} \right) +
+\frac{D}{2 \Delta y^2} \left( U_{j,i+1}^n - 2 U_{j,i}^n + U_{j,i-1}^n \right) +
 \Delta t f(U_{j,i}^n),$$
 
-$$U_{j,i}^{n+1} - U_{j,i}^{n+1/2} =
-\sigma_x \left( U_{j+1,i}^{n+1/2} - 2 U_{j,i}^{n+1/2} + U_{j-1,i}^{n+1/2}
-\right) +
-\sigma_y \left( U_{j,i+1}^{n+1} - 2 U_{j,i}^{n+1} + U_{j,i-1}^{n+1} \right) +
+$$\frac{U_{j,i}^{n+1} - U_{j,i}^{n+1/2}}{\Delta t / 2} =
+\frac{D}{2 \Delta x^2} \left( U_{j+1,i}^{n+1/2} - 2 U_{j,i}^{n+1/2} +
+U_{j-1,i}^{n+1/2} \right) +
+\frac{D}{2 \Delta y^2} \left( U_{j,i+1}^{n+1} - 2 U_{j,i}^{n+1} +
+U_{j,i-1}^{n+1} \right) +
 \Delta t f(U_{j,i}^{n+1/2}).$$
 
 ## The ADI Linear Systems
 
+We define $\alpha_x = \frac{D \Delta t}{\Delta x^2}$ and $\alpha_y = \frac{D
+\Delta t}{\Delta y^2}$.
+Note that $2 \sigma_x = \alpha_x$ and $2 \sigma_y = \alpha_y$.
+
 Reordering both stencils, we obtain the following systems of linear equations
 
 $$
--\sigma_x U_{j-1,i}^{n+1/2} + (1+2\sigma_x) U_{j,i}^{n+1/2} - \sigma_x
+-\alpha_x U_{j-1,i}^{n+1/2} + (1+2\alpha_x) U_{j,i}^{n+1/2} - \alpha_x
 U_{j+1,i}^{n+1/2} =
-\sigma_y U_{j,i-1}^n + (1-2\sigma_y) U_{j,i}^n + \sigma_y U_{j,i+1}^n + \Delta t
+\alpha_y U_{j,i-1}^n + (1-2\alpha_y) U_{j,i}^n + \alpha_y U_{j,i+1}^n + \Delta t
 f(U_{j,i}^n)
 $$
 
 $$
--\sigma_y U_{j,i-1}^{n+1} + (1+2\sigma_y) U_{j,i}^{n+1} - \sigma_y
-U_{j,i+1}^{n+1} =
-\sigma_x U_{j-1,i}^{n+1/2} + (1-2\sigma_x) U_{j,i}^{n+1/2} + \sigma_y
+-\alpha_y U_{j,i+1}^{n+1} + (1+2\alpha_y) U_{j,i}^{n+1} - \alpha_y
+U_{j,i-1}^{n+1} =
+\alpha_x U_{j-1,i}^{n+1/2} + (1-2\alpha_x) U_{j,i}^{n+1/2} + \alpha_x
 U_{j+1,i}^{n+1/2} + \Delta t f(U_{j,i}^{n+1/2})
 $$
 
-### Linear System in the x-Direction
+### Linear System in the $x$-Direction
 
-Stencil pictured in [Dehghan Figure
+Consider the stencil pictured in
+[Dehghan Figure
 1](http://www.sciencedirect.com/science/article/pii/S0377042700004520#FIG1)
+and let us think of the matrix defined by $\left(U_{j,i}^n\right)$
+($j=0,\ldots,J-1$, $i=0\ldots,I-1$, $n$ held constant) as a concentration plane.
 
-### Linear System in the y-Direction
+We realize that for fixed index $i$ the first of our two equations above define
+a
+system of linear equations similar to the linear system we obtained for
+[CN with one space dimension](http://georg.io/2013/12/03/Crank_Nicolson.html#reo
+rdering_stencil_into_linear_system).
+As for CN with one space dimension we need to amend certain entries of our
+linear system to
+accommodate our Neumann boundary conditions on the edges of our grid.
+In fact we need to accommodate boundary conditions in both the $x$- and
+$y$-direction.
+
+Our first equation does not need to be modified for grid points that lie
+"within" the
+spatial part of our grid, i.e. $(j,i,n)$ for $j=1,\ldots,J-2$, $i=1,\ldots,I-2$,
+and $n=0,1,2,\ldots$:
+
+$$
+-\alpha_x U_{j-1,i}^{n+1/2} + (1+2\alpha_x) U_{j,i}^{n+1/2} - \alpha_x
+U_{j+1,i}^{n+1/2} =
+\alpha_y U_{j,i-1}^n + (1-2\alpha_y) U_{j,i}^n + \alpha_y U_{j,i+1}^n + \Delta t
+f(U_{j,i}^n).
+$$
+
+Let us take a look at what happens for grid points on the far left and right
+with $j=0,J-1$ and $i=1,\ldots,I-2$:
+
+$$
+j=0:~ (1+\alpha_x) U_{0,i}^{n+1/2} - \alpha_x U_{1,i}^{n+1/2} =
+\alpha_y U_{0,i-1}^n + (1-2\alpha_y) U_{0,i}^n + \alpha_y U_{0,i+1}^n + \Delta t
+f(U_{0,i}^n),
+$$
+
+$$
+j=J-1:~ -\alpha_x U_{J-2,i}^{n+1/2} + (1+\alpha_x) U_{J-1,i}^{n+1/2} =
+\alpha_y U_{J-1,i-1}^n + (1-2\alpha_y) U_{J-1,i}^n + \alpha_y U_{J-1,i+1}^n +
+\Delta t f(U_{J-1,i}^n).
+$$
+
+On the left-hand side of the linear system defined by these three expressions
+(imagine varying $j=0,1,\ldots,J-1$)
+we can already make out essentially the same matrix as we constructed for
+[CN with one space dimension](http://georg.io/2013/12/03/Crank_Nicolson.html#reo
+rdering_stencil_into_linear_system).
+Note that this matrix is the same for all indeces $i=0,1,\ldots,I-1$.
+
+This completes incorporating our boundary conditions in the $x$-direction.
+Before we move on to doing the same with our boundary conditions in the
+$y$-direction let us
+state clearly that our $(x,y)$-concentration plane has
+[right-handed orientation](http://en.wikipedia.org/wiki/Cartesian_coordinate_sys
+tem#In_two_dimensions)
+meaning that $x$ increases *left to right* and $y$ increases *bottom to top*.
+Our grid has the same orientation so that index $j$ incrases *left to right* and
+index $i$ increases *bottom to top*.
+
+Let us now take a look at this equation for $j=1,\ldots,J-2$ and $i=0$ (bottom)
+and $i=I-1$ (top):
+
+$$
+i=0:~ -\alpha_x U_{j-1,0}^{n+1/2} + (1+2\alpha_x) U_{j,0}^{n+1/2} - \alpha_x
+U_{j+1,0}^{n+1/2} =
+(1-\alpha_y) U_{j,0}^n + \alpha_y U_{j,1}^n + \Delta t f(U_{j,0}^n),
+$$
+
+$$
+i=I-1:~ -\alpha_x U_{j-1,I-1}^{n+1/2} + (1+2\alpha_x) U_{j,I-1}^{n+1/2} -
+\alpha_x U_{j+1,I-1}^{n+1/2} =
+\alpha_y U_{j,I-2}^n + (1-\alpha_y) U_{j,I-1}^n + \Delta t f(U_{j,I-1}^n).
+$$
+
+To rewrite these equations in compact matrix notation, let us define a
+horizontal slice (*left to right*)
+through our concentration plane as vector
+
+$$\mathbf{U}_{x,i}^n = \begin{bmatrix}U_{0,i}^n, & \ldots, & U_{J-1,i}^n
+\end{bmatrix}$$
+
+We can now combine all of the above and write the first of our two families of
+ADI linear systems compactly:
+
+$$A \mathbf{U}_{x,i}^{n+1/2} = \mathbf{b}_i + \mathbf{f}\left( \Delta t
+\mathbf{U}_{x,i}^n \right),~i=0,\ldots,I-1,$$
+
+where
+
+$$A = \begin{bmatrix}
+1+\alpha_x & -\alpha_x & 0 & 0 & 0 & \cdots & 0 & 0 & 0 & 0\\\\
+-\alpha_x & 1+2\alpha_x & -\alpha_x & 0 & 0 & \cdots & 0 & 0 & 0 & 0 \\\\
+0 & -\alpha_x & 1+2\alpha_x & -\alpha_x & \cdots & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & \ddots & \ddots & \ddots & \ddots & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & -\alpha_x & 1+2\alpha_x & -\alpha_x \\\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -\alpha_x & 1+\alpha_x
+\end{bmatrix}.$$
+
+The form of vector $\mathbf{b}_i$ depends on $i$:
+
+$$i=I-1:~ \mathbf{b}_{I-1} =
+\begin{bmatrix}
+(1-\alpha_y) U_{0,I-1}^n + \alpha_y U_{0,I-2}^n \\\\
+\vdots \\\\
+(1-\alpha_y) U_{J-1,I-1}^n + \alpha_y U_{J-1,I-2}^n
+\end{bmatrix}$$
+
+$$i=I-2,\ldots,1:~ \mathbf{b}_i =
+\begin{bmatrix}
+\alpha_y U_{0,i+1}^n + (1-2\alpha_y) U_{0,i}^n + \alpha_y U_{0,i-1}^n \\\\
+\vdots \\\\
+\alpha_y U_{J-1,i+1}^n + (1-2\alpha_y) U_{J-1,i}^n + \alpha_y U_{J-1,i-1}^n
+\end{bmatrix}$$
+
+$$i=0:~ \mathbf{b}_0 =
+\begin{bmatrix}
+\alpha_y U_{0,1}^n + (1-\alpha_y) U_{0,0}^n \\\\
+\vdots \\\\
+\alpha_y U_{J-1,1}^n + (1-\alpha_y) U_{J-1,0}^n
+\end{bmatrix}.$$
+
+The reaction term vector is
+
+$$\mathbf{f}\left( \Delta t \mathbf{U}_{x,i}^n \right) =
+\begin{bmatrix}
+\Delta t f(U_{0,i}^n), & \ldots, & \Delta t f(U_{J-1,i}^n)
+\end{bmatrix}$$
+
+### Linear System in the $y$-Direction
+
+Let us first define a vertical (*from top to bottom*) slice through our
+concentration plane
+(note our comment on
+[right-handedness](http://en.wikipedia.org/wiki/Cartesian_coordinate_system#In_t
+wo_dimensions) above) as:
+
+$$\mathbf{U}_{y,j}^n = \begin{bmatrix}U_{j,I-1}^n, & U_{j,I-2}^n, & \ldots, &
+U_{j,0}^n \end{bmatrix}$$
+
+Following an equivalent procedure to above for the second family of ADI linear
+systems we obtain:
+
+$$C \mathbf{U}_{y,j}^{n+1} = \mathbf{d}_j + \mathbf{f}\left( \Delta t
+\mathbf{U}_{y,j}^{n+1/2} \right),~j=0,\ldots,J-1,$$
+
+where
+
+$$C = \begin{bmatrix}
+1+\alpha_y & -\alpha_y & 0 & 0 & 0 & \cdots & 0 & 0 & 0 & 0\\\\
+-\alpha_y & 1+2\alpha_y & -\alpha_y & 0 & 0 & \cdots & 0 & 0 & 0 & 0 \\\\
+0 & -\alpha_y & 1+2\alpha_y & -\alpha_y & \cdots & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & \ddots & \ddots & \ddots & \ddots & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & -\alpha_y & 1+2\alpha_y & -\alpha_y \\\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -\alpha_y & 1+\alpha_y
+\end{bmatrix}.$$
+
+The form of vector $\mathbf{d}_j$ depends on $j$:
+
+$$j=0:~ \mathbf{d}_0 =
+\begin{bmatrix}
+(1-\alpha_x) U_{0,I-1}^{n+1/2} + \alpha_x U_{1,I-1}^{n+1/2} \\\\
+(1-\alpha_x) U_{0,I-2}^{n+1/2} + \alpha_x U_{1,I-2}^{n+1/2} \\\\
+\vdots \\\\
+(1-\alpha_x) U_{0,0}^{n+1/2} + \alpha_x U_{1,0}^{n+1/2}
+\end{bmatrix}$$
+
+$$j=1,\ldots,J-2:~ \mathbf{d}_j =
+\begin{bmatrix}
+\alpha_x U_{j-1,I-1}^{n+1/2} + (1-2\alpha_x) U_{j,I-1}^{n+1/2} + \alpha_x
+U_{j+1,I-1}^{n+1/2} \\\\
+\alpha_x U_{j-1,I-2}^{n+1/2} + (1-2\alpha_x) U_{j,I-2}^{n+1/2} + \alpha_x
+U_{j+1,I-2}^{n+1/2} \\\\
+\vdots \\\\
+\alpha_x U_{j-1,0}^{n+1/2} + (1-2\alpha_x) U_{j,0}^{n+1/2} + \alpha_x
+U_{j+1,0}^{n+1/2}
+\end{bmatrix}$$
+
+$$j=J-1:~ \mathbf{d}_{J-1} =
+\begin{bmatrix}
+\alpha_x U_{J-2,I-1}^{n+1/2} + (1-\alpha_x) U_{J-1,I-1}^{n+1/2} \\\\
+\alpha_x U_{J-2,I-2}^{n+1/2} + (1-\alpha_x) U_{J-1,I-2}^{n+1/2} \\\\
+\vdots \\\\
+\alpha_x U_{J-2,0}^{n+1/2} + (1-\alpha_x) U_{J-1,0}^{n+1/2}
+\end{bmatrix}$$
+
+The reaction term vector is
+
+$$\mathbf{f}\left( \Delta t \mathbf{U}_{y,j}^{n+1/2} \right) =
+\begin{bmatrix}
+\Delta t f(U_{j,I-1}^{n+1/2}), & \Delta t f(U_{j,I-2}^{n+1/2}), & \ldots, &
+\Delta t f(U_{j,0}^{n+1/2})
+\end{bmatrix}$$
 
 ## Parallelism in the ADI
 
