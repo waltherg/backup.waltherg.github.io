@@ -431,4 +431,31 @@ $$\mathbf{f}\left( \Delta t \mathbf{U}_{y,j}^{n+1/2} \right) =
 
 ## Parallelism in the ADI
 
+To summarize, the ADI stencil generates two families of linear systems that we
+need to solve iteratively:
+
+$$A \mathbf{U}_{x,i}^{n+1/2} = \mathbf{b}_i + \mathbf{f}\left( \Delta t
+\mathbf{U}_{x,i}^n \right),~i=0,\ldots,I-1,$$
+
+$$C \mathbf{U}_{y,j}^{n+1} = \mathbf{d}_j + \mathbf{f}\left( \Delta t
+\mathbf{U}_{y,j}^{n+1/2} \right),~j=0,\ldots,J-1.$$
+
+Upon closer inspection, we realize that we can solve the $I$ linear systems of
+the first family in parallel.
+To see this let us take a look at two arbitrary linear systems out of this
+family:
+
+$$A \mathbf{U}_{x,i_1}^{n+1/2} = \mathbf{b}_{i_1} + \mathbf{f}\left( \Delta t
+\mathbf{U}_{x,i_1}^n \right),$$
+
+$$A \mathbf{U}_{x,i_2}^{n+1/2} = \mathbf{b}_{i_2} + \mathbf{f}\left( \Delta t
+\mathbf{U}_{x,i_2}^n \right).$$
+
+As we can see, there is no interdependence between the linear systems for
+indeces $i_1$ and $i_2$ that would prevent
+us from solving these in parallel.
+
+The same reasoning can be applied to our second family of linear systems.
+We can solve the linear systems of all indeces $j$ of that family in parallel.
+
 ## An ADI Example in Python
