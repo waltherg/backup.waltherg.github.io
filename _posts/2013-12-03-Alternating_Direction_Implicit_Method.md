@@ -5,7 +5,7 @@ date: 2013-12-06
 tags: wip
 ---
 
-**This post is work in progress**
+**This post is work in progress. Last updated {{page.date}}.**
 
 # The Alternating Direction Implicit Method
 
