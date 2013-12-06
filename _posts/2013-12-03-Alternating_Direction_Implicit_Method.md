@@ -232,7 +232,7 @@ U_{j,i-1}^{n+1} =
 U_{j+1,i}^{n+1/2} + \Delta t f(U_{j,i}^{n+1/2})
 $$
 
-### Linear System in the $x$-Direction
+### Family of Linear Systems in the $x$-Direction
 
 Consider the stencil pictured in
 [Dehghan Figure
