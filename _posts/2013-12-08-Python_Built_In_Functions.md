@@ -5,7 +5,7 @@ title: "Python Built-In Functions"
 tags: Python wip
 ---
 
-**This post is work in progress. Last updated {{post.date}}.**
+**This post is work in progress. Last updated {{page.date}}.**
 
 # Python Built-In Functions
 
