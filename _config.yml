@@ -1,0 +1,25 @@
+safe: true
+lsi: true
+pygments: true
+navigation:
+  - text: Home
+    url: /index.html
+  - text: Imprint
+    url: /imprint.html
+baseurl: http://georg.io
+author:
+  name: Georg R Walther
+  email: contact@georg.io
+  nick: waltherg
+  profiles:
+    - label: GitHub
+      url: https://github.com/waltherg
+    - label: Twitter
+      url: https://twitter.com/mbgrw
+title: georg.io
+disqus:
+  config:
+    - label: disqus_shortname
+      value: 'georgio'
+googleanalytics:
+  account: UA-45212489-1
