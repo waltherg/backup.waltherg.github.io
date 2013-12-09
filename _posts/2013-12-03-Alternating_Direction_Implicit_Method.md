@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "The Alternating Direction Implicit Method"
-date: 2013-12-06
+date: 2013-12-03
 tags: wip
 ---
 
-**This post is work in progress. Last updated {{page.date}}.**
+**This post is work in progress**
 
 # The Alternating Direction Implicit Method
 
@@ -364,7 +364,7 @@ $$\mathbf{f}\left( \Delta t \mathbf{U}_{x,i}^n \right) =
 \Delta t f(U_{0,i}^n), & \ldots, & \Delta t f(U_{J-1,i}^n)
 \end{bmatrix}$$
 
-### Linear System in the $y$-Direction
+### Family of Linear Systems in the $y$-Direction
 
 Let us first define a vertical (*from top to bottom*) slice through our
 concentration plane
@@ -459,3 +459,176 @@ The same reasoning can be applied to our second family of linear systems.
 We can solve the linear systems of all indeces $j$ of that family in parallel.
 
 ## An ADI Example in Python
+
+
+    import numpy
+    from matplotlib import pyplot
+
+
+    J = 5
+    I = 10
+    
+    print numpy.array([[str((j,i)) for j in range(J)] for i in range(I-1,-1,-1)])
+
+    [['(0, 9)' '(1, 9)' '(2, 9)' '(3, 9)' '(4, 9)']
+     ['(0, 8)' '(1, 8)' '(2, 8)' '(3, 8)' '(4, 8)']
+     ['(0, 7)' '(1, 7)' '(2, 7)' '(3, 7)' '(4, 7)']
+     ['(0, 6)' '(1, 6)' '(2, 6)' '(3, 6)' '(4, 6)']
+     ['(0, 5)' '(1, 5)' '(2, 5)' '(3, 5)' '(4, 5)']
+     ['(0, 4)' '(1, 4)' '(2, 4)' '(3, 4)' '(4, 4)']
+     ['(0, 3)' '(1, 3)' '(2, 3)' '(3, 3)' '(4, 3)']
+     ['(0, 2)' '(1, 2)' '(2, 2)' '(3, 2)' '(4, 2)']
+     ['(0, 1)' '(1, 1)' '(2, 1)' '(3, 1)' '(4, 1)']
+     ['(0, 0)' '(1, 0)' '(2, 0)' '(3, 0)' '(4, 0)']]
+
+
+
+    L_x = 1.
+    L_y = 2.
+    T = 100.
+    
+    J = 100
+    I = 200
+    N = 1000
+    
+    dx = float(L_x)/float(J-1)
+    dy = float(L_y)/float(I-1)
+    dt = float(T)/float(N-1)
+    
+    x_grid = numpy.array([j*dx for j in range(J)])
+    y_grid = numpy.array([i*dy for i in range(I)])
+    t_grid = numpy.array([n*dt for n in range(N)])
+
+
+    D_U = 0.1
+    D_V = 10.
+
+
+    tot_protein = 2.26
+
+
+    no_high = 10
+    U =  numpy.array([[0.1 if (I-1)-i+1 > no_high else 2.0 for j in range(J)] for i in range(I)])
+    
+    U_protein = sum(sum(U))*dx*dy
+    V_protein_px = float(tot_protein-U_protein)/float(I*J*dx*dy)
+    V = numpy.array([[V_protein_px for i in range(0,J)] for i in range(I)])
+    
+    print 'Initial protein mass', (sum(sum(U))+sum(sum(V)))*(dx*dy)
+
+    Initial protein mass 2.26
+
+
+
+    fig, ax = pyplot.subplots()
+    ax.set_xlim(left=0., right=(J-1)*dx)
+    ax.set_ylim(bottom=0., top=(I-1)*dy)
+    heatmap = ax.pcolor(x_grid, y_grid, U, vmin=0., vmax=2.1)
+    colorbar = pyplot.colorbar(heatmap)
+    colorbar.set_label('concentration U')
+
+
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/2013-12-03-Alternating_Direction_Implicit_Method_files/2013-12-03-Alternating_Direction_Implicit_Method_25_0.png)
+
+
+
+    alpha_x_U = D_U*dt/(dx*dx)
+    alpha_y_U = D_U*dt/(dy*dy)
+    
+    alpha_x_V = D_V*dt/(dx*dx)
+    alpha_y_V = D_V*dt/(dy*dy)
+
+
+    A_U = numpy.diagflat([-alpha_x_U for j in range(J-1)], -1)+\
+        numpy.diagflat([1.+alpha_x_U]+[1.+2.*alpha_x_U for j in range(J-2)]+[1.+alpha_x_U], 0)+\
+        numpy.diagflat([-alpha_x_U for j in range(J-1)], 1)
+        
+    C_U = numpy.diagflat([-alpha_y_U for i in range(I-1)], -1)+\
+          numpy.diagflat([1.+alpha_y_U]+[1.+2.*alpha_y_U for i in range(I-2)]+[1.+alpha_y_U], 0)+\
+          numpy.diagflat([-alpha_y_U for i in range(I-1)], 1)
+            
+    A_V = numpy.diagflat([-alpha_x_V for j in range(J-1)], -1)+\
+        numpy.diagflat([1.+alpha_x_V]+[1.+2.*alpha_x_V for j in range(J-2)]+[1.+alpha_x_V], 0)+\
+        numpy.diagflat([-alpha_x_V for j in range(J-1)], 1)
+        
+    C_V = numpy.diagflat([-alpha_y_V for i in range(I-1)], -1)+\
+          numpy.diagflat([1.+alpha_y_V]+[1.+2.*alpha_y_V for i in range(I-2)]+[1.+alpha_y_V], 0)+\
+          numpy.diagflat([-alpha_y_V for i in range(I-1)], 1)
+
+
+    f_vec = lambda U, V: numpy.multiply(dt, numpy.subtract(numpy.multiply(V, 
+                         numpy.add(k0, numpy.divide(numpy.multiply(U,U), numpy.add(1., numpy.multiply(U,U))))), U))
+    
+    k0 = 0.067
+
+
+    b_t_stencil_U = numpy.array([[(1.-alpha_y_U) for j in range(J)],
+                                 [alpha_y_U for j in range(J)]])
+    b_c_stencil_U = numpy.array([[alpha_y_U for j in range(J)],
+                                 [1.-2.*alpha_y_U for j in range(J)],
+                                 [alpha_y_U for j in range(J)]])
+    b_b_stencil_U = numpy.array([[alpha_y_U for j in range(J)],
+                                 [(1.-alpha_y_U) for j in range(J)]])
+    
+    b_t_stencil_V = numpy.array([[(1.-alpha_y_V) for j in range(J)],
+                                 [alpha_y_V for j in range(J)]])
+    b_c_stencil_V = numpy.array([[alpha_y_V for j in range(J)],
+                                 [1.-2.*alpha_y_V for j in range(J)],
+                                 [alpha_y_V for j in range(J)]])
+    b_b_stencil_V = numpy.array([[alpha_y_V for j in range(J)],
+                                 [(1.-alpha_y_V) for j in range(J)]])
+    
+    f_curr = f(U,V)
+    
+    def b_U(i):
+        if i <= I-2 and i >= 1:
+            U_y = U[[i+1, i, i-1], :]
+            return numpy.add(U_y+b_c_stencil_U, f_curr[[i+1, i, i-1], :]).sum(axis=0)
+        elif i == I-1:
+            U_y = U[[I-1, I-2], :]
+            return numpy.add(U_y+b_t_stencil_U, f_curr[[I-1, I-2], :]).sum(axis=0)
+        elif i == 0:
+            U_y = U[[1, 0], :]
+            return numpy.add(U_y+b_b_stencil_U, f_curr[[1, 0], :]).sum(axis=0)
+        
+    def b_V(i):
+        if i <= I-2 and i >= 1:
+            V_y = V[[i+1, i, i-1], :]
+            return numpy.add(V_y+b_c_stencil_V, f_curr[[i+1, i, i-1], :]).sum(axis=0)
+        elif i == I-1:
+            V_y = V[[I-1, I-2], :]
+            return numpy.add(V_y+b_t_stencil_V, f_curr[[I-1, I-2], :]).sum(axis=0)
+        elif i == 0:
+            V_y = V[[1, 0], :]
+            return numpy.add(V_y+b_b_stencil_V, f_curr[[1, 0], :]).sum(axis=0)
+
+
+    numpy.linalg.solve(A, b_U(0))
+
+    array([  54.714724  ,   55.25042972,   56.33706168,   57.98426118,
+             60.20635023,   63.02986304,   66.47710598,   70.58939494,
+             75.40022933,   80.9673746 ,   87.34757575,   94.6048406 ,
+            102.81416575,  112.05900553,  122.43350823,  134.02121346,
+            146.96230295,  160.84817102,  159.56797494,  159.90177877,
+            161.85177784,  165.28713763,  170.37389138,  177.18500712,
+            185.78990942,  196.23310272,  208.6632231 ,  215.11512097,
+            223.72896304,  234.61098759,  247.20901905,  262.31458036,
+            280.08164015,  300.58373665,  298.77153646,  299.98741957,
+            304.23993722,  311.55700462,  320.8107233 ,  333.32209491,
+            349.21872655,  368.63959346,  391.80570462,  355.2372413 ,
+            322.27276918,  292.57921192,  265.78799108,  241.66002915,
+            218.84403963,  198.19823191,  179.56039514,  162.74055687,
+            147.56727522,  133.70166181,  121.18129297,  109.88385729,
+             99.67876762,   90.47745603,   82.17679059,   74.70150841,
+             67.97541513,   61.9299528 ,   56.49879025,   51.61670521,
+             47.244502  ,   43.34161898,   39.82944649,   36.71101767,
+             33.75639149,   31.13360733,   28.31416878,   25.77110054,
+             23.47848144,   21.39678548,   19.52095204,   17.83186103,
+             16.31229588,   14.9467679 ,   13.7213585 ,   12.62357553,
+             11.64223111,   10.76726919,    9.98982488,    9.3019734 ,
+              8.69669468,    8.16600012,    7.70630888,    7.31292036,
+              6.98183752,    6.63212981,    6.33718047,    6.08211195,
+              5.76917204,    5.50280458,    5.28029158,    5.09935233,
+              4.95815374,    4.85355401,    4.78266555,    4.7465165 ])
+
+
