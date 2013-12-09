@@ -1,10 +1,8 @@
 ---
 layout: nil
 ---
-<!-- 
-based on sitemap.xml created by Toni Uebernickel  
-https://github.com/havvg/havvg.github.com/blob/master/sitemap.xml
--->
+<!-- based on sitemap.xml created by Toni Uebernickel -->
+<!-- https://github.com/havvg/havvg.github.com/blob/master/sitemap.xml -->
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for post in site.posts %}
