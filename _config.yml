@@ -7,6 +7,13 @@ navigation:
   - text: Imprint
     url: /imprint.html
 baseurl: http://georg.io
+description: "Personal webpage by Georg R Walther. \
+              I discuss programming and data anlysis in Python, C, JavaScript, \
+              and other languages. \
+              My main interests lie with numerical methods / numerical analysis, \
+              consuming web API services, and tinkering with web applications. \
+              I strive to learn more about data analysis, \
+              statistical analysis, and machine learning."              
 author:
   name: Georg R Walther
   email: contact@georg.io
