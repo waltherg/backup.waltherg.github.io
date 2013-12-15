@@ -127,7 +127,7 @@ how fast a volume element travels, depend
 on our system of interest, its system parameters and so forth.
 
 We do, however, know what our domain looks like initially (it's simply the
-interval $[0, L(0)]$) and so we impose
+interval $\[0, L(0)\]$) and so we impose
 the following initial condition on $G$:
 
 $$G(X,0) = X,$$
@@ -252,10 +252,10 @@ Using the [square bracket notation for
 units](http://physics.stackexchange.com/a/77691/20924), we can express
 this as
 
-$$[X] = [t a_0] = [t][X] / [t].$$
+$$\[X\] = \[t a_0\] = \[t\]\[X\] / \[t\].$$
 
 To meet this equivalence in units, let us rewrite our local growth velocity  as
-$a(X,t) = X \alpha(X,t)$ where the units of $[\alpha(X,t)] = 1/[t]$ -
+$a(X,t) = X \alpha(X,t)$ where the units of $\[\alpha(X,t)\] = 1/\[t\]$ -
 assigning to $\alpha(X,t)$ the meaning of a
 [rate](http://en.wikipedia.org/wiki/Rate_(mathematics))
 ("per unit time").
