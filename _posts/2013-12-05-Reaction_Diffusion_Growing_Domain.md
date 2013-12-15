@@ -8,7 +8,7 @@ tags: wip
 # Reaction-Diffusion Systems on Growing Domains
 
 Here I will discuss the same reaction-diffusion system in one space dimension
-[as I considered previously](http://georg.io/2013/12/03/Crank_Nicolson.html
+[as I considered previously](http://georg.io/2013/12/Crank_Nicolson
 #a_cranknicolson_example_in_python).
 
 While in my previous blog post I discussed integrating this system numerically
@@ -42,7 +42,7 @@ In all of this I will follow the framework provided by Crampin *et al.*
 ## Reaction-Diffusion System
 
 As a brief recap, this is the system we discussed
-[previously](http://georg.io/2013/12/03/Crank_Nicolson.html)
+[previously](http://georg.io/2013/12/Crank_Nicolson)
 
 $$\frac{\partial u}{\partial t} = D_u \frac{\partial^2 u}{\partial x^2} +
 f(u,v),$$
@@ -416,7 +416,7 @@ However, the `J+1` endpoints will move as we express those in space coordinates.
     D_v = float(10.)/float(100.)
     D_u = 0.01 * D_v
 
-[As before](http://georg.io/2013/12/Crank_Nicolson/), we express the
+[As before](http://georg.io/2013/12/Crank_Nicolson), we express the
 reaction term as a vector.
 
 
@@ -554,7 +554,7 @@ would rather do the following:
                                                                            numpy.divide(V,g))))
 
 As opposed to [our previous
-derivation](http://georg.io/2013/12/Crank_Nicolson_Convection_Diffusion/),
+derivation](http://georg.io/2013/12/Crank_Nicolson_Convection_Diffusion),
 the sigma constants that we fill the non-zero elements of our tridiagonal
 matrices with are
 functions of $g$:
@@ -597,7 +597,7 @@ However, for the time being we will apply our stencil and boundary conditions
 without modification.
 
 This concludes our derivation of [constants
-$\rho$](http://georg.io/2013/12/Crank_Nicolson_Convection_Diffusion/)
+$\rho$](http://georg.io/2013/12/Crank_Nicolson_Convection_Diffusion)
 that are now functions of $g_X$ and $a$.
 
 
@@ -798,7 +798,7 @@ for the time being, will plot `U` against material coordinates `X_grid`.
 
 As we can see, polarity is lost contrary to what happens on
 [a domain of fixed size under the same
-conditions](http://georg.io/2013/12/Crank_Nicolson/).
+conditions](http://georg.io/2013/12/Crank_Nicolson).
 
 Since we also know that the total amount of protein remains roughly constants,
 we can conclude
