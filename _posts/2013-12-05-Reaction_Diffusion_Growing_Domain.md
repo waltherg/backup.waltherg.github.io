@@ -579,7 +579,7 @@ As for our approximation of $a_X$, I would be inclined to divide by $\Delta X$
 rather than $2 \Delta X$
 at the boundaries:
 
-```
+```python
 rho_u_func = lambda g, a: numpy.multiply(float(-dt)/float(4.*dX),
 
                                       numpy.add(numpy.divide(a, g),
