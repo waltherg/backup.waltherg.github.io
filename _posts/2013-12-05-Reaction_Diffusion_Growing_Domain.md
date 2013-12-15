@@ -448,7 +448,7 @@ Note that we plot `U` and `V` against the `J` midpoints stored in `X_grid`.
     pyplot.show()
 
 
-![png]({{site.imgbase}}}/2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_27_0.png)
+![png]({{site.imgbase}}/2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_27_0.png)
 
 
 The initial condition on `g` is as described above and just a horizontal line.
@@ -459,7 +459,7 @@ The initial condition on `g` is as described above and just a horizontal line.
     pyplot.show()
 
 
-![png]({{site.imgbase}}}/2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_29_0.png)
+![png]({{site.imgbase}}/2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_29_0.png)
 
 
 Note that we need to write `a` as a function of `U` so that the values of
@@ -473,7 +473,7 @@ Given the initial condition on `U`, `a(U)` looks as follows initially.
     pyplot.show()
 
 
-![png]({{site.imgbase}}}/2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_31_0.png)
+![png]({{site.imgbase}}/2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_31_0.png)
 
 
 If you check again our equations in material coordinates you will notice that we
@@ -809,7 +809,7 @@ for the time being, will plot `U` against material coordinates `X_grid`.
     colorbar.set_label('concentration U')
 
 
-![png]({{site.imgbase}}}/2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_64_0.png)
+![png]({{site.imgbase}}2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_64_0.png)
 
 
 As we can see, polarity is lost contrary to what happens on
@@ -837,7 +837,7 @@ Let us also take a look at how the local growth velocity `a` behaves over time:
     colorbar.set_label('local growth velocity a(X,t)')
 
 
-![png]({{site.imgbase}}}/2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_67_0.png)
+![png]({{site.imgbase}}/2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_67_0.png)
 
 
 We can see that the local growth velocity of the volume elements $X$ shadows the
