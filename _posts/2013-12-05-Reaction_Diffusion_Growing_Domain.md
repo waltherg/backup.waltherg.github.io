@@ -8,8 +8,8 @@ tags: wip
 # Reaction-Diffusion Systems on Growing Domains
 
 Here I will discuss the same reaction-diffusion system in one space dimension
-[as I considered previously](http://georg.io/2013/12/03/Crank_Nicolson.html#a_cr
-anknicolson_example_in_python).
+[as I considered previously](http://georg.io/2013/12/03/Crank_Nicolson.html
+#a_cranknicolson_example_in_python).
 
 While in my previous blog post I discussed integrating this system numerically
 on a one-dimensional domain of
