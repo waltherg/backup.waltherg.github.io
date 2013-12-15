@@ -793,7 +793,7 @@ for the time being, will plot `U` against material coordinates `X_grid`.
     colorbar.set_label('concentration U')
 
 
-![png]({{site.imgbase}}2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_64_0.png)
+![png]({{site.imgbase}}/2013-12-05-Reaction_Diffusion_Growing_Domain_files/2013-12-05-Reaction_Diffusion_Growing_Domain_64_0.png)
 
 
 As we can see, polarity is lost contrary to what happens on
