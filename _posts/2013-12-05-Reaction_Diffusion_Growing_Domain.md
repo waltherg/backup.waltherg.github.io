@@ -764,9 +764,6 @@ Our initial conditions were chosen so that the total protein mass equals `2.26`:
 
     sum(numpy.multiply(numpy.diff(x_record[0]),U_record[0]) + numpy.multiply(numpy.diff(x_record[0]),V_record[0]))
 
-
-
-
     2.2599999999999962
 
 
@@ -777,9 +774,6 @@ figure - hence we can have some confidence in the accuracy of our results:
 
 
     sum(numpy.multiply(numpy.diff(x_record[-1]),U_record[-1]) + numpy.multiply(numpy.diff(x_record[-1]),V_record[-1]))
-
-
-
 
     2.2244799098191379
 
@@ -838,9 +832,6 @@ concentration of `U` - just as we defined above.
 
 
     max(a_record[-1])
-
-
-
 
     0.00017910058794305358
 
