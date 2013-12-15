@@ -7,7 +7,7 @@ navigation:
   - text: Imprint
     url: /imprint.html
 baseurl: http://georg.io
-imgbase: https://dl.dropboxusercontent.com/u/129945779/georgio/
+imgbase: https://dl.dropboxusercontent.com/u/129945779/georgio
 description: "Personal webpage by Georg R Walther. \
               I discuss programming and data anlysis in Python, C, JavaScript, \
               and other languages. \
