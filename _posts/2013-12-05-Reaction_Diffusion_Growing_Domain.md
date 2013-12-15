@@ -581,18 +581,31 @@ at the boundaries:
 
 ```
 rho_u_func = lambda g, a: numpy.multiply(float(-dt)/float(4.*dX),
+
                                       numpy.add(numpy.divide(a, g),
+                                      
 numpy.multiply(numpy.subtract(g_left(g), g_right(g)),
+
 numpy.divide([float(D_u)/dX]+
+
 [float(D_u)/(2.*dX) for j in range(1,J-1)]+
+
 [float(D_u)/dX],
+
 numpy.power(g, 3)))))
+
 rho_v_func = lambda g, a: numpy.multiply(float(-dt)/float(4.*dX),
+
                                       numpy.add(numpy.divide(a, g),
+                                      
 numpy.multiply(numpy.subtract(g_left(g), g_right(g)),
+
 numpy.divide([float(D_v)/dX]+
+
 [float(D_v)/(2.*dX) for j in range(1,J-1)]+
+
 [float(D_v)/dX],
+
 numpy.power(g, 3)))))
 ```
 
