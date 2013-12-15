@@ -524,20 +524,19 @@ so to me it would seem more natural to divide by $\Delta X$ rather than $2
 
 This can be achieved with the following bit of code:
 
-```
-f_vec_u = lambda U, V, g, a: numpy.subtract(f_vec(U, V),
-numpy.multiply(numpy.subtract(a_left(a), a_right(a)),
-numpy.multiply([float(dt)/(float(dX))]+
-[float(dt)/(float(2.*dX)) for j in range(1,J-1)]+
-[float(dt)/(float(dX))],
-numpy.divide(U,g))))
-f_vec_v = lambda U, V, g, a: numpy.subtract(numpy.multiply(-1., f_vec(U, V)),
-numpy.multiply(numpy.subtract(a_left(a), a_right(a)),
-numpy.multiply([float(dt)/(float(dX))]+
-[float(dt)/(float(2.*dX)) for j in range(1,J-1)]+
-[float(dt)/(float(dX))],
-numpy.divide(V,g))))
-```
+    f_vec_u = lambda U, V, g, a: numpy.subtract(f_vec(U, V),
+    numpy.multiply(numpy.subtract(a_left(a), a_right(a)),
+    numpy.multiply([float(dt)/(float(dX))]+
+    [float(dt)/(float(2.*dX)) for j in range(1,J-1)]+
+    [float(dt)/(float(dX))],
+    numpy.divide(U,g))))
+    f_vec_v = lambda U, V, g, a: numpy.subtract(numpy.multiply(-1., f_vec(U, V)),
+    numpy.multiply(numpy.subtract(a_left(a), a_right(a)),
+    numpy.multiply([float(dt)/(float(dX))]+
+    [float(dt)/(float(2.*dX)) for j in range(1,J-1)]+
+    [float(dt)/(float(dX))],
+    numpy.divide(V,g))))
+
 
 However, applying our finitie differences stencil and boundary conditions
 rigorously to $a_X$ we
@@ -579,35 +578,20 @@ As for our approximation of $a_X$, I would be inclined to divide by $\Delta X$
 rather than $2 \Delta X$
 at the boundaries:
 
-```python
-rho_u_func = lambda g, a: numpy.multiply(float(-dt)/float(4.*dX),
-
+    rho_u_func = lambda g, a: numpy.multiply(float(-dt)/float(4.*dX),
+                                      numpy.add(numpy.divide(a, g),             
+    numpy.multiply(numpy.subtract(g_left(g), g_right(g)),
+    numpy.divide([float(D_u)/dX]+
+    [float(D_u)/(2.*dX) for j in range(1,J-1)]+
+    [float(D_u)/dX],
+    numpy.power(g, 3)))))
+    rho_v_func = lambda g, a: numpy.multiply(float(-dt)/float(4.*dX),
                                       numpy.add(numpy.divide(a, g),
-                                      
-numpy.multiply(numpy.subtract(g_left(g), g_right(g)),
-
-numpy.divide([float(D_u)/dX]+
-
-[float(D_u)/(2.*dX) for j in range(1,J-1)]+
-
-[float(D_u)/dX],
-
-numpy.power(g, 3)))))
-
-rho_v_func = lambda g, a: numpy.multiply(float(-dt)/float(4.*dX),
-
-                                      numpy.add(numpy.divide(a, g),
-                                      
-numpy.multiply(numpy.subtract(g_left(g), g_right(g)),
-
-numpy.divide([float(D_v)/dX]+
-
-[float(D_v)/(2.*dX) for j in range(1,J-1)]+
-
-[float(D_v)/dX],
-
-numpy.power(g, 3)))))
-```
+    numpy.multiply(numpy.subtract(g_left(g), g_right(g)),
+    numpy.divide([float(D_v)/dX]+
+    [float(D_v)/(2.*dX) for j in range(1,J-1)]+
+    [float(D_v)/dX],
+    numpy.power(g, 3)))))
 
 However, for the time being we will apply our stencil and boundary conditions
 without modification.
