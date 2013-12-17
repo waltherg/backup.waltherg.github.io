@@ -141,32 +141,32 @@ Let us now take a look at the results!
         print ''
 
     
-    Cosine Similarity: 0.89
-    [Title 1: MYRF Is a Membrane-Associated Transcription Factor That Autoproteolytically Cleaves to Directly Activate Myelin Genes](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001625)
+**Cosine Similarity: 0.89**
+[Title 1: MYRF Is a Membrane-Associated Transcription Factor That Autoproteolytically Cleaves to Directly Activate Myelin Genes](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001625)
     
-    [Title 2: A Bacteriophage Tailspike Domain Promotes Self-Cleavage of a Human Membrane-Bound Transcription Factor, the Myelin Regulatory Factor MYRF](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001624)
-    
-    
-    Cosine Similarity: 0.92
-    [Title 1: Gamma-Secretase Represents a Therapeutic Target for the Treatment of Invasive Glioma Mediated by the p75 Neurotrophin Receptor](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060289)
-    
-    [Title 2: The p75 Neurotrophin Receptor Is a Central Regulator of Glioma Invasion](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0050212)
+[Title 2: A Bacteriophage Tailspike Domain Promotes Self-Cleavage of a Human Membrane-Bound Transcription Factor, the Myelin Regulatory Factor MYRF](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001624)
     
     
-    Cosine Similarity: 0.86
-    [Title 1: Coupling of a Core Post-Translational Pacemaker to a Slave Transcription/Translation Feedback Loop in a Circadian System](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1000394)
+**Cosine Similarity: 0.92**
+[Title 1: Gamma-Secretase Represents a Therapeutic Target for the Treatment of Invasive Glioma Mediated by the p75 Neurotrophin Receptor](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060289)
     
-    [Title 2: Elucidating the Ticking of an In Vitro Circadian Clockwork](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0050093)
-    
-    
-    Cosine Similarity: 0.86
-    [Title 1: PICK1 and ICA69 Control Insulin Granule Trafficking and Their Deficiencies Lead to Impaired Glucose Tolerance](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001541)
-    
-    [Title 2: PICK1 Deficiency Impairs Secretory Vesicle Biogenesis and Leads to Growth Retardation and Decreased Glucose Tolerance](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001542)
+[Title 2: The p75 Neurotrophin Receptor Is a Central Regulator of Glioma Invasion](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0050212)
     
     
-    Cosine Similarity: 0.91
-    [Title 1: Insights into Mad2 Regulation in the Spindle Checkpoint Revealed by the Crystal Structure of the Symmetric Mad2 Dimer](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060050)
+**Cosine Similarity: 0.86**
+[Title 1: Coupling of a Core Post-Translational Pacemaker to a Slave Transcription/Translation Feedback Loop in a Circadian System](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1000394)
     
-    [Title 2: The Influence of Catalysis on Mad2 Activation Dynamics](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1000010)
+[Title 2: Elucidating the Ticking of an In Vitro Circadian Clockwork](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0050093)
+    
+    
+**Cosine Similarity: 0.86**
+[Title 1: PICK1 and ICA69 Control Insulin Granule Trafficking and Their Deficiencies Lead to Impaired Glucose Tolerance](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001541)
+    
+[Title 2: PICK1 Deficiency Impairs Secretory Vesicle Biogenesis and Leads to Growth Retardation and Decreased Glucose Tolerance](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001542)
+    
+    
+**Cosine Similarity: 0.91**
+[Title 1: Insights into Mad2 Regulation in the Spindle Checkpoint Revealed by the Crystal Structure of the Symmetric Mad2 Dimer](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060050)
+    
+[Title 2: The Influence of Catalysis on Mad2 Activation Dynamics](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1000010)
     
