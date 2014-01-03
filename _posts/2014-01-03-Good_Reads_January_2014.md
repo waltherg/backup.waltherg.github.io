@@ -12,19 +12,19 @@ tags: links reads
 [http://www.slideshare.net/AmgadMuhammad/unsupervised-feature-learning](http://www.slideshare.net/AmgadMuhammad/unsupervised-feature-learning)
 
 - Autoencoders
-    -- These are neural networks whose weights are trained (using backpropagation)
+    - These are neural networks whose weights are trained (using backpropagation)
     to reproduce the input in the output (the weights are trained so that the
     final network is a good representation of the input)
-    -- A sparsity condition, enforced with the Kullback-Leibler divergence is
+    - A sparsity condition, enforced with the Kullback-Leibler divergence is
     used to constrain the activity of the hidden neurons
 - Principal Component Analysis
 - Whitening
-    -- Scale features so that they all have unit variance
+    - Scale features so that they all have unit variance
 - Self-Taught Learning and Unsupervised Feature Learning
-    -- Train autoencoder on unlabeled data to get condensed representation of
+    - Train autoencoder on unlabeled data to get condensed representation of
     the data
-    -- Condensed because the number of hidden nodes is chosen to be less than
+    - Condensed because the number of hidden nodes is chosen to be less than
     the number of input (and equally output) nodes?
-    -- Feed labeled data to trained autoencoder and replace input with
+    - Feed labeled data to trained autoencoder and replace input with
     activation of hidden nodes - this condenses our representation of the input
     to the (fewer) hidden neurons
