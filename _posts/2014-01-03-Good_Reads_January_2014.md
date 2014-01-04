@@ -7,6 +7,35 @@ tags: links reads
 
 # Good Reads January 2014
 
+## Recursive Neural Networks
+
+[Socher *et al.*](http://nlp.stanford.edu/pubs/SocherLinNgManning_ICML2011.pdf)
+
+[Yoshua Bengio](http://nlp.stanford.edu/pubs/SocherLinNgManning_ICML2011.pdf)
+
+* Recursive structure in scenes and natural language
+  (Principle of Compositionality)
+
+    * The 'whole' (sentence, image) can be split into hierarchical regions
+      (noun phrases, words, objects) that may occur in different 'whole'
+      objects
+    * Meaning of a sentence is given by its words and the rules that combine
+      these words.
+      
+* Composite vector representation
+
+    * Representation of a sentence in a vector space that represents
+      the vocabulary.
+      
+* Recursive neural networks jointly learn compositional vector representations
+  and parse trees
+
+* Generate a parse tree of the sentence using a standard tokenizer,
+  the tokens are the leaves of the parse tree
+* Iteratively, choose two child nodes and decide if you want to combine them
+  into their parent node which is the semantic representation of the child
+  nodes - also produce a score of how plausible the new parent node is
+  
 ## Unsupervised Feature Learning - Amgad Muhammed
 
 [http://www.slideshare.net/AmgadMuhammad/unsupervised-feature-learning](http://www.slideshare.net/AmgadMuhammad/unsupervised-feature-learning)
@@ -38,3 +67,4 @@ tags: links reads
       activation of hidden nodes - this condenses our 
       representation of the input
       to the (fewer) hidden neurons
+
