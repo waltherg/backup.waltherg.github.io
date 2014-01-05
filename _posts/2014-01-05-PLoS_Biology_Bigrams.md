@@ -196,5 +196,5 @@ After filtering, the six most frequent bigrams are the following:
      (u'amino', u'acid'),
      (u'scale', u'bar')]
 
-The most frequent bigram is listed first hence, the most frequent bigram in the
+The most frequent bigram is listed first hence the most frequent bigram in the
 PLoS Biology articles in my dataset is **unpublished data**.
