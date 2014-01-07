@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /2013/12/04/Crank_Nicolson_Variable_Diffusivity.html
+Disallow: /2013/09/21/PLoS_ONE_Citation_Counts_Crossref.html
+Disallow: /2013/12/02/Structuring_PLoS_API_Data.html
+Disallow: /2013/12/08/Python_Built_In_Functions.html
+Disallow: /2013/12/05/Reaction_Diffusion_Growing_Domain.html
+Disallow: /2013/12/06/Alternating_Direction_Implicit_Method.html
+Disallow: /2013/12/04/Crank_Nicolson_Convection_Diffusion.html
+Disallow: /2013/11/26/how-this-page-was-made.html
+Disallow: /2013/10/06/PLoS_Time_to_Publication.html
+Disallow: /2013/12/03/Crank_Nicolson.html
