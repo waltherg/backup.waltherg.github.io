@@ -8,13 +8,10 @@ navigation:
     url: /imprint.html
 baseurl: http://georg.io
 imgbase: https://dl.dropboxusercontent.com/u/129945779/georgio
-description: "Personal webpage by Georg R Walther. \
-              I discuss programming and data analysis in Python, C, JavaScript, \
-              and other languages. \
-              My main interests lie with numerical methods / numerical analysis, \
-              consuming web API services, and tinkering with web applications. \
-              I strive to learn more about data analysis, \
-              statistical analysis, and machine learning."              
+description: "Personal weblog of Georg R Walther. \
+              Programming, data analysis, data visualization, machine learning, \
+              modelling, dynamical systems, numerical analysis, and
+              web applications in Python, C, and JavaScript."
 author:
   name: Georg R Walther
   email: contact@georg.io
