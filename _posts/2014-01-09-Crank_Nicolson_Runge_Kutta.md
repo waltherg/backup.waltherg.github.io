@@ -135,7 +135,7 @@ Let us take a look at the inhomogeneous initial condition:
     pyplot.show()
 
 
-![png]({{imgbase}}/2014-01-09-Crank_Nicolson_Runge_Kutta_files/2014-01-09-Crank_Nicolson_Runge_Kutta_9_0.png)
+![png]({{site.imgbase}}/2014-01-09-Crank_Nicolson_Runge_Kutta_files/2014-01-09-Crank_Nicolson_Runge_Kutta_9_0.png)
 
 
 These are the matrices of our system of linear equations whose derivation
@@ -244,7 +244,7 @@ same pictures).
     pyplot.show()
 
 
-![png]({{imgbase}}/2014-01-09-Crank_Nicolson_Runge_Kutta_files/2014-01-09-Crank_Nicolson_Runge_Kutta_22_0.png)
+![png]({{site.imgbase}}/2014-01-09-Crank_Nicolson_Runge_Kutta_files/2014-01-09-Crank_Nicolson_Runge_Kutta_22_0.png)
 
 
 Kymograph of `U` integrated with the explicit Euler method.
@@ -259,7 +259,7 @@ Kymograph of `U` integrated with the explicit Euler method.
     colorbar.set_label('concentration U')
 
 
-![png]({{imgbase}}/2014-01-09-Crank_Nicolson_Runge_Kutta_files/2014-01-09-Crank_Nicolson_Runge_Kutta_24_0.png)
+![png]({{site.imgbase}}/2014-01-09-Crank_Nicolson_Runge_Kutta_files/2014-01-09-Crank_Nicolson_Runge_Kutta_24_0.png)
 
 
 Kymograph of `U` integrated with the Runge-Kutta 4 method.
@@ -274,5 +274,5 @@ Kymograph of `U` integrated with the Runge-Kutta 4 method.
     colorbar.set_label('concentration U')
 
 
-![png]({{imgbase}}/2014-01-09-Crank_Nicolson_Runge_Kutta_files/2014-01-09-Crank_Nicolson_Runge_Kutta_26_0.png)
+![png]({{site.imgbase}}/2014-01-09-Crank_Nicolson_Runge_Kutta_files/2014-01-09-Crank_Nicolson_Runge_Kutta_26_0.png)
 
