@@ -68,7 +68,7 @@ $$k_4 = f\left( U_j^n + \Delta t k_3 \right).$$
 
 Whether or not doing this makes sense theoretically I am not certain. But going
 ahead and implementing this
-to the numerical example we discussed
+for the numerical example we discussed
 [earlier](http://georg.io/2013/12/Crank_Nicolson) seems to suggest
 that this does work.
 
