@@ -181,63 +181,61 @@ condense scientific articles.
                     print ' '.join(sentence)
             print '\n'
 
-    Title: Use of a Dense Single Nucleotide Polymorphism Map for In Silico Mapping in the Mouse
-    http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0020393
-    We have shown that they can be used to identify Mendelian traits and replicate classical QTL associations.
+[Use of a Dense Single Nucleotide Polymorphism Map for In Silico Mapping in the Mouse](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0020393):
+
+- We have shown that they can be used to identify Mendelian traits and replicate classical QTL associations.
     
     
-    Title: Translation Repression in Human Cells by MicroRNA-Induced Gene Silencing Requires RCK/p54
-    http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0040210
-    We have shown that depletion of RCK/p54 disrupts P-bodies and disperses the cytoplasmic localization of Ago2.
+[Translation Repression in Human Cells by MicroRNA-Induced Gene Silencing Requires RCK/p54](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0040210):
+
+- We have shown that depletion of RCK/p54 disrupts P-bodies and disperses the cytoplasmic localization of Ago2.
     
     
-    Title: SIRT1 Regulates HIV Transcription via Tat Deacetylation
-    http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0030041
-    We and others have shown that Tat is acetylated at lysine 50 by the transcriptional coactivators p300 and human GCN5 (general control of amino acid synthesis 5) [ 7 , 8 , 9 , 10 ].
+[SIRT1 Regulates HIV Transcription via Tat Deacetylation](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0030041):
+
+- We and others have shown that Tat is acetylated at lysine 50 by the transcriptional coactivators p300 and human GCN5 (general control of amino acid synthesis 5) [ 7 , 8 , 9 , 10 ].
     
     
-    Title: HIV-1 Tat Stimulates Transcription Complex Assembly through Recruitment of TBP in the Absence of TAFs
-    http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0030044
-    Tat and P-TEFb Direct Recruitment of TBP in the Absence of TAFs We have shown that transcription from the HIV-1 LTR involves TBP but not TFIID.
-    However, we have shown that when tethered to DNA or nascent RNA, P-TEFb can also stimulate TC assembly and dictate the composition of the TC.
+[HIV-1 Tat Stimulates Transcription Complex Assembly through Recruitment of TBP in the Absence of TAFs](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0030044):
+
+- Tat and P-TEFb Direct Recruitment of TBP in the Absence of TAFs We have shown that transcription from the HIV-1 LTR involves TBP but not TFIID.
+- However, we have shown that when tethered to DNA or nascent RNA, P-TEFb can also stimulate TC assembly and dictate the composition of the TC.
+    
+
+[Exdpf Is a Key Regulator of Exocrine Pancreas Development Controlled by Retinoic Acid and ptf1a in Zebrafish](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060293):
+
+- We have shown in our previous result that overexpression of exdpf increased exocrine cell number due to overproliferation of these cells ( Figure 5 B, [center]).
+- The exdpf Gene Acts Genetically Downstream of RA in Regulating Exocrine Pancreas Development We have shown that exdpf is essential for the exocrine pancreas differentiation and expansion; overexpression of exdpf gene leads to increased exocrine size.
     
     
-    Title: Exdpf Is a Key Regulator of Exocrine Pancreas Development Controlled by Retinoic Acid and ptf1a in Zebrafish
-    http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060293
-    We have shown in our previous result that overexpression of exdpf increased exocrine cell number due to overproliferation of these cells ( Figure 5 B, [center]).
-    The exdpf Gene Acts Genetically Downstream of RA in Regulating Exocrine Pancreas Development We have shown that exdpf is essential for the exocrine pancreas differentiation and expansion; overexpression of exdpf gene leads to increased exocrine size.
+[USP8 Promotes Smoothened Signaling by Preventing Its Ubiquitination and Changing Its Subcellular Localization](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001238):
+
+- Here, we have shown that Smo accumulates on the cell surface when Shi is inactivated, suggesting that Smo functions through Shi-mediated endocytosis.
     
     
-    Title: USP8 Promotes Smoothened Signaling by Preventing Its Ubiquitination and Changing Its Subcellular Localization
-    http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001238
-    Here, we have shown that Smo accumulates on the cell surface when Shi is inactivated, suggesting that Smo functions through Shi-mediated endocytosis.
+[Hedgehog-Regulated Ubiquitination Controls Smoothened Trafficking and Cell Surface Expression in Drosophila](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001239):
+
+- Using antibody uptake assay in S2 cells, we have shown that Smo reaches the cell surface but quickly internalizes in the absence of Hh and that Hh stimulation diminishes internalized Smo with a concomitant increase in cell surface Smo [13] .
     
     
-    Title: Hedgehog-Regulated Ubiquitination Controls Smoothened Trafficking and Cell Surface Expression in Drosophila
-    http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001239
-    Using antibody uptake assay in S2 cells, we have shown that Smo reaches the cell surface but quickly internalizes in the absence of Hh and that Hh stimulation diminishes internalized Smo with a concomitant increase in cell surface Smo [13] .
+[Raf Activation Is Regulated by Tyrosine 510 Phosphorylation in Drosophila](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060128):
+
+- We have shown that Src64B Δ17 mutant flies possess reduced Draf kinase activity (see Figure 1 B), which can be attributed to lack of tyrosine phosphorylation of Draf by Src64B (see Figure 1 C).
     
     
-    Title: Raf Activation Is Regulated by Tyrosine 510 Phosphorylation in Drosophila 
-    http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060128
-    We have shown that Src64B Δ17 mutant flies possess reduced Draf kinase activity (see Figure 1 B), which can be attributed to lack of tyrosine phosphorylation of Draf by Src64B (see Figure 1 C).
+[Notch-Deficient Skin Induces a Lethal Systemic B-Lymphoproliferative Disorder by Secreting TSLP, a Sentinel for Epidermal Integrity](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060123):
+
+- With this system, we have shown previously that Notch loss also involves non-cell autonomous alteration in transforming growth factor ß and insulin-like growth factor signaling [ 15 ].
     
     
-    Title: Notch-Deficient Skin Induces a Lethal Systemic B-Lymphoproliferative Disorder by Secreting TSLP, a Sentinel for Epidermal Integrity
-    http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060123
-    With this system, we have shown previously that Notch loss also involves non-cell autonomous alteration in transforming growth factor ß and insulin-like growth factor signaling [ 15 ].
+[Nongenetic Individuality in the Host–Phage Interaction](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060120):
+
+- We have shown that although persister λcI857KnR lysogens can survive the transient heat induction by being in a dormant state, they cannot survive infection, since the effect of the phage comes into action once persisters switch to normal growth.
+- Conclusion We have shown that the nongenetic individuality in the exit from stationary phase found in populations that persist intensive antibiotic treatments can dramatically affect the interaction between bacteria and λ-phages.
+- However, we have shown that lytic phages are able to infect persistent cells, wait for their switching back to the normally growing state, and then eliminate them by lysis.
     
     
-    Title: Nongenetic Individuality in the Host–Phage Interaction
-    http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060120
-    We have shown that although persister λcI857KnR lysogens can survive the transient heat induction by being in a dormant state, they cannot survive infection, since the effect of the phage comes into action once persisters switch to normal growth.
-    Conclusion We have shown that the nongenetic individuality in the exit from stationary phase found in populations that persist intensive antibiotic treatments can dramatically affect the interaction between bacteria and λ-phages.
-    However, we have shown that lytic phages are able to infect persistent cells, wait for their switching back to the normally growing state, and then eliminate them by lysis.
-    
-    
-    Title: A Feedback Loop between Dynamin and Actin Recruitment during Clathrin-Mediated Endocytosis
-    http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001302
-    As we have shown here productive CME scission events do occur in the presence of actin-disrupting drugs, similar to previous results [7] , [33] , [46] .
-    
-    
+[A Feedback Loop between Dynamin and Actin Recruitment during Clathrin-Mediated Endocytosis](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001302):
+
+- As we have shown here productive CME scission events do occur in the presence of actin-disrupting drugs, similar to previous results [7] , [33] , [46] .
 
