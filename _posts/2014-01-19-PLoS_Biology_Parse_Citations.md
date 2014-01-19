@@ -17,15 +17,13 @@ what is the citation count of
 each reference listed in the bibliography of peer-reviewed articles?
 
 This question touches upon
-[the observation](http://lemire.me/blog/archives/2013/11/18/not-all-citations-
-are-equal-identifying-key-citations-automatically/)
+[the observation](http://lemire.me/blog/archives/2013/11/18/not-all-citations-are-equal-identifying-key-citations-automatically/)
 that many references cited in a given article are rather shallow, i.e. the
 citing the author
 may not cite certain references for their ingenious influence on their study but
 rather for any number of alternate reasons.
 
-My current approach to this question is to use [regular
-expressions](https://en.wikipedia.org/wiki/Regular_expression) in an
+My current approach to this question is to use [regular expressions](https://en.wikipedia.org/wiki/Regular_expression) in an
 attempt to detect as many citations in a given article as possible.
 
 As I am rather unfamiliar with regular expressions and citation typography is
@@ -39,8 +37,7 @@ interpreted as approximations.
 able to contribute for better data collection.**
 (Just get in touch if you would like to contribute)
 
-To read the articles I have downloaded, I will use my own [helper
-library](https://github.com/waltherg/PLoSPy).
+To read the articles I have downloaded, I will use my own [helper library](https://github.com/waltherg/PLoSPy).
 
     import plospy
     import os
@@ -199,8 +196,7 @@ ignore:
 
 ![png]({{site.imgbase}}/2014-01-19-PLoS_Biology_Parse_Citations_files/2014-01-19-PLoS_Biology_Parse_Citations_12_1.png)
 
-[Daniel Lemire](http://lemire.me/blog/archives/2013/11/18/not-all-citations-are-
-equal-identifying-key-citations-automatically/)
+[Daniel Lemire](http://lemire.me/blog/archives/2013/11/18/not-all-citations-are-equal-identifying-key-citations-automatically/)
 and coauthors observed an average of 30 references cited per article.
 
 To see if our citation counts make any sense, let us see what average we
@@ -289,8 +285,7 @@ that we do not ignore (see above).
 ![png]({{site.imgbase}}/2014-01-19-PLoS_Biology_Parse_Citations_files/2014-01-19-PLoS_Biology_Parse_Citations_23_0.png)
 
 The bins in the above histograms
-[are *[1,2[*, *[2,3[*, etc.](https://stackoverflow.com/questions/15177203/how-
-is-the-pyplot-histogram-bins-interpreted)
+[are *[1,2[*, *[2,3[*, etc.](https://stackoverflow.com/questions/15177203/how-is-the-pyplot-histogram-bins-interpreted)
 so that, by far, the greatest number of times references are cited is once.
 
 However, as mentioned multiple times in this post, I need to go back and
