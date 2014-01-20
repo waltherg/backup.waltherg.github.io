@@ -225,22 +225,37 @@ in each article:
             print doi
             print citations[doi]['counter'].most_common(1)
 
-    10.1371/journal.pbio.0040362
-    [(16, 39)]
-    10.1371/journal.pbio.1001546
-    [(29, 47)]
-    10.1371/journal.pbio.0050092
-    [(1, 38)]
-    10.1371/journal.pbio.1001115
-    [(13, 32)]
-    10.1371/journal.pbio.1001126
-    [(41, 32)]
-    10.1371/journal.pbio.1000132
-    [(1, 42)]
-    10.1371/journal.pbio.1001524
-    [(18, 34)]
-    10.1371/journal.pbio.0060072
-    [(17, 42)]
+[10.1371/journal.pbio.0040362](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0040362)
+
+- [(16, 39)]
+
+[10.1371/journal.pbio.1001546](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001546)
+
+- [(29, 47)]
+    
+[10.1371/journal.pbio.0050092](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0050092)
+
+- [(1, 38)]
+    
+[10.1371/journal.pbio.1001115](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001115)
+
+- [(13, 32)]
+    
+[10.1371/journal.pbio.1001126](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001126)
+    
+- [(41, 32)]
+    
+[10.1371/journal.pbio.1000132](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1000132)
+    
+- [(1, 42)]
+    
+[10.1371/journal.pbio.1001524](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.1001524)
+    
+- [(18, 34)]
+    
+[10.1371/journal.pbio.0060072](http://www.plosbiology.org/article/info%3Adoi%2F10.1371/journal.pbio.0060072)
+    
+- [(17, 42)]
 
 Going through the above articles by hand, it is interesting to see that most of
 the counted citations
