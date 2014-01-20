@@ -285,7 +285,7 @@ that we do not ignore (see above).
 ![png]({{site.imgbase}}/2014-01-19-PLoS_Biology_Parse_Citations_files/2014-01-19-PLoS_Biology_Parse_Citations_23_0.png)
 
 The bins in the above histograms
-are *[1,2[*, *[2,3[*, etc.
+are \[1,2\[, \[2,3\[, etc.
 ([see this question](https://stackoverflow.com/questions/15177203/how-is-the-pyplot-histogram-bins-interpreted))
 so that, by far, the greatest number of times references are cited is once.
 
