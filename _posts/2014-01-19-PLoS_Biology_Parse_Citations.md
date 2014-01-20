@@ -257,7 +257,7 @@ in each article:
     
 - [(17, 42)]
 
-(Read the above output as [(reference number article, number of times this
+(Read the above output as [(reference number in article, number of times this
 reference is cited)])
 
 Going through the above articles by hand, it is interesting to see that most of
