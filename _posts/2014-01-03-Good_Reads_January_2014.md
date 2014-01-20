@@ -42,7 +42,7 @@ tags: links reads
 - mention type specifically when:
     - want to make type clear specifically
     - be specific about range or precision (`double` v. `float`)
-- *scopes:
+- *scopes*:
     - local: function, lambda
     - class: member names (class member names)
     - namespace: namespace member names (outside function, lambda, class)
