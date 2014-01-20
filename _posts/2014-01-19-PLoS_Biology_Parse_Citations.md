@@ -257,6 +257,9 @@ in each article:
     
 - [(17, 42)]
 
+(Read the above output as [(reference number article, number of times this
+reference is cited)])
+
 Going through the above articles by hand, it is interesting to see that most of
 the counted citations
 are actually real: reference 13 in *10.1371/journal.pbio.1001115* is actually
