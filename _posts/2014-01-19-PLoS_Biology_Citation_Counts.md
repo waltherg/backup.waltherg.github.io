@@ -266,11 +266,11 @@ are actually real: reference 13 in *10.1371/journal.pbio.1001115* is actually
 cited 32 times in the main text
 and once in the figure captions (the latter are not part of my data set).
 
-However, reference 1 in 10.1371/journal.pbio.1000132 occurs only five times in
+However, reference 1 in *10.1371/journal.pbio.1000132* occurs only five times in
 the main text while the string *[1]* as part of the table in the
-format that I downloaded these articles in occurs many more times.
+specific format that I downloaded these articles in occurs many more times.
 
-In the same article, 10.1371/journal.pbio.1000132, the editors seem to have made
+In the same article, *10.1371/journal.pbio.1000132*, the editors seem to have made
 use of a different typographical scheme for indicating
 ranges of references as in this article we find ranges such as *[1] - [3]* as
 opposed to the far more common *[1 - 3]*.
