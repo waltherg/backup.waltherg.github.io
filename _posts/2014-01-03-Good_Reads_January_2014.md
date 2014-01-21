@@ -83,6 +83,26 @@ tags: links reads
 - `<<` is *put to*, `>>` is *get from*
 - `cin`: standard input stream
 
+### Chapter 2
+
+- *user-defined types*: types that are built out of built-in C++ types
+- `struct`: data structure to organize elements
+- `new` allocates memory from the *free store* (*dynamic memory* or *heap*)
+- objects allocated on free store are independent of the scope they were
+  generated in and live until destroyed with `delete`
+- `.` (dot) used to access `struct` members through name,
+  `->` used to access `struct` members through a pointer
+- *classes*: offer tighter connection between data representation and
+  operations on data - classes keep implementation hidden from user
+  and present permitted functions to user
+- `public` members define the class interface
+- `private` members are accessible only through the defined interface
+- `operator`: allows to define operators for objects, such as indexing with
+  `operator[](int i)`
+- *constructor*: a function with the same name as its class, is guaranteed
+  to initialize objects of its class
+- *member initializer*: `Class(int s): member1 {s} {//empty function body}`
+
 ## Git: moving files between repositories
 
 [Blog post by Greg Bayer](http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/).
