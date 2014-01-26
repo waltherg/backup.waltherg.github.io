@@ -5,6 +5,15 @@ date: 2014-01-17
 tags: plos nltk
 ---
 
+# Update: Web Application in Development
+
+I started developing a web application based on the simple steps lined
+out in this blog post.
+I am entirely new to developing and deploying web applications so any
+feedback and criticism is greatly appreciated!
+
+Check out the app: [TLDRMed](http://tldrmed.com).
+
 # Most Frequent Author Actions in PLoS Biology Articles
 
 In a [previous blog post](http://georg.io/2014/01/PLoS_Biology_Author_Action) I
