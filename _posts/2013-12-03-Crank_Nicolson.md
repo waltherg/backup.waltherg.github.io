@@ -150,13 +150,13 @@ at $j=J-1$ with the
 [forward difference](http://en.wikipedia.org/wiki/Finite_difference#Forward.2C_b
 ackward.2C_and_central_differences):
 
-$$\frac{U_1^n - U_0^n}{\Delta x} = 0,$$
+$$\frac{U_0^n - U_{-1}^n}{\Delta x} = 0,$$
 
 $$\frac{U_J^n - U_{J-1}^n}{\Delta x} = 0.$$
 
 These two equations make it clear that we need to amend our above numerical
 approximation for
-$j=0$ with the identities $U_0^n = U_1^n$ and $U_0^{n+1} = U_1^{n+1}$, and
+$j=0$ with the identities $U_0^n = U_{-1}^n$ and $U_0^{n+1} = U_{-1}^{n+1}$, and
 for $j=J-1$ with the identities $U_{J-1}^n = U_J^n$ and $U_{J-1}^{n+1} =
 U_J^{n+1}$.
 
