@@ -270,6 +270,7 @@ text {
 </script>
 
 <script>
+
 var root = {
     "name": "plos",
     "children": [
