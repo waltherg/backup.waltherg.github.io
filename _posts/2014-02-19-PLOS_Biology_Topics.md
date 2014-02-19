@@ -198,24 +198,17 @@ Let us see what topics we find after lemmatizing all of our tokens.
     for article in articles_unfurled:
         articles_lemmatized.append([wnl.lemmatize(token) for token in article])
 
-
     pickle.dump(articles_lemmatized, open('plos_biology_articles_lemmatized.list', 'w'))
-
 
     dictionary_lemmatized = gensim.corpora.Dictionary(articles_lemmatized)
 
-
     dictionary_lemmatized.save('plos_biology_lemmatized.dict')
-
 
     dictionary_lemmatized.filter_extremes()
 
-
     corpus_lemmatized = [dictionary_lemmatized.doc2bow(article) for article in articles_lemmatized]
 
-
     gensim.corpora.MmCorpus.serialize('plos_biology_corpus_lemmatized.mm', corpus_lemmatized)
-
 
     model_lemmatized = gensim.models.ldamodel.LdaModel(corpus_lemmatized, id2word=dictionary_lemmatized, update_every=1, chunksize=100, passes=2, num_topics=20)
 
