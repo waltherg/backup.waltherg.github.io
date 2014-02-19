@@ -269,7 +269,8 @@ text {
 
 </script>
 
-<script type=text/javascript>
+<script type="text/javascript">
+
 var root = {
     "name": "plos",
     "children": [
