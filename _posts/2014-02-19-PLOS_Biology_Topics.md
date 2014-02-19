@@ -270,8 +270,911 @@ text {
 </script>
 
 <script>
-var root = {"name": "plos", "children": [{"name": "topic_1", "children": [{"name": "state", "size": 0.014027120760192772}, {"name": "network", "size": 0.0122754309070018}, {"name": "fluorescence", "size": 0.0069818890929627692}, {"name": "networks", "size": 0.0063824398216250468}, {"name": "dynamics", "size": 0.0063165510379729192}, {"name": "parameters", "size": 0.0062569057579803921}, {"name": "force", "size": 0.0059521217199271512}, {"name": "feedback", "size": 0.0053634819997756596}, {"name": "constant", "size": 0.0051344960645075127}, {"name": "rates", "size": 0.0049777773635393931}]}, {"name": "topic_2", "children": [{"name": "strains", "size": 0.019288758455905716}, {"name": "mrna", "size": 0.019129536696917433}, {"name": "strain", "size": 0.016924902356001123}, {"name": "motif", "size": 0.011603745579452832}, {"name": "splicing", "size": 0.0090241923574943816}, {"name": "yeast", "size": 0.0088613410885865079}, {"name": "exon", "size": 0.0085509191263928759}, {"name": "deletion", "size": 0.0074036730897024672}, {"name": "mutant", "size": 0.0070528255921478954}, {"name": "motifs", "size": 0.0065137716176034526}]}, {"name": "topic_3", "children": [{"name": "neurons", "size": 0.023955360683196321}, {"name": "embryos", "size": 0.01981370990711705}, {"name": "axons", "size": 0.0089215049359675953}, {"name": "dorsal", "size": 0.0081751200040579824}, {"name": "synaptic", "size": 0.0074853705979132804}, {"name": "axon", "size": 0.0065595867576193571}, {"name": "stage", "size": 0.005994851655044842}, {"name": "embryo", "size": 0.0059626695682523257}, {"name": "ventral", "size": 0.0058604029524139348}, {"name": "muscle", "size": 0.0057370171613367327}]}, {"name": "topic_4", "children": [{"name": "transcription", "size": 0.024016158772247796}, {"name": "promoter", "size": 0.012882150743487628}, {"name": "transcriptional", "size": 0.011537078888604623}, {"name": "mrna", "size": 0.01036319399223423}, {"name": "targets", "size": 0.0094187159119675946}, {"name": "chip", "size": 0.0079161367805673771}, {"name": "promoters", "size": 0.0076364615947420869}, {"name": "chromatin", "size": 0.0071839103394654566}, {"name": "regulation", "size": 0.0064638031139786639}, {"name": "regulatory", "size": 0.0055068911067800161}]}, {"name": "topic_5", "children": [{"name": "mutants", "size": 0.026943401007582728}, {"name": "animals", "size": 0.022416005729422414}, {"name": "rnai", "size": 0.017613142119984181}, {"name": "elegans", "size": 0.017327010580101554}, {"name": "mutant", "size": 0.013695650887971204}, {"name": "larvae", "size": 0.012560461966238768}, {"name": "worms", "size": 0.0097169901123682987}, {"name": "phenotype", "size": 0.0082521330322630881}, {"name": "pathway", "size": 0.0069054230126535309}, {"name": ":gfp", "size": 0.0064240699787520977}]}, {"name": "topic_6", "children": [{"name": "mice", "size": 0.015986624967884888}, {"name": "differentiation", "size": 0.01578319744647191}, {"name": "tumor", "size": 0.011129841970479714}, {"name": "proliferation", "size": 0.0088507838392918991}, {"name": "tumors", "size": 0.0083384303166775444}, {"name": "stem", "size": 0.0077956278442888414}, {"name": "adult", "size": 0.0076076053430986328}, {"name": "mouse", "size": 0.007176346158845881}, {"name": "hscs", "size": 0.00634557839682026}, {"name": "cancer", "size": 0.0058015537199410175}]}, {"name": "topic_7", "children": [{"name": "chromosome", "size": 0.020856658836037874}, {"name": "cohesin", "size": 0.011789525715462948}, {"name": "methylation", "size": 0.010941995343835951}, {"name": "chromosomes", "size": 0.010795679979173417}, {"name": "mirna", "size": 0.0090080759836123521}, {"name": "mitotic", "size": 0.0077756137706331916}, {"name": "male", "size": 0.0065410327666861751}, {"name": "males", "size": 0.0064483405631109783}, {"name": "mirnas", "size": 0.0064013806058340322}, {"name": "melanogaster", "size": 0.0063692430010434866}]}, {"name": "topic_8", "children": [{"name": "genome", "size": 0.014552428692555635}, {"name": "recombination", "size": 0.0086418475041967827}, {"name": "selection", "size": 0.0075836470604873068}, {"name": "genomic", "size": 0.0062649775757052106}, {"name": "chromosome", "size": 0.0058167958510554904}, {"name": "mutations", "size": 0.0052933745043048956}, {"name": "evolution", "size": 0.0047103941093790342}, {"name": "divergence", "size": 0.0046675862565455943}, {"name": "clusters", "size": 0.0046526649283968741}, {"name": "conserved", "size": 0.0042640621290373493}]}, {"name": "topic_9", "children": [{"name": "circadian", "size": 0.017020000751596116}, {"name": "phase", "size": 0.015677114374813481}, {"name": "auxin", "size": 0.014747769677089521}, {"name": "clock", "size": 0.014262150910979375}, {"name": "period", "size": 0.013961062172626599}, {"name": "cycle", "size": 0.012457610463457619}, {"name": "temperature", "size": 0.0096598736942255098}, {"name": "plants", "size": 0.0092506823262986856}, {"name": "dark", "size": 0.0084621532113019621}, {"name": "oscillations", "size": 0.0082258852059390077}]}, {"name": "topic_10", "children": [{"name": "phosphorylation", "size": 0.0085617528557889021}, {"name": "buffer", "size": 0.0071421891674349524}, {"name": "vitro", "size": 0.0064887813189541997}, {"name": "transfected", "size": 0.0056998659415852942}, {"name": "assay", "size": 0.0056581393931337265}, {"name": "kinase", "size": 0.0054010894849014241}, {"name": "antibodies", "size": 0.0052253572082241496}, {"name": "treated", "size": 0.0049470794736423233}, {"name": "lane", "size": 0.0049279148809745791}, {"name": "vivo", "size": 0.00488704347588705}]}, {"name": "topic_11", "children": [{"name": "infection", "size": 0.015772666669748352}, {"name": "mice", "size": 0.015361720289496545}, {"name": "virus", "size": 0.011007241525944013}, {"name": "infected", "size": 0.010457767374836181}, {"name": "viral", "size": 0.0096232672290534164}, {"name": "immune", "size": 0.0081514199399909358}, {"name": "t-cells", "size": 0.0079034914747158885}, {"name": "c57bl/6", "size": 0.0061575908215039891}, {"name": "treg", "size": 0.0057852493316896585}, {"name": "thymocytes", "size": 0.005382845291039275}]}, {"name": "topic_12", "children": [{"name": "mice", "size": 0.052679440455092902}, {"name": "animals", "size": 0.0095809328812108806}, {"name": "glucose", "size": 0.0082509630002719422}, {"name": "insulin", "size": 0.0081459118044437152}, {"name": "treatment", "size": 0.0075167615931407018}, {"name": "mouse", "size": 0.0074101678140089571}, {"name": "mitochondrial", "size": 0.0073920587440700165}, {"name": "muscle", "size": 0.005277263226406868}, {"name": "release", "size": 0.0052460880352040431}, {"name": "cholesterol", "size": 0.0050112365099932287}]}, {"name": "topic_13", "children": [{"name": "membrane", "size": 0.015184017447007824}, {"name": "images", "size": 0.012172087924975981}, {"name": "actin", "size": 0.011256938516447932}, {"name": "fluorescence", "size": 0.010942907809257687}, {"name": "microscopy", "size": 0.0077399571942645008}, {"name": "video", "size": 0.0077167755417482534}, {"name": "localization", "size": 0.007597669806112658}, {"name": "surface", "size": 0.0073467843252092088}, {"name": "migration", "size": 0.0065614232066798011}, {"name": "image", "size": 0.0065336411833713621}]}, {"name": "topic_14", "children": [{"name": "population", "size": 0.010150343223103476}, {"name": "populations", "size": 0.0070722779138639733}, {"name": "variation", "size": 0.0046545479004644098}, {"name": "selection", "size": 0.0045007003449379652}, {"name": "density", "size": 0.0039151538827025614}, {"name": "rates", "size": 0.0034320350348145501}, {"name": "fitness", "size": 0.003286580667362158}, {"name": "estimates", "size": 0.0032753623328261455}, {"name": "estimated", "size": 0.0030765654591539543}, {"name": "individuals", "size": 0.003069874941554179}]}, {"name": "topic_15", "children": [{"name": "domain", "size": 0.014231839613620274}, {"name": "residues", "size": 0.012987919435578031}, {"name": "structures", "size": 0.0072229816477178792}, {"name": "domains", "size": 0.0070443420377051926}, {"name": "structural", "size": 0.006989240970416582}, {"name": "surface", "size": 0.0043223670217884735}, {"name": "peptide", "size": 0.0042575777056635617}, {"name": "residue", "size": 0.0041095145462142057}, {"name": "crystal", "size": 0.0038185694899268165}, {"name": "conformation", "size": 0.0036738875572206869}]}, {"name": "topic_16", "children": [{"name": "membrane", "size": 0.026592074867969832}, {"name": "syntaxin", "size": 0.025690650844904815}, {"name": "tiles", "size": 0.021837862752907212}, {"name": "vesicles", "size": 0.021112327013802411}, {"name": "vesicle", "size": 0.019586908406923953}, {"name": "recruitment", "size": 0.01681972829888044}, {"name": "fusion", "size": 0.016804977693530981}, {"name": "endocytosis", "size": 0.016631567035261433}, {"name": "snare", "size": 0.011956395148843538}, {"name": "endosomes", "size": 0.011254771850375159}]}, {"name": "topic_17", "children": [{"name": "stimulus", "size": 0.0123412060680319}, {"name": "neurons", "size": 0.012190142614242679}, {"name": "responses", "size": 0.0091996000883602033}, {"name": "stimuli", "size": 0.0089298382831856753}, {"name": "firing", "size": 0.0086784683841803177}, {"name": "visual", "size": 0.0061698485150468007}, {"name": "frequency", "size": 0.0055530683248531049}, {"name": "cortex", "size": 0.0054482632671411426}, {"name": "trials", "size": 0.0049332350384982864}, {"name": "location", "size": 0.0047514063223054398}]}, {"name": "topic_18", "children": [{"name": "signaling", "size": 0.021487682656121072}, {"name": "mutant", "size": 0.01774419480293616}, {"name": "flies", "size": 0.012001528736965764}, {"name": "pathway", "size": 0.010911270191325876}, {"name": "drosophila", "size": 0.0079335768091140287}, {"name": "overexpression", "size": 0.0071568691566811721}, {"name": "receptor", "size": 0.0058245829680843358}, {"name": "expressing", "size": 0.0057249106899934406}, {"name": "mutants", "size": 0.0054662151454680031}, {"name": "staining", "size": 0.005412321403521954}]}, {"name": "topic_19", "children": [{"name": "memory", "size": 0.014690218497751888}, {"name": "sleep", "size": 0.012833179523530445}, {"name": "trials", "size": 0.012715129877910479}, {"name": "learning", "size": 0.011924435130735741}, {"name": "task", "size": 0.011804447187987122}, {"name": "participants", "size": 0.0084482860417621156}, {"name": "performance", "size": 0.0083105154202010156}, {"name": "brain", "size": 0.008120687855453777}, {"name": "trial", "size": 0.0075735993403997148}, {"name": "behavioral", "size": 0.007438183861358561}]}, {"name": "topic_20", "children": [{"name": "host", "size": 0.014154065580705285}, {"name": "bacterial", "size": 0.0096577527020015388}, {"name": "bacteria", "size": 0.0089720414351792763}, {"name": "infection", "size": 0.0071832517669637146}, {"name": "strain", "size": 0.0065878342736358682}, {"name": "strains", "size": 0.00624765312732708}, {"name": "plant", "size": 0.005570793457917716}, {"name": "tree", "size": 0.0053427323912903727}, {"name": "phylogenetic", "size": 0.0053367333515555448}, {"name": "genome", "size": 0.0052818068125844017}]}]};
-
+var root = {
+    "name": "plos",
+    "children": [
+        {
+            "name": "topic_1",
+            "children": [
+                {
+                    "name": "state",
+                    "size": 0.014027120760192772
+                },
+                {
+                    "name": "network",
+                    "size": 0.0122754309070018
+                },
+                {
+                    "name": "fluorescence",
+                    "size": 0.006981889092962769
+                },
+                {
+                    "name": "networks",
+                    "size": 0.006382439821625047
+                },
+                {
+                    "name": "dynamics",
+                    "size": 0.006316551037972919
+                },
+                {
+                    "name": "parameters",
+                    "size": 0.006256905757980392
+                },
+                {
+                    "name": "force",
+                    "size": 0.005952121719927151
+                },
+                {
+                    "name": "feedback",
+                    "size": 0.00536348199977566
+                },
+                {
+                    "name": "constant",
+                    "size": 0.005134496064507513
+                },
+                {
+                    "name": "rates",
+                    "size": 0.004977777363539393
+                }
+            ]
+        },
+        {
+            "name": "topic_2",
+            "children": [
+                {
+                    "name": "strains",
+                    "size": 0.019288758455905716
+                },
+                {
+                    "name": "mrna",
+                    "size": 0.019129536696917433
+                },
+                {
+                    "name": "strain",
+                    "size": 0.016924902356001123
+                },
+                {
+                    "name": "motif",
+                    "size": 0.011603745579452832
+                },
+                {
+                    "name": "splicing",
+                    "size": 0.009024192357494382
+                },
+                {
+                    "name": "yeast",
+                    "size": 0.008861341088586508
+                },
+                {
+                    "name": "exon",
+                    "size": 0.008550919126392876
+                },
+                {
+                    "name": "deletion",
+                    "size": 0.007403673089702467
+                },
+                {
+                    "name": "mutant",
+                    "size": 0.007052825592147895
+                },
+                {
+                    "name": "motifs",
+                    "size": 0.0065137716176034526
+                }
+            ]
+        },
+        {
+            "name": "topic_3",
+            "children": [
+                {
+                    "name": "neurons",
+                    "size": 0.02395536068319632
+                },
+                {
+                    "name": "embryos",
+                    "size": 0.01981370990711705
+                },
+                {
+                    "name": "axons",
+                    "size": 0.008921504935967595
+                },
+                {
+                    "name": "dorsal",
+                    "size": 0.008175120004057982
+                },
+                {
+                    "name": "synaptic",
+                    "size": 0.00748537059791328
+                },
+                {
+                    "name": "axon",
+                    "size": 0.006559586757619357
+                },
+                {
+                    "name": "stage",
+                    "size": 0.005994851655044842
+                },
+                {
+                    "name": "embryo",
+                    "size": 0.005962669568252326
+                },
+                {
+                    "name": "ventral",
+                    "size": 0.005860402952413935
+                },
+                {
+                    "name": "muscle",
+                    "size": 0.005737017161336733
+                }
+            ]
+        },
+        {
+            "name": "topic_4",
+            "children": [
+                {
+                    "name": "transcription",
+                    "size": 0.024016158772247796
+                },
+                {
+                    "name": "promoter",
+                    "size": 0.012882150743487628
+                },
+                {
+                    "name": "transcriptional",
+                    "size": 0.011537078888604623
+                },
+                {
+                    "name": "mrna",
+                    "size": 0.01036319399223423
+                },
+                {
+                    "name": "targets",
+                    "size": 0.009418715911967595
+                },
+                {
+                    "name": "chip",
+                    "size": 0.007916136780567377
+                },
+                {
+                    "name": "promoters",
+                    "size": 0.007636461594742087
+                },
+                {
+                    "name": "chromatin",
+                    "size": 0.0071839103394654566
+                },
+                {
+                    "name": "regulation",
+                    "size": 0.006463803113978664
+                },
+                {
+                    "name": "regulatory",
+                    "size": 0.005506891106780016
+                }
+            ]
+        },
+        {
+            "name": "topic_5",
+            "children": [
+                {
+                    "name": "mutants",
+                    "size": 0.02694340100758273
+                },
+                {
+                    "name": "animals",
+                    "size": 0.022416005729422414
+                },
+                {
+                    "name": "rnai",
+                    "size": 0.01761314211998418
+                },
+                {
+                    "name": "elegans",
+                    "size": 0.017327010580101554
+                },
+                {
+                    "name": "mutant",
+                    "size": 0.013695650887971204
+                },
+                {
+                    "name": "larvae",
+                    "size": 0.012560461966238768
+                },
+                {
+                    "name": "worms",
+                    "size": 0.009716990112368299
+                },
+                {
+                    "name": "phenotype",
+                    "size": 0.008252133032263088
+                },
+                {
+                    "name": "pathway",
+                    "size": 0.006905423012653531
+                },
+                {
+                    "name": ":gfp",
+                    "size": 0.006424069978752098
+                }
+            ]
+        },
+        {
+            "name": "topic_6",
+            "children": [
+                {
+                    "name": "mice",
+                    "size": 0.015986624967884888
+                },
+                {
+                    "name": "differentiation",
+                    "size": 0.01578319744647191
+                },
+                {
+                    "name": "tumor",
+                    "size": 0.011129841970479714
+                },
+                {
+                    "name": "proliferation",
+                    "size": 0.008850783839291899
+                },
+                {
+                    "name": "tumors",
+                    "size": 0.008338430316677544
+                },
+                {
+                    "name": "stem",
+                    "size": 0.007795627844288841
+                },
+                {
+                    "name": "adult",
+                    "size": 0.007607605343098633
+                },
+                {
+                    "name": "mouse",
+                    "size": 0.007176346158845881
+                },
+                {
+                    "name": "hscs",
+                    "size": 0.00634557839682026
+                },
+                {
+                    "name": "cancer",
+                    "size": 0.0058015537199410175
+                }
+            ]
+        },
+        {
+            "name": "topic_7",
+            "children": [
+                {
+                    "name": "chromosome",
+                    "size": 0.020856658836037874
+                },
+                {
+                    "name": "cohesin",
+                    "size": 0.011789525715462948
+                },
+                {
+                    "name": "methylation",
+                    "size": 0.01094199534383595
+                },
+                {
+                    "name": "chromosomes",
+                    "size": 0.010795679979173417
+                },
+                {
+                    "name": "mirna",
+                    "size": 0.009008075983612352
+                },
+                {
+                    "name": "mitotic",
+                    "size": 0.007775613770633192
+                },
+                {
+                    "name": "male",
+                    "size": 0.006541032766686175
+                },
+                {
+                    "name": "males",
+                    "size": 0.006448340563110978
+                },
+                {
+                    "name": "mirnas",
+                    "size": 0.006401380605834032
+                },
+                {
+                    "name": "melanogaster",
+                    "size": 0.006369243001043487
+                }
+            ]
+        },
+        {
+            "name": "topic_8",
+            "children": [
+                {
+                    "name": "genome",
+                    "size": 0.014552428692555635
+                },
+                {
+                    "name": "recombination",
+                    "size": 0.008641847504196783
+                },
+                {
+                    "name": "selection",
+                    "size": 0.007583647060487307
+                },
+                {
+                    "name": "genomic",
+                    "size": 0.006264977575705211
+                },
+                {
+                    "name": "chromosome",
+                    "size": 0.0058167958510554904
+                },
+                {
+                    "name": "mutations",
+                    "size": 0.005293374504304896
+                },
+                {
+                    "name": "evolution",
+                    "size": 0.004710394109379034
+                },
+                {
+                    "name": "divergence",
+                    "size": 0.004667586256545594
+                },
+                {
+                    "name": "clusters",
+                    "size": 0.004652664928396874
+                },
+                {
+                    "name": "conserved",
+                    "size": 0.004264062129037349
+                }
+            ]
+        },
+        {
+            "name": "topic_9",
+            "children": [
+                {
+                    "name": "circadian",
+                    "size": 0.017020000751596116
+                },
+                {
+                    "name": "phase",
+                    "size": 0.01567711437481348
+                },
+                {
+                    "name": "auxin",
+                    "size": 0.01474776967708952
+                },
+                {
+                    "name": "clock",
+                    "size": 0.014262150910979375
+                },
+                {
+                    "name": "period",
+                    "size": 0.013961062172626599
+                },
+                {
+                    "name": "cycle",
+                    "size": 0.012457610463457619
+                },
+                {
+                    "name": "temperature",
+                    "size": 0.00965987369422551
+                },
+                {
+                    "name": "plants",
+                    "size": 0.009250682326298686
+                },
+                {
+                    "name": "dark",
+                    "size": 0.008462153211301962
+                },
+                {
+                    "name": "oscillations",
+                    "size": 0.008225885205939008
+                }
+            ]
+        },
+        {
+            "name": "topic_10",
+            "children": [
+                {
+                    "name": "phosphorylation",
+                    "size": 0.008561752855788902
+                },
+                {
+                    "name": "buffer",
+                    "size": 0.007142189167434952
+                },
+                {
+                    "name": "vitro",
+                    "size": 0.0064887813189542
+                },
+                {
+                    "name": "transfected",
+                    "size": 0.005699865941585294
+                },
+                {
+                    "name": "assay",
+                    "size": 0.0056581393931337265
+                },
+                {
+                    "name": "kinase",
+                    "size": 0.005401089484901424
+                },
+                {
+                    "name": "antibodies",
+                    "size": 0.00522535720822415
+                },
+                {
+                    "name": "treated",
+                    "size": 0.004947079473642323
+                },
+                {
+                    "name": "lane",
+                    "size": 0.004927914880974579
+                },
+                {
+                    "name": "vivo",
+                    "size": 0.00488704347588705
+                }
+            ]
+        },
+        {
+            "name": "topic_11",
+            "children": [
+                {
+                    "name": "infection",
+                    "size": 0.01577266666974835
+                },
+                {
+                    "name": "mice",
+                    "size": 0.015361720289496545
+                },
+                {
+                    "name": "virus",
+                    "size": 0.011007241525944013
+                },
+                {
+                    "name": "infected",
+                    "size": 0.010457767374836181
+                },
+                {
+                    "name": "viral",
+                    "size": 0.009623267229053416
+                },
+                {
+                    "name": "immune",
+                    "size": 0.008151419939990936
+                },
+                {
+                    "name": "t-cells",
+                    "size": 0.007903491474715888
+                },
+                {
+                    "name": "c57bl/6",
+                    "size": 0.006157590821503989
+                },
+                {
+                    "name": "treg",
+                    "size": 0.0057852493316896585
+                },
+                {
+                    "name": "thymocytes",
+                    "size": 0.005382845291039275
+                }
+            ]
+        },
+        {
+            "name": "topic_12",
+            "children": [
+                {
+                    "name": "mice",
+                    "size": 0.0526794404550929
+                },
+                {
+                    "name": "animals",
+                    "size": 0.00958093288121088
+                },
+                {
+                    "name": "glucose",
+                    "size": 0.008250963000271942
+                },
+                {
+                    "name": "insulin",
+                    "size": 0.008145911804443715
+                },
+                {
+                    "name": "treatment",
+                    "size": 0.007516761593140702
+                },
+                {
+                    "name": "mouse",
+                    "size": 0.007410167814008957
+                },
+                {
+                    "name": "mitochondrial",
+                    "size": 0.0073920587440700165
+                },
+                {
+                    "name": "muscle",
+                    "size": 0.005277263226406868
+                },
+                {
+                    "name": "release",
+                    "size": 0.005246088035204043
+                },
+                {
+                    "name": "cholesterol",
+                    "size": 0.005011236509993229
+                }
+            ]
+        },
+        {
+            "name": "topic_13",
+            "children": [
+                {
+                    "name": "membrane",
+                    "size": 0.015184017447007824
+                },
+                {
+                    "name": "images",
+                    "size": 0.012172087924975981
+                },
+                {
+                    "name": "actin",
+                    "size": 0.011256938516447932
+                },
+                {
+                    "name": "fluorescence",
+                    "size": 0.010942907809257687
+                },
+                {
+                    "name": "microscopy",
+                    "size": 0.007739957194264501
+                },
+                {
+                    "name": "video",
+                    "size": 0.007716775541748253
+                },
+                {
+                    "name": "localization",
+                    "size": 0.007597669806112658
+                },
+                {
+                    "name": "surface",
+                    "size": 0.007346784325209209
+                },
+                {
+                    "name": "migration",
+                    "size": 0.006561423206679801
+                },
+                {
+                    "name": "image",
+                    "size": 0.006533641183371362
+                }
+            ]
+        },
+        {
+            "name": "topic_14",
+            "children": [
+                {
+                    "name": "population",
+                    "size": 0.010150343223103476
+                },
+                {
+                    "name": "populations",
+                    "size": 0.007072277913863973
+                },
+                {
+                    "name": "variation",
+                    "size": 0.00465454790046441
+                },
+                {
+                    "name": "selection",
+                    "size": 0.004500700344937965
+                },
+                {
+                    "name": "density",
+                    "size": 0.003915153882702561
+                },
+                {
+                    "name": "rates",
+                    "size": 0.00343203503481455
+                },
+                {
+                    "name": "fitness",
+                    "size": 0.003286580667362158
+                },
+                {
+                    "name": "estimates",
+                    "size": 0.0032753623328261455
+                },
+                {
+                    "name": "estimated",
+                    "size": 0.0030765654591539543
+                },
+                {
+                    "name": "individuals",
+                    "size": 0.003069874941554179
+                }
+            ]
+        },
+        {
+            "name": "topic_15",
+            "children": [
+                {
+                    "name": "domain",
+                    "size": 0.014231839613620274
+                },
+                {
+                    "name": "residues",
+                    "size": 0.01298791943557803
+                },
+                {
+                    "name": "structures",
+                    "size": 0.007222981647717879
+                },
+                {
+                    "name": "domains",
+                    "size": 0.007044342037705193
+                },
+                {
+                    "name": "structural",
+                    "size": 0.006989240970416582
+                },
+                {
+                    "name": "surface",
+                    "size": 0.0043223670217884735
+                },
+                {
+                    "name": "peptide",
+                    "size": 0.004257577705663562
+                },
+                {
+                    "name": "residue",
+                    "size": 0.004109514546214206
+                },
+                {
+                    "name": "crystal",
+                    "size": 0.0038185694899268165
+                },
+                {
+                    "name": "conformation",
+                    "size": 0.003673887557220687
+                }
+            ]
+        },
+        {
+            "name": "topic_16",
+            "children": [
+                {
+                    "name": "membrane",
+                    "size": 0.02659207486796983
+                },
+                {
+                    "name": "syntaxin",
+                    "size": 0.025690650844904815
+                },
+                {
+                    "name": "tiles",
+                    "size": 0.021837862752907212
+                },
+                {
+                    "name": "vesicles",
+                    "size": 0.02111232701380241
+                },
+                {
+                    "name": "vesicle",
+                    "size": 0.019586908406923953
+                },
+                {
+                    "name": "recruitment",
+                    "size": 0.01681972829888044
+                },
+                {
+                    "name": "fusion",
+                    "size": 0.01680497769353098
+                },
+                {
+                    "name": "endocytosis",
+                    "size": 0.016631567035261433
+                },
+                {
+                    "name": "snare",
+                    "size": 0.011956395148843538
+                },
+                {
+                    "name": "endosomes",
+                    "size": 0.01125477185037516
+                }
+            ]
+        },
+        {
+            "name": "topic_17",
+            "children": [
+                {
+                    "name": "stimulus",
+                    "size": 0.0123412060680319
+                },
+                {
+                    "name": "neurons",
+                    "size": 0.012190142614242679
+                },
+                {
+                    "name": "responses",
+                    "size": 0.009199600088360203
+                },
+                {
+                    "name": "stimuli",
+                    "size": 0.008929838283185675
+                },
+                {
+                    "name": "firing",
+                    "size": 0.008678468384180318
+                },
+                {
+                    "name": "visual",
+                    "size": 0.006169848515046801
+                },
+                {
+                    "name": "frequency",
+                    "size": 0.005553068324853105
+                },
+                {
+                    "name": "cortex",
+                    "size": 0.005448263267141143
+                },
+                {
+                    "name": "trials",
+                    "size": 0.004933235038498286
+                },
+                {
+                    "name": "location",
+                    "size": 0.00475140632230544
+                }
+            ]
+        },
+        {
+            "name": "topic_18",
+            "children": [
+                {
+                    "name": "signaling",
+                    "size": 0.02148768265612107
+                },
+                {
+                    "name": "mutant",
+                    "size": 0.01774419480293616
+                },
+                {
+                    "name": "flies",
+                    "size": 0.012001528736965764
+                },
+                {
+                    "name": "pathway",
+                    "size": 0.010911270191325876
+                },
+                {
+                    "name": "drosophila",
+                    "size": 0.007933576809114029
+                },
+                {
+                    "name": "overexpression",
+                    "size": 0.007156869156681172
+                },
+                {
+                    "name": "receptor",
+                    "size": 0.005824582968084336
+                },
+                {
+                    "name": "expressing",
+                    "size": 0.005724910689993441
+                },
+                {
+                    "name": "mutants",
+                    "size": 0.005466215145468003
+                },
+                {
+                    "name": "staining",
+                    "size": 0.005412321403521954
+                }
+            ]
+        },
+        {
+            "name": "topic_19",
+            "children": [
+                {
+                    "name": "memory",
+                    "size": 0.014690218497751888
+                },
+                {
+                    "name": "sleep",
+                    "size": 0.012833179523530445
+                },
+                {
+                    "name": "trials",
+                    "size": 0.012715129877910479
+                },
+                {
+                    "name": "learning",
+                    "size": 0.01192443513073574
+                },
+                {
+                    "name": "task",
+                    "size": 0.011804447187987122
+                },
+                {
+                    "name": "participants",
+                    "size": 0.008448286041762116
+                },
+                {
+                    "name": "performance",
+                    "size": 0.008310515420201016
+                },
+                {
+                    "name": "brain",
+                    "size": 0.008120687855453777
+                },
+                {
+                    "name": "trial",
+                    "size": 0.007573599340399715
+                },
+                {
+                    "name": "behavioral",
+                    "size": 0.007438183861358561
+                }
+            ]
+        },
+        {
+            "name": "topic_20",
+            "children": [
+                {
+                    "name": "host",
+                    "size": 0.014154065580705285
+                },
+                {
+                    "name": "bacterial",
+                    "size": 0.009657752702001539
+                },
+                {
+                    "name": "bacteria",
+                    "size": 0.008972041435179276
+                },
+                {
+                    "name": "infection",
+                    "size": 0.007183251766963715
+                },
+                {
+                    "name": "strain",
+                    "size": 0.006587834273635868
+                },
+                {
+                    "name": "strains",
+                    "size": 0.00624765312732708
+                },
+                {
+                    "name": "plant",
+                    "size": 0.005570793457917716
+                },
+                {
+                    "name": "tree",
+                    "size": 0.005342732391290373
+                },
+                {
+                    "name": "phylogenetic",
+                    "size": 0.005336733351555545
+                },
+                {
+                    "name": "genome",
+                    "size": 0.005281806812584402
+                }
+            ]
+        }
+    ]
+};
 
  var diameter = 960,
     format = d3.format(",d"),
