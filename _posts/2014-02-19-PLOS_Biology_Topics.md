@@ -212,6 +212,7 @@ Let us see what topics we find after lemmatizing all of our tokens.
 
     model_lemmatized = gensim.models.ldamodel.LdaModel(corpus_lemmatized, id2word=dictionary_lemmatized, update_every=1, chunksize=100, passes=2, num_topics=20)
 
+And here are the twenty topics we find with lemmatized tokens:
 
     for topic_i, topic in enumerate(model_lemmatized.print_topics(20)):
         print('topic # %d: %s\n' % (topic_i+1, topic))
