@@ -182,7 +182,7 @@ And these are the twenty topics we find in 1,754 PLOS Biology articles:
     
     topic # 20: 0.011*stimulus + 0.008*stimuli + 0.008*responses + 0.008*firing + 0.007*neurons + 0.007*trials + 0.006*visual + 0.006*task + 0.005*cortex + 0.005*frequency
     
-Let us visualize these topics as color-coded bubbles:
+Let us visualize these topics as color-coded bubbles ... see at the bottom of this page.
 
 <style>
 
