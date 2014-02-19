@@ -258,3 +258,5 @@ And here are the twenty topics we find with lemmatized tokens:
     topic # 20: 0.014*subject + 0.014*brain + 0.014*cortex + 0.012*participant + 0.008*task + 0.007*visual + 0.007*word + 0.007*object + 0.005*neural + 0.005*trial
     
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js">
+</script>
