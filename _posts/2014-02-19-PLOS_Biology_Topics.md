@@ -1222,4 +1222,7 @@ function classes(root) {
   recurse(null, root);
   return {children: classes};
 }
+
+d3.select(self.frameElement).style("height", diameter + "px");
+
 </script>
