@@ -381,7 +381,7 @@ var root = {'children': [{'children': [{'name': 'state', 'size': 0.0140271207601
     {'name': 'lane', 'size': 0.0049279148809745791},
     {'name': 'vivo', 'size': 0.00488704347588705}],
    'name': 'topic_9'}],
- 'name': 'plos'}
+ 'name': 'plos'};
  
 var diameter = 960,
     format = d3.format(",d"),
