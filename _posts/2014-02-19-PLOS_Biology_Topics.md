@@ -1210,5 +1210,16 @@ var node = svg.selectAll(".node")
       .text(function(d) { return d.className.substring(0, d.r / 3); });
 
 
-d3.select(self.frameElement).style("height", diameter + "px");
+// Returns a flattened hierarchy containing all leaf nodes under the root.
+function classes(root) {
+  var classes = [];
+
+  function recurse(name, node) {
+    if (node.children) node.children.forEach(function(child) { recurse(node.name, child); });
+    else classes.push({packageName: name, className: node.name, value: node.size});
+  }
+
+  recurse(null, root);
+  return {children: classes};
+}
 </script>
