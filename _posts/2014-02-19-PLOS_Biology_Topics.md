@@ -187,7 +187,7 @@ Let us visualize these topics as color-coded bubbles ... see at the bottom of th
 <style>
 
 text {
-  font: 10px sans-serif;
+  font: 12px sans-serif;
 }
 
 </style>
@@ -1104,14 +1104,14 @@ var root = {
     ]
 };
 
-var diameter = 960,
+var diameter = 2000,
     format = d3.format(",d"),
     color = d3.scale.category20c();
 
 var bubble = d3.layout.pack()
     .sort(null)
     .size([diameter, diameter])
-    .padding(1.5);
+    .padding(6.0);
 
 var svg = d3.select("body").append("svg")
     .attr("width", diameter)
