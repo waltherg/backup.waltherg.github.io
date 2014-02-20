@@ -196,6 +196,7 @@ text {
 
 </script>
 
+<div id="#bubbles">
 <script type="text/javascript">
 
 var root = {
@@ -1154,6 +1155,7 @@ function classes(root) {
 d3.select(self.frameElement).style("height", diameter + "px");
 
 </script>
+</div>
 
 ## Topics with Lemmatized Tokens
 
