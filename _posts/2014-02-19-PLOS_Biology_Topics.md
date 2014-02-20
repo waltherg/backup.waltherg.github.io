@@ -182,7 +182,9 @@ And these are the twenty topics we find in 1,754 PLOS Biology articles:
     
     topic # 20: 0.014*state + 0.012*network + 0.007*fluorescence + 0.006*networks + 0.006*dynamics + 0.006*parameters + 0.006*force + 0.005*feedback + 0.005*constant + 0.005*rates
 
-Let us visualize these topics as color-coded bubbles ... see at the bottom of this page.
+Let us visualize these topics as color-coded bubbles.
+I adapted the JavaScript code for this visualization from one of
+[Mike Bostock's](http://bl.ocks.org/mbostock/4063269) examples.
 
 <style>
 
