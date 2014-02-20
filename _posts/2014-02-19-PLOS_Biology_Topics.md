@@ -142,46 +142,46 @@ And these are the twenty topics we find in 1,754 PLOS Biology articles:
     for topic_i, topic in enumerate(model.print_topics(20)):
         print('topic # %d: %s\n' % (topic_i+1, topic))
 
-    topic # 1: 0.019*residues + 0.017*domain + 0.008*peptide + 0.007*domains + 0.006*structures + 0.006*residue + 0.006*crystal + 0.006*mutant + 0.005*structural + 0.005*conformation
+    topic # 1: 0.014*host + 0.010*bacterial + 0.009*bacteria + 0.007*infection + 0.007*strain + 0.006*strains + 0.006*plant + 0.005*tree + 0.005*phylogenetic + 0.005*genome
     
-    topic # 2: 0.018*strains + 0.017*strain + 0.011*bacterial + 0.009*bacteria + 0.009*coli + 0.008*host + 0.005*medium + 0.005*albicans + 0.004*enzymes + 0.004*phage
+    topic # 2: 0.015*memory + 0.013*sleep + 0.013*trials + 0.012*learning + 0.012*task + 0.008*participants + 0.008*performance + 0.008*brain + 0.008*trial + 0.007*behavioral
     
-    topic # 3: 0.024*transcription + 0.013*transcriptional + 0.012*promoter + 0.011*methylation + 0.010*chip + 0.009*promoters + 0.009*chromatin + 0.007*microarray + 0.006*enriched + 0.006*genomic
+    topic # 3: 0.021*signaling + 0.018*mutant + 0.012*flies + 0.011*pathway + 0.008*drosophila + 0.007*overexpression + 0.006*receptor + 0.006*expressing + 0.005*mutants + 0.005*staining
     
-    topic # 4: 0.025*membrane + 0.021*infection + 0.013*infected + 0.012*virus + 0.012*viral + 0.010*vesicles + 0.009*syntaxin + 0.009*fusion + 0.008*recruitment + 0.007*vesicle
+    topic # 4: 0.012*stimulus + 0.012*neurons + 0.009*responses + 0.009*stimuli + 0.009*firing + 0.006*visual + 0.006*frequency + 0.005*cortex + 0.005*trials + 0.005*location
     
-    topic # 5: 0.019*memory + 0.015*sleep + 0.013*learning + 0.012*neurons + 0.012*brain + 0.011*animals + 0.011*hippocampal + 0.010*rats + 0.008*trials + 0.007*hippocampus
+    topic # 5: 0.027*membrane + 0.026*syntaxin + 0.022*tiles + 0.021*vesicles + 0.020*vesicle + 0.017*recruitment + 0.017*fusion + 0.017*endocytosis + 0.012*snare + 0.011*endosomes
     
-    topic # 6: 0.011*genome + 0.008*chromosome + 0.007*selection + 0.007*recombination + 0.006*2003 + 0.006*2002 + 0.005*genomic + 0.005*alleles + 0.005*mutations + 0.004*evolution
+    topic # 6: 0.014*domain + 0.013*residues + 0.007*structures + 0.007*domains + 0.007*structural + 0.004*surface + 0.004*peptide + 0.004*residue + 0.004*crystal + 0.004*conformation
     
-    topic # 7: 0.023*neurons + 0.019*synaptic + 0.010*channels + 0.010*cortical + 0.009*channel + 0.008*current + 0.008*synapses + 0.008*membrane + 0.006*cortex + 0.006*microtubules
+    topic # 7: 0.010*population + 0.007*populations + 0.005*variation + 0.005*selection + 0.004*density + 0.003*rates + 0.003*fitness + 0.003*estimates + 0.003*estimated + 0.003*individuals
     
-    topic # 8: 0.012*motif + 0.009*network + 0.008*motifs + 0.008*targets + 0.006*networks + 0.006*conserved + 0.005*mirna + 0.005*modules + 0.005*regulatory + 0.005*hairy
+    topic # 8: 0.015*membrane + 0.012*images + 0.011*actin + 0.011*fluorescence + 0.008*microscopy + 0.008*video + 0.008*localization + 0.007*surface + 0.007*migration + 0.007*image
     
-    topic # 9: 0.021*population + 0.012*populations + 0.007*rates + 0.006*estimates + 0.006*modern + 0.006*density + 0.006*diversity + 0.005*estimated + 0.005*variation + 0.004*selection
+    topic # 9: 0.053*mice + 0.010*animals + 0.008*glucose + 0.008*insulin + 0.008*treatment + 0.007*mouse + 0.007*mitochondrial + 0.005*muscle + 0.005*release + 0.005*cholesterol
     
-    topic # 10: 0.010*actin + 0.007*surface + 0.007*force + 0.007*images + 0.007*image + 0.006*density + 0.006*myosin + 0.005*fibers + 0.005*video + 0.005*distance
+    topic # 10: 0.016*infection + 0.015*mice + 0.011*virus + 0.010*infected + 0.010*viral + 0.008*immune + 0.008*t-cells + 0.006*c57bl/6 + 0.006*treg + 0.005*thymocytes
     
-    topic # 11: 0.028*plants + 0.015*plant + 0.015*circadian + 0.013*auxin + 0.012*clock + 0.011*arabidopsis + 0.010*retina + 0.010*retinal + 0.009*period + 0.009*phase
+    topic # 11: 0.009*phosphorylation + 0.007*buffer + 0.006*vitro + 0.006*transfected + 0.006*assay + 0.005*kinase + 0.005*antibodies + 0.005*treated + 0.005*lane + 0.005*vivo
     
-    topic # 12: 0.063*mice + 0.009*mouse + 0.009*animals + 0.007*blood + 0.007*insulin + 0.007*liver + 0.006*glucose + 0.006*muscle + 0.006*tissue + 0.005*controls
+    topic # 12: 0.017*circadian + 0.016*phase + 0.015*auxin + 0.014*clock + 0.014*period + 0.012*cycle + 0.010*temperature + 0.009*plants + 0.008*dark + 0.008*oscillations
     
-    topic # 13: 0.011*phosphorylation + 0.009*signaling + 0.009*transfected + 0.007*treated + 0.007*treatment + 0.007*fluorescence + 0.006*receptor + 0.006*membrane + 0.006*kinase + 0.006*antibody
+    topic # 13: 0.015*genome + 0.009*recombination + 0.008*selection + 0.006*genomic + 0.006*chromosome + 0.005*mutations + 0.005*evolution + 0.005*divergence + 0.005*clusters + 0.004*conserved
     
-    topic # 14: 0.009*mrna + 0.006*buffer + 0.006*mutant + 0.005*vitro + 0.005*complexes + 0.004*assay + 0.004*reaction + 0.004*translation + 0.004*domain + 0.004*nuclear
+    topic # 14: 0.021*chromosome + 0.012*cohesin + 0.011*methylation + 0.011*chromosomes + 0.009*mirna + 0.008*mitotic + 0.007*male + 0.006*males + 0.006*mirnas + 0.006*melanogaster
     
-    topic # 15: 0.017*rnai + 0.017*mutants + 0.016*animals + 0.015*elegans + 0.014*mrna + 0.011*splicing + 0.011*exon + 0.010*pathway + 0.009*transcripts + 0.009*worms
+    topic # 15: 0.016*mice + 0.016*differentiation + 0.011*tumor + 0.009*proliferation + 0.008*tumors + 0.008*stem + 0.008*adult + 0.007*mouse + 0.006*hscs + 0.006*cancer
     
-    topic # 16: 0.016*cohesin + 0.016*chromosome + 0.014*nuclear + 0.012*mitotic + 0.011*chromosomes + 0.009*xist + 0.009*cycle + 0.009*division + 0.009*spindle + 0.008*nuclei
+    topic # 16: 0.027*mutants + 0.022*animals + 0.018*rnai + 0.017*elegans + 0.014*mutant + 0.013*larvae + 0.010*worms + 0.008*phenotype + 0.007*pathway + 0.006*:gfp
     
-    topic # 17: 0.021*embryos + 0.011*mutant + 0.011*neurons + 0.009*mutants + 0.007*stage + 0.007*signaling + 0.007*dorsal + 0.007*embryo + 0.007*axons + 0.006*drosophila
+    topic # 17: 0.024*transcription + 0.013*promoter + 0.012*transcriptional + 0.010*mrna + 0.009*targets + 0.008*chip + 0.008*promoters + 0.007*chromatin + 0.006*regulation + 0.006*regulatory
     
-    topic # 18: 0.014*differentiation + 0.010*tumor + 0.008*proliferation + 0.007*tumors + 0.006*stem + 0.006*mice + 0.006*hscs + 0.006*mouse + 0.005*apoptosis + 0.005*progenitor
+    topic # 18: 0.024*neurons + 0.020*embryos + 0.009*axons + 0.008*dorsal + 0.007*synaptic + 0.007*axon + 0.006*stage + 0.006*embryo + 0.006*ventral + 0.006*muscle
     
-    topic # 19: 0.014*females + 0.013*males + 0.009*fitness + 0.008*male + 0.008*female + 0.006*food + 0.005*flight + 0.005*host + 0.004*individuals + 0.004*variation
+    topic # 19: 0.019*strains + 0.019*mrna + 0.017*strain + 0.012*motif + 0.009*splicing + 0.009*yeast + 0.009*exon + 0.007*deletion + 0.007*mutant + 0.007*motifs
     
-    topic # 20: 0.011*stimulus + 0.008*stimuli + 0.008*responses + 0.008*firing + 0.007*neurons + 0.007*trials + 0.006*visual + 0.006*task + 0.005*cortex + 0.005*frequency
-    
+    topic # 20: 0.014*state + 0.012*network + 0.007*fluorescence + 0.006*networks + 0.006*dynamics + 0.006*parameters + 0.006*force + 0.005*feedback + 0.005*constant + 0.005*rates
+
 
 
 ## Topics with Lemmatized Tokens
