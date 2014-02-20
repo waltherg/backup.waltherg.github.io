@@ -1114,7 +1114,7 @@ var bubble = d3.layout.pack()
     .size([diameter, diameter])
     .padding(6.0);
 
-var svg = d3.select("bubbles").append("svg")
+var svg = d3.select("#bubbles").append("svg")
     .attr("width", diameter)
     .attr("height", diameter)
     .attr("class", "bubble");
