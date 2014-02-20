@@ -196,7 +196,7 @@ text {
 
 </script>
 
-<div id="#bubbles">
+<div id="bubbles">
 <script type="text/javascript">
 
 var root = {
