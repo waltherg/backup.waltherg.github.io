@@ -182,81 +182,8 @@ And these are the twenty topics we find in 1,754 PLOS Biology articles:
     
     topic # 20: 0.014*state + 0.012*network + 0.007*fluorescence + 0.006*networks + 0.006*dynamics + 0.006*parameters + 0.006*force + 0.005*feedback + 0.005*constant + 0.005*rates
 
+Let us visualize these topics as color-coded bubbles ... see at the bottom of this page.
 
-
-## Topics with Lemmatized Tokens
-
-As we can notice, some of the tokens in the above topics are just singular and
-plural forms of the same word.
-
-Let us see what topics we find after lemmatizing all of our tokens.
-
-
-    from nltk.stem import WordNetLemmatizer
-    wnl = WordNetLemmatizer()
-    articles_lemmatized = []
-    for article in articles_unfurled:
-        articles_lemmatized.append([wnl.lemmatize(token) for token in article])
-
-    pickle.dump(articles_lemmatized, open('plos_biology_articles_lemmatized.list', 'w'))
-
-    dictionary_lemmatized = gensim.corpora.Dictionary(articles_lemmatized)
-
-    dictionary_lemmatized.save('plos_biology_lemmatized.dict')
-
-    dictionary_lemmatized.filter_extremes()
-
-    corpus_lemmatized = [dictionary_lemmatized.doc2bow(article) for article in articles_lemmatized]
-
-    gensim.corpora.MmCorpus.serialize('plos_biology_corpus_lemmatized.mm', corpus_lemmatized)
-
-    model_lemmatized = gensim.models.ldamodel.LdaModel(corpus_lemmatized, id2word=dictionary_lemmatized, update_every=1, chunksize=100, passes=2, num_topics=20)
-
-And here are the twenty topics we find with lemmatized tokens:
-
-    for topic_i, topic in enumerate(model_lemmatized.print_topics(20)):
-        print('topic # %d: %s\n' % (topic_i+1, topic))
-
-    topic # 1: 0.052*embryo + 0.011*dorsal + 0.011*zebrafish + 0.009*neural + 0.008*anterior + 0.008*ventral + 0.007*cartilage + 0.007*signaling + 0.007*posterior + 0.007*muscle
-    
-    topic # 2: 0.015*infection + 0.015*elegans + 0.014*host + 0.014*rnai + 0.012*worm + 0.009*parasite + 0.009*larva + 0.009*mosquito + 0.008*adult + 0.008*bacteria
-    
-    topic # 3: 0.025*promoter + 0.023*transcription + 0.012*transcriptional + 0.011*chromatin + 0.011*chip + 0.010*cohesin + 0.010*methylation + 0.009*nuclear + 0.007*histone + 0.006*ino1
-    
-    topic # 4: 0.017*microtubule + 0.013*nucleus + 0.011*mitotic + 0.011*insulin + 0.011*glucose + 0.011*spindle + 0.010*nuclear + 0.009*retina + 0.008*mitochondrial + 0.007*retinal
-    
-    topic # 5: 0.024*stimulus + 0.015*neuron + 0.014*trial + 0.010*firing + 0.007*spike + 0.007*task + 0.007*current + 0.007*frequency + 0.006*recording + 0.006*memory
-    
-    topic # 6: 0.020*phosphorylation + 0.016*kinase + 0.013*signaling + 0.012*antibody + 0.007*inhibitor + 0.007*receptor + 0.006*phosphorylated + 0.006*transfected + 0.006*infection + 0.006*peptide
-    
-    topic # 7: 0.061*neuron + 0.031*axon + 0.022*synaptic + 0.013*dendrite + 0.012*brain + 0.011*neuronal + 0.010*synapsis + 0.010*cortical + 0.010*dendritic + 0.008*axonal
-    
-    topic # 8: 0.023*fly + 0.017*drosophila + 0.012*larva + 0.012*signaling + 0.012*phenotype + 0.010*clone + 0.010*defect + 0.009*rescue + 0.008*disc + 0.008*genotype
-    
-    topic # 9: 0.010*network + 0.010*dynamic + 0.008*force + 0.007*parameter + 0.007*distance + 0.007*movement + 0.006*simulation + 0.006*video + 0.005*motor + 0.005*direction
-    
-    topic # 10: 0.019*residue + 0.011*peptide + 0.007*substrate + 0.007*reaction + 0.007*structural + 0.007*enzyme + 0.006*crystal + 0.006*subunit + 0.006*molecule + 0.005*conformation
-    
-    topic # 11: 0.038*chromosome + 0.025*allele + 0.018*recombination + 0.015*locus + 0.008*hybrid + 0.008*female + 0.008*male + 0.008*marker + 0.007*genomic + 0.007*primer
-    
-    topic # 12: 0.016*tumor + 0.012*differentiation + 0.010*tissue + 0.008*blood + 0.007*proliferation + 0.007*culture + 0.007*wound + 0.007*liver + 0.006*treatment + 0.006*stem
-    
-    topic # 13: 0.038*strain + 0.010*yeast + 0.008*plasmid + 0.007*coli + 0.006*grown + 0.006*deletion + 0.006*codon + 0.006*ribosome + 0.006*phage + 0.005*culture
-    
-    topic # 14: 0.033*fiber + 0.026*receptor + 0.016*aggregation + 0.015*aggregate + 0.008*trkb + 0.007*granule + 0.007*liposome + 0.007*bdnf + 0.006*body + 0.006*signaling
-    
-    topic # 15: 0.015*genome + 0.009*cluster + 0.006*motif + 0.005*selection + 0.005*dataset + 0.005*2003 + 0.005*family + 0.004*2002 + 0.004*conserved + 0.004*read
-    
-    topic # 16: 0.007*estimate + 0.007*female + 0.007*male + 0.006*variation + 0.006*selection + 0.006*fitness + 0.005*variable + 0.005*density + 0.005*trait + 0.005*bird
-    
-    topic # 17: 0.022*membrane + 0.010*antibody + 0.008*fluorescence + 0.008*vesicle + 0.006*surface + 0.006*transfected + 0.006*expressing + 0.006*fusion + 0.005*localization + 0.005*particle
-    
-    topic # 18: 0.025*plant + 0.019*cycle + 0.014*circadian + 0.013*clock + 0.013*phase + 0.012*auxin + 0.012*period + 0.010*feedback + 0.010*rhythm + 0.010*oscillation
-    
-    topic # 19: 0.052*mrna + 0.025*transcript + 0.020*exon + 0.011*splicing + 0.011*motif + 0.010*transcription + 0.009*regulation + 0.008*translation + 0.008*association + 0.007*intron
-    
-    topic # 20: 0.014*subject + 0.014*brain + 0.014*cortex + 0.012*participant + 0.008*task + 0.007*visual + 0.007*word + 0.007*object + 0.005*neural + 0.005*trial
-    
 <style>
 
 text {
@@ -269,7 +196,7 @@ text {
 
 </script>
 
-<script type="text/javascript">//
+<script type="text/javascript">
 
 var root = {
     "name": "plos",
@@ -1227,3 +1154,77 @@ function classes(root) {
 d3.select(self.frameElement).style("height", diameter + "px");
 
 </script>
+
+## Topics with Lemmatized Tokens
+
+As we can notice, some of the tokens in the above topics are just singular and
+plural forms of the same word.
+
+Let us see what topics we find after lemmatizing all of our tokens.
+
+
+    from nltk.stem import WordNetLemmatizer
+    wnl = WordNetLemmatizer()
+    articles_lemmatized = []
+    for article in articles_unfurled:
+        articles_lemmatized.append([wnl.lemmatize(token) for token in article])
+
+    pickle.dump(articles_lemmatized, open('plos_biology_articles_lemmatized.list', 'w'))
+
+    dictionary_lemmatized = gensim.corpora.Dictionary(articles_lemmatized)
+
+    dictionary_lemmatized.save('plos_biology_lemmatized.dict')
+
+    dictionary_lemmatized.filter_extremes()
+
+    corpus_lemmatized = [dictionary_lemmatized.doc2bow(article) for article in articles_lemmatized]
+
+    gensim.corpora.MmCorpus.serialize('plos_biology_corpus_lemmatized.mm', corpus_lemmatized)
+
+    model_lemmatized = gensim.models.ldamodel.LdaModel(corpus_lemmatized, id2word=dictionary_lemmatized, update_every=1, chunksize=100, passes=2, num_topics=20)
+
+And here are the twenty topics we find with lemmatized tokens:
+
+    for topic_i, topic in enumerate(model_lemmatized.print_topics(20)):
+        print('topic # %d: %s\n' % (topic_i+1, topic))
+
+    topic # 1: 0.052*embryo + 0.011*dorsal + 0.011*zebrafish + 0.009*neural + 0.008*anterior + 0.008*ventral + 0.007*cartilage + 0.007*signaling + 0.007*posterior + 0.007*muscle
+    
+    topic # 2: 0.015*infection + 0.015*elegans + 0.014*host + 0.014*rnai + 0.012*worm + 0.009*parasite + 0.009*larva + 0.009*mosquito + 0.008*adult + 0.008*bacteria
+    
+    topic # 3: 0.025*promoter + 0.023*transcription + 0.012*transcriptional + 0.011*chromatin + 0.011*chip + 0.010*cohesin + 0.010*methylation + 0.009*nuclear + 0.007*histone + 0.006*ino1
+    
+    topic # 4: 0.017*microtubule + 0.013*nucleus + 0.011*mitotic + 0.011*insulin + 0.011*glucose + 0.011*spindle + 0.010*nuclear + 0.009*retina + 0.008*mitochondrial + 0.007*retinal
+    
+    topic # 5: 0.024*stimulus + 0.015*neuron + 0.014*trial + 0.010*firing + 0.007*spike + 0.007*task + 0.007*current + 0.007*frequency + 0.006*recording + 0.006*memory
+    
+    topic # 6: 0.020*phosphorylation + 0.016*kinase + 0.013*signaling + 0.012*antibody + 0.007*inhibitor + 0.007*receptor + 0.006*phosphorylated + 0.006*transfected + 0.006*infection + 0.006*peptide
+    
+    topic # 7: 0.061*neuron + 0.031*axon + 0.022*synaptic + 0.013*dendrite + 0.012*brain + 0.011*neuronal + 0.010*synapsis + 0.010*cortical + 0.010*dendritic + 0.008*axonal
+    
+    topic # 8: 0.023*fly + 0.017*drosophila + 0.012*larva + 0.012*signaling + 0.012*phenotype + 0.010*clone + 0.010*defect + 0.009*rescue + 0.008*disc + 0.008*genotype
+    
+    topic # 9: 0.010*network + 0.010*dynamic + 0.008*force + 0.007*parameter + 0.007*distance + 0.007*movement + 0.006*simulation + 0.006*video + 0.005*motor + 0.005*direction
+    
+    topic # 10: 0.019*residue + 0.011*peptide + 0.007*substrate + 0.007*reaction + 0.007*structural + 0.007*enzyme + 0.006*crystal + 0.006*subunit + 0.006*molecule + 0.005*conformation
+    
+    topic # 11: 0.038*chromosome + 0.025*allele + 0.018*recombination + 0.015*locus + 0.008*hybrid + 0.008*female + 0.008*male + 0.008*marker + 0.007*genomic + 0.007*primer
+    
+    topic # 12: 0.016*tumor + 0.012*differentiation + 0.010*tissue + 0.008*blood + 0.007*proliferation + 0.007*culture + 0.007*wound + 0.007*liver + 0.006*treatment + 0.006*stem
+    
+    topic # 13: 0.038*strain + 0.010*yeast + 0.008*plasmid + 0.007*coli + 0.006*grown + 0.006*deletion + 0.006*codon + 0.006*ribosome + 0.006*phage + 0.005*culture
+    
+    topic # 14: 0.033*fiber + 0.026*receptor + 0.016*aggregation + 0.015*aggregate + 0.008*trkb + 0.007*granule + 0.007*liposome + 0.007*bdnf + 0.006*body + 0.006*signaling
+    
+    topic # 15: 0.015*genome + 0.009*cluster + 0.006*motif + 0.005*selection + 0.005*dataset + 0.005*2003 + 0.005*family + 0.004*2002 + 0.004*conserved + 0.004*read
+    
+    topic # 16: 0.007*estimate + 0.007*female + 0.007*male + 0.006*variation + 0.006*selection + 0.006*fitness + 0.005*variable + 0.005*density + 0.005*trait + 0.005*bird
+    
+    topic # 17: 0.022*membrane + 0.010*antibody + 0.008*fluorescence + 0.008*vesicle + 0.006*surface + 0.006*transfected + 0.006*expressing + 0.006*fusion + 0.005*localization + 0.005*particle
+    
+    topic # 18: 0.025*plant + 0.019*cycle + 0.014*circadian + 0.013*clock + 0.013*phase + 0.012*auxin + 0.012*period + 0.010*feedback + 0.010*rhythm + 0.010*oscillation
+    
+    topic # 19: 0.052*mrna + 0.025*transcript + 0.020*exon + 0.011*splicing + 0.011*motif + 0.010*transcription + 0.009*regulation + 0.008*translation + 0.008*association + 0.007*intron
+    
+    topic # 20: 0.014*subject + 0.014*brain + 0.014*cortex + 0.012*participant + 0.008*task + 0.007*visual + 0.007*word + 0.007*object + 0.005*neural + 0.005*trial
+    
