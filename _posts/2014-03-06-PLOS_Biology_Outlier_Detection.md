@@ -124,11 +124,11 @@ Let's focus on some of these:
     for index in numpy.where(corpus_mat_transform[:,0]>150)[0]:
         print 'http://www.plosbiology.org/article/info:doi/%s' % dois[index]
 
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001060]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001657]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001283]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000135]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000373]
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001060](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001060)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001657](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001657)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001283](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001283)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000135](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000135)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000373](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000373)
 
 
 The first of these "outliers" in the above reduced space is a *Synopsis*
@@ -161,13 +161,13 @@ median (red disk in the above scatter plot).
     for index in near_median[0]:
         print 'http://www.plosbiology.org/article/info:doi/%s' % dois[index]
 
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0030233]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060002]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0050237]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001513]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060160]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000091]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0020367]
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0030233](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0030233)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060002](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060002)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0050237](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0050237)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001513](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001513)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060160](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060160)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000091](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000091)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0020367](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0020367)
 
 
 Articles near the median discuss topics such as gene expression in *C. elegans*,
@@ -206,17 +206,17 @@ Let us focus on the group of articles on the right in the above plot.
 
     (array([ 388,  397,  486,  521,  676,  949, 1087, 1109, 1221, 1325, 1427]),)
     
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060246]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0030271]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001194]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000479]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040369]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001212]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001506]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001283]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060152]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060037]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000041]
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060246](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060246)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0030271](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0030271)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001194](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001194)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000479](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000479)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040369](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040369)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001212](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001212)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001506](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001506)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001283](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001283)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060152](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060152)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060037](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060037)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000041](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000041)
 
 
 Clicking through these, we realize that most of these articles deal with
@@ -233,8 +233,8 @@ cell lymphomas.
 
     (array([  35, 1074]),)
     
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001060]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001657]
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001060](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001060)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001657](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001657)
     
 
 Also these two outliers deal with neurobiological topics.
@@ -249,7 +249,7 @@ Also these two outliers deal with neurobiological topics.
 
     (array([421]),)
     
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000230]
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000230](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000230)
 
 
 And again an article about a neurobiological topic.
@@ -274,20 +274,20 @@ And again an article about a neurobiological topic.
     for index in near_median[0]:
         print 'http://www.plosbiology.org/article/info:doi/%s' % dois[index]
 
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000607]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060301]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060263]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0020379]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0020418]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0050299]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001082]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001138]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001616]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060114]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040138]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040188]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040156]
-- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000320]
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000607](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000607)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060301](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060301)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060263](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060263)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0020379](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0020379)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0020418](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0020418)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0050299](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0050299)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001082](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001082)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001138](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001138)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001616](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1001616)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060114](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0060114)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040138](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040138)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040188](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040188)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040156](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.0040156)
+- [http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000320](http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio.1000320)
 
 
 Articles near the median discuss topics such as stochastic gene expression, DNA
