@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "PLOS Biology Outlier Detection"
-date: 2014-02-19
+date: 2014-03-06
 tags: plos nltk svd isomap dimensionality
 ---
 
