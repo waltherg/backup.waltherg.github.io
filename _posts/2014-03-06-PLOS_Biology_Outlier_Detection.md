@@ -17,7 +17,7 @@ Here, I realized that the data points far away from the bulk discuss (almost)
 consistently neurobiological topics.
 
 As far as I am aware PLOS Biology publish articles on all biological topics so
-there is probably no editorial factor our observation here.
+there is probably no editorial factor to our observation here.
 
 
     %matplotlib inline
