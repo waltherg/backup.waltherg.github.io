@@ -93,7 +93,7 @@ We generated this corpus and the corresponding dictionary
 
     <matplotlib.collections.PathCollection at 0x39dd4690>
 
-![png]({{imgbase}}/PLOS_Biology_Outlier_Detecton_files/PLOS_Biology_Outlier_Detecton_15_1.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/PLOS_Biology_Outlier_Detecton_files/PLOS_Biology_Outlier_Detecton_15_1.png)
 
 
 ### Outliers far Away from Median
@@ -191,7 +191,7 @@ data cloud better than SVD.
 
     <matplotlib.collections.PathCollection at 0x37bc4910>
 
-![png]({{imgbase}}/PLOS_Biology_Outlier_Detecton_files/PLOS_Biology_Outlier_Detecton_32_1.png)
+![png](https://dl.dropboxusercontent.com/u/129945779/georgio/PLOS_Biology_Outlier_Detecton_files/PLOS_Biology_Outlier_Detecton_32_1.png)
 
 
 ### Outlying Group of Articles with 1st Component > 400
