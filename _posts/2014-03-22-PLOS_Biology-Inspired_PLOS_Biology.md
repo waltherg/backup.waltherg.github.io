@@ -532,8 +532,10 @@ And here our our inspirators in more detail:
         print('--------------------------------------')
         print('')
 
-**Edit**: Upon closer inspection I realize that my method of distinguishing authors, implemented in `are_different_authors`, is too simplistic to properly distinguish authors in my data set. You will find that the names of some authors are spelled with and without abbreviation periods such as *Alexander D Johnson* versus *Alexander D. Johnson*. Amending `are_different_authors` to catch these spelling variations shows that both inspirators listed below are not inspirators as defined by my arbitrary categories.
-Rather than updating `are_different_authors` with some ad-hoc fix I will rather think about this issue more coherently and leave the misclassified articles below to show that author disambiguation is not easy.
+**Edit**: Upon closer inspection I realize that my method of distinguishing authors, implemented in `are_different_authors`, is too simplistic to properly distinguish authors in my data set.
+You will find that the names of some authors are spelled with and without abbreviation periods such as *Alexander D Johnson* versus *Alexander D. Johnson*.
+Amending `are_different_authors` to catch these spelling variations shows that both inspirators listed below are not inspirators as defined by my arbitrary categories.
+Rather than updating `are_different_authors` with some ad-hoc fix I will think about this issue more coherently and leave the misclassified articles below to show that author disambiguation is not easy.
 
 **Inspirator**:
 
