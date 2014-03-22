@@ -25,6 +25,8 @@ other PLOS Biology articles.
 
 In this blog post I will examine these links between PLOS Biology articles.
 
+## The Graph Database
+
 Let us first take a look at my database to get an idea of what this looks like.
 
     %matplotlib inline
@@ -44,6 +46,9 @@ The label `g` now holds a reference to our graph database.
 
 Python bulbs allows us to define classes for our data model which is something I
 did when creating this graph database in the first place.
+
+## Our Graph Model
+
 These are the node (vertex) types and edge (relationship) types I defined:
 
 
@@ -83,6 +88,9 @@ the bottom of most PLOS Biology articles).
     g.add_proxy('authored', Authorship)
     g.add_proxy('cites', Citation)
 
+
+## Querying the Database
+
 Usually we would use Rexster/Bulbs-builtin functions that rely on some internal
 index but since that index seems to be broken for me right now
 I will simply collect all nodes and edges by hand and create Python dictionaries
@@ -98,6 +106,7 @@ prohibitive for anything marginally bigger.
 
     authors = {n.name: n for n in nodes if n.element_type == 'author'}
 
+Here are ten authors in our database:
 
     authors.keys()[:10]
 
@@ -114,9 +123,9 @@ prohibitive for anything marginally bigger.
 
 
 
-
     articles = {n.doi: n for n in nodes if n.element_type == 'article'}
 
+And here are the DOI's of ten articles in our database:
 
     articles.keys()[:10]
 
@@ -142,6 +151,7 @@ in our data set (this should equal 1754).
     1754
 
 
+## Examining One Article
 
 Let us now pick an article at random and see how this article is connected to
 the remainder of the graph.
@@ -199,8 +209,7 @@ Biology article:
 
     [<Citation: http://localhost:8182/graphs/plos/edges/29290>]
 
-
-
+And these are the title, authors, and DOI of the article cited by `article`:
 
     for citation in article.outV():
         print citation.title
@@ -214,6 +223,8 @@ Biology article:
 
 As you can see above, querying our database for the authors of the PLOS Biology
 article that our current article (`article`) cites is simple.
+
+## Number of PLOS Biology Articles That Cite Other PLOS Biology Articles
 
 How many PLOS Biology articles in our data set of 1754 articles cite other PLOS
 Biology articles?
@@ -243,6 +254,8 @@ For our `article` and its one cited PLOS Biology article I counted:
 Just to verify this, look up `article` online (DOI =
 10.1371/journal.pbio.0030225) and look for reference *[4]* which corresponds to
 this one cited PLOS Biology article.
+
+## Distribution of PLOS Biology-Internal References
 
 Let us now take a look at the observed distribution of how often cited PLOS
 Biology articles are referenced in the main text of the citing PLOS Biology
@@ -291,31 +304,45 @@ bigger values to see if these make sense.
                 print('Citer cites citee %d times.' % edge.reference_count)
                 print('-----------------------------------------------------')
 
-    Citer:
-    Title: A Feedback Loop between Dynamin and Actin Recruitment during Clathrin-Mediated Endocytosis
-    Authors: Marko Lampe, Christien J. Merrifield, Marcus J. Taylor
-    DOI: 10.1371/journal.pbio.1001302
-    
-    Citee
-    Title: A High Precision Survey of the Molecular Dynamics of Mammalian Clathrin-Mediated Endocytosis
-    Authors: Marcus J. Taylor, David Perrais, Christien J. Merrifield
-    DOI: 10.1371/journal.pbio.1000604
-    
-    Citer cites citee 21 times.
-    -----------------------------------------------------
-    Citer:
-    Title: H2A.Z-Mediated Localization of Genes at the Nuclear Periphery Confers Epigenetic Memory of Previous Transcriptional State 
-    Authors: Yvonne Fondufe-Mittendorf, Sara Ahmed, Jason H Brickner, Donna Garvey Brickner, Jonathan Widom, Ivelisse Cajigas, Pei-Chih Lee
-    DOI: 10.1371/journal.pbio.0050081
-    
-    Citee
-    Title: Gene Recruitment of the Activated INO1 Locus to the Nuclear Membrane
-    Authors: Peter Walter, Jason H Brickner
-    DOI: 10.1371/journal.pbio.0020342
-    
-    Citer cites citee 21 times.
-    -----------------------------------------------------
+**Citer**:
 
+**Title**: A Feedback Loop between Dynamin and Actin Recruitment during Clathrin-Mediated Endocytosis
+
+**Authors**: Marko Lampe, Christien J. Merrifield, Marcus J. Taylor
+
+**DOI**: 10.1371/journal.pbio.1001302
+    
+**Citee**:
+
+**Title**: A High Precision Survey of the Molecular Dynamics of Mammalian Clathrin-Mediated Endocytosis
+    
+**Authors**: Marcus J. Taylor, David Perrais, Christien J. Merrifield
+
+**DOI**: 10.1371/journal.pbio.1000604
+    
+**Citer cites citee 21 times.**
+
+-----------------------------------------------------
+
+**Citer**:
+    
+**Title**: H2A.Z-Mediated Localization of Genes at the Nuclear Periphery Confers Epigenetic Memory of Previous Transcriptional State 
+    
+**Authors**: Yvonne Fondufe-Mittendorf, Sara Ahmed, Jason H Brickner, Donna Garvey Brickner, Jonathan Widom, Ivelisse Cajigas, Pei-Chih Lee
+    
+**DOI**: 10.1371/journal.pbio.0050081
+    
+**Citee**:
+    
+**Title**: Gene Recruitment of the Activated INO1 Locus to the Nuclear Membrane
+    
+**Authors**: Peter Walter, Jason H Brickner
+    
+**DOI**: 10.1371/journal.pbio.0020342
+    
+**Citer cites citee 21 times.**
+
+---
 
 Checking these by hand we verify that our counts are correct.
 
@@ -328,13 +355,9 @@ point is simply that citing another article multiple times in your manuscript
 probably means that you are basing your work at least partially on the article
 you cite.
 
-In the above list we can already see that one article titled *A sex-ratio
-Meiotic Drive System in Drosophila simulans. II: An X-linked Distorter* is a
-clear follow-up to the article titled *A sex-ratio Meiotic Drive System in
-Drosophila simulans. I: An Autosomal Suppressor*.
+For both pairs above we can see that at least one author is shared between citer and citee.
 
-One question I am interested in is: How inspired are authors by their own work
-(generally *very inspired* I would presume), and how inspiring are articles to a
+One question I am interested in is: How inspiring is the work of one group of authors for a
 completely different group of authors?
 
 In my opinion, if one group of authors inspires a completely different group of
@@ -346,8 +369,7 @@ the first place.
 (I am certain this statement can be refined further but roughly speaking this is
 what I think)
 
-Let us redo the above histogram but exclude all cited PLOS Biology articles that
-have one or more authors in common with the citing article.
+Let us redo the above histogram but exclude all pairs of citers and citees that share one or more authors.
 
 (one more bracketed caveat: When constructing my database I assumed that every
 author name occurs exactly once and is therefore unique - this is a heuristic
@@ -406,35 +428,51 @@ Let us take a look at data points in the tail:
                 print('Citer cites citee %d times.' % edge.reference_count)
                 print('-----------------------------------------------------')
 
-    Citer:
-    Title: Lack of Support for the Association between GAD2 Polymorphisms and Severe Human Obesity
-    Authors: Frank Geller, John P Kane, Raphael Merriman, Christian Vaisse, Winfried Rief, Robert Dent, Johannes Hebebrand, Björn Waldenmaier, Franck Mauvais-Jarvis, Anke Hinney, Michael M Swarbrick, Clive R Pullinger, Mary Malloy, Len A Pennacchio, Anna Ustaszewska, Denise L Lind, Wen-Chi Hsueh, Ruth McPherson, Martha M Cavazos, André Scherag, Pui-Yan Kwok
-    DOI: 10.1371/journal.pbio.0030315
+**Citer**:
     
-    Citee
-    Title: GAD2 on Chromosome 10p12 Is a Candidate Gene for Human Obesity
-    Authors: Lynn Bekris, Valérie Vasseur-Delannoy, Philippe Boutin, Karin Séron, Philippe Froguel, Mohamed Chikri, Christian Dina, Laetitia Corset, M. Aline Charles, Séverine Dubois, Francis Vasseur, Janice Cabellon, Ake Lernmark, Bernadette Neve, Karine Clement
-    DOI: 10.1371/journal.pbio.0000068
-    
-    Citer cites citee 17 times.
-    -----------------------------------------------------
-    Citer:
-    Title: Structural Basis of Rap Phosphatase Inhibition by Phr Peptides
-    Authors: Alberto Marina, Francisca Gallego del Sol
-    DOI: 10.1371/journal.pbio.1001511
-    
-    Citee
-    Title: Structural Basis of Response Regulator Inhibition by a Bacterial Anti-Activator Protein
-    Authors: Matthew B. Neiditch, Melinda D. Baker
-    DOI: 10.1371/journal.pbio.1001226
-    
-    Citer cites citee 16 times.
-    -----------------------------------------------------
+**Title**: Lack of Support for the Association between GAD2 Polymorphisms and Severe Human Obesity
 
+**Authors**: Frank Geller, John P Kane, Raphael Merriman, Christian Vaisse, Winfried Rief, Robert Dent, Johannes Hebebrand, Björn Waldenmaier, Franck Mauvais-Jarvis, Anke Hinney, Michael M Swarbrick, Clive R Pullinger, Mary Malloy, Len A Pennacchio, Anna Ustaszewska, Denise L Lind, Wen-Chi Hsueh, Ruth McPherson, Martha M Cavazos, André Scherag, Pui-Yan Kwok
+    
+**DOI**: 10.1371/journal.pbio.0030315
+    
+**Citee**:
+    
+**Title**: GAD2 on Chromosome 10p12 Is a Candidate Gene for Human Obesity
+    
+**Authors**: Lynn Bekris, Valérie Vasseur-Delannoy, Philippe Boutin, Karin Séron, Philippe Froguel, Mohamed Chikri, Christian Dina, Laetitia Corset, M. Aline Charles, Séverine Dubois, Francis Vasseur, Janice Cabellon, Ake Lernmark, Bernadette Neve, Karine Clement
+    
+**DOI**: 10.1371/journal.pbio.0000068
+    
+**Citer cites citee 17 times.**
+
+-----------------------------------------------------
+
+**Citer**:
+    
+**Title**: Structural Basis of Rap Phosphatase Inhibition by Phr Peptides
+    
+**Authors**: Alberto Marina, Francisca Gallego del Sol
+    
+**DOI**: 10.1371/journal.pbio.1001511
+    
+**Citee**:
+    
+**Title**: Structural Basis of Response Regulator Inhibition by a Bacterial Anti-Activator Protein
+    
+**Authors**: Matthew B. Neiditch, Melinda D. Baker
+    
+**DOI**: 10.1371/journal.pbio.1001226
+    
+**Citer cites citee 16 times.**
+
+-----------------------------------------------------
 
 As we can see the two article pairs in the tail of this updated distribution are
 linked with lower reference counts than what we observed before filtering for
 author disjointedness.
+
+## The Most Inspiring PLOS Biology Articles (PLOS Biology-Internally)
 
 Now, how inspiring are PLOS Biology authors for other (different) PLOS Biology
 authors?
@@ -470,12 +508,13 @@ least three other PLOS Biology articles.
             inspirators.append([article, in_nodes])
 
 
+And this is the number of PLOS Biology articles in my data set that have been referenced by three or more PLOS Biology articles at least three times (i.e. these are our **inspirators**):
+
     len(inspirators)
 
     2
 
-
-
+And here our our inspirators in more detail:
 
     for inspirator in inspirators:
         print('Inspirator')
@@ -489,57 +528,88 @@ least three other PLOS Biology articles.
         print('--------------------------------------')
         print('')
 
-    Inspirator
-    Title: The Evolution of Combinatorial Gene Regulation in Fungi
-    Authors: Alexander D Johnson, Aaron D Hernday, Hao Li, Brian B Tuch, David J Galgoczy
-    DOI: 10.1371/journal.pbio.0060038
+**Inspirator**:
+
+**Title**: The Evolution of Combinatorial Gene Regulation in Fungi
     
-    Inspired Article
-    Title: Biofilm Matrix Regulation by Candida albicans Zap1
-    Authors: Oliver R. Homann, Clarissa J. Nobile, Jean-Sebastien Deneault, Aaron P. Mitchell, Andre Nantel, Aaron D. Hernday, David R. Andes, Jeniel E. Nett, Alexander D. Johnson
-    DOI: 10.1371/journal.pbio.1000133
-    Cites inspirator 3 times.
+**Authors**: Alexander D Johnson, Aaron D Hernday, Hao Li, Brian B Tuch, David J Galgoczy
+
+**DOI**: 10.1371/journal.pbio.0060038
     
-    Inspired Article
-    Title: Evolutionary Tinkering with Conserved Components of a Transcriptional Regulatory Network
-    Authors: Jaideep Mallick, Adnane Sellam, Hugo Lavoie, Hervé Hogues, Malcolm Whiteway, André Nantel
-    DOI: 10.1371/journal.pbio.1000329
-    Cites inspirator 6 times.
+**Inspired Article**:
+
+**Title**: Biofilm Matrix Regulation by Candida albicans Zap1
     
-    Inspired Article
-    Title: Evolution of Phosphoregulation: Comparison of Phosphorylation Patterns across Yeast Species
-    Authors: Assen Roguev, Dorothea Fiedler, Jonathan C. Trinidad, Wendell A. Lim, Pedro Beltrao, Kevan M. Shokat, Alma L. Burlingame, Nevan J. Krogan
-    DOI: 10.1371/journal.pbio.1000134
-    Cites inspirator 3 times.
+**Authors**: Oliver R. Homann, Clarissa J. Nobile, Jean-Sebastien Deneault, Aaron P. Mitchell, Andre Nantel, Aaron D. Hernday, David R. Andes, Jeniel E. Nett, Alexander D. Johnson
+
+**DOI**: 10.1371/journal.pbio.1000133
     
-    --------------------------------------
+**Cites inspirator 3 times.**
     
-    Inspirator
-    Title: Transcription Factors Bind Thousands of Active and Inactive Regions in the Drosophila Blastoderm 
-    Authors: Lisa Simirenko, Michael B Eisen, Mark Stapleton, Richard Weiszmann, Cris L. Luengo Hendriks, Tom Gingeras, Amy Beaton, Hou Cheng Chu, Xiao-yong Li, Terence P Speed, Victor Sementchenko, Mark D Biggin, Richard Bourgon, Stewart MacArthur, William Inwood, Susan E Celniker, Nobuo Ogawa, Venky N Iyer, David W Knowles, Daniel A Pollard, David Nix, Aaron Hechmer
-    DOI: 10.1371/journal.pbio.0060027
+**Inspired Article**:
     
-    Inspired Article
-    Title: Target Genes of the MADS Transcription Factor SEPALLATA3: Integration of Developmental and Hormonal Pathways in the Arabidopsis Flower
-    Authors: Cezary Smaczniak, Kerstin Kaufmann, Pawel Krajewski, Ruy Jauregui, Chiara A Airoldi, Gerco C Angenent, Jose M Muiño
-    DOI: 10.1371/journal.pbio.1000090
-    Cites inspirator 3 times.
+**Title**: Evolutionary Tinkering with Conserved Components of a Transcriptional Regulatory Network
     
-    Inspired Article
-    Title: Evolutionary Plasticity of Polycomb/Trithorax Response Elements in Drosophila Species
-    Authors: Arne Hauenschild, Leonie Ringrose, Renato Paro, Christina Altmutter, Marc Rehmsmeier
-    DOI: 10.1371/journal.pbio.0060261
-    Cites inspirator 6 times.
+**Authors**: Jaideep Mallick, Adnane Sellam, Hugo Lavoie, Hervé Hogues, Malcolm Whiteway, André Nantel
+
+**DOI**: 10.1371/journal.pbio.1000329
     
-    Inspired Article
-    Title: Quantitative Analysis of the Drosophila Segmentation Regulatory Network Using Pattern Generating Potentials
-    Authors: Sudhir Kumar, Susan E. Celniker, Ann S. Hammonds, Saurabh Sinha, Majid Kazemian, Charles Blatti, Noriko Wakabayashi-Ito, Scot A. Wolfe, Adam Richards, Michael McCutchan, Michael H. Brodsky
-    DOI: 10.1371/journal.pbio.1000456
-    Cites inspirator 7 times.
+**Cites inspirator 6 times.**
     
-    --------------------------------------
+**Inspired Article**
+    
+**Title**: Evolution of Phosphoregulation: Comparison of Phosphorylation Patterns across Yeast Species
+    
+**Authors**: Assen Roguev, Dorothea Fiedler, Jonathan C. Trinidad, Wendell A. Lim, Pedro Beltrao, Kevan M. Shokat, Alma L. Burlingame, Nevan J. Krogan
+    
+**DOI**: 10.1371/journal.pbio.1000134
+    
+**Cites inspirator 3 times.**
+    
+--------------------------------------
+    
+**Inspirator**:
+
+**Title**: Transcription Factors Bind Thousands of Active and Inactive Regions in the Drosophila Blastoderm 
+    
+**Authors**: Lisa Simirenko, Michael B Eisen, Mark Stapleton, Richard Weiszmann, Cris L. Luengo Hendriks, Tom Gingeras, Amy Beaton, Hou Cheng Chu, Xiao-yong Li, Terence P Speed, Victor Sementchenko, Mark D Biggin, Richard Bourgon, Stewart MacArthur, William Inwood, Susan E Celniker, Nobuo Ogawa, Venky N Iyer, David W Knowles, Daniel A Pollard, David Nix, Aaron Hechmer
+    
+**DOI**: 10.1371/journal.pbio.0060027
+    
+**Inspired Article**:
+    
+**Title**: Target Genes of the MADS Transcription Factor SEPALLATA3: Integration of Developmental and Hormonal Pathways in the Arabidopsis Flower
+    
+**Authors**: Cezary Smaczniak, Kerstin Kaufmann, Pawel Krajewski, Ruy Jauregui, Chiara A Airoldi, Gerco C Angenent, Jose M Muiño
+    
+**DOI**: 10.1371/journal.pbio.1000090
+    
+**Cites inspirator 3 times.**
+    
+**Inspired Article**:
+
+**Title**: Evolutionary Plasticity of Polycomb/Trithorax Response Elements in Drosophila Species
+    
+**Authors**: Arne Hauenschild, Leonie Ringrose, Renato Paro, Christina Altmutter, Marc Rehmsmeier
+    
+**DOI**: 10.1371/journal.pbio.0060261
+    
+**Cites inspirator 6 times.**
+    
+**Inspired Article**:
+    
+**Title**: Quantitative Analysis of the Drosophila Segmentation Regulatory Network Using Pattern Generating Potentials
+    
+**Authors**: Sudhir Kumar, Susan E. Celniker, Ann S. Hammonds, Saurabh Sinha, Majid Kazemian, Charles Blatti, Noriko Wakabayashi-Ito, Scot A. Wolfe, Adam Richards, Michael McCutchan, Michael H. Brodsky
+    
+**DOI**: 10.1371/journal.pbio.1000456
+    
+**Cites inspirator 7 times.**
+    
+--------------------------------------
     
 
+## Outlook: Inspiration Chains
 
 And that is it for now.
 
