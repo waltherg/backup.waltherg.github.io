@@ -257,6 +257,8 @@ this one cited PLOS Biology article.
 
 ## Distribution of PLOS Biology-Internal References
 
+### Allowing Self-Citation
+
 Let us now take a look at the observed distribution of how often cited PLOS
 Biology articles are referenced in the main text of the citing PLOS Biology
 article.
@@ -354,6 +356,8 @@ There is certainly some cut-off at which *importance* stops increasing - my
 point is simply that citing another article multiple times in your manuscript
 probably means that you are basing your work at least partially on the article
 you cite.
+
+### Disallowing Self-Citation
 
 For both pairs above we can see that at least one author is shared between citer and citee.
 
