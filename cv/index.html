@@ -35,12 +35,24 @@
         .skills {
             margin-right: 1em;
         }
+
+        @media print {
+        /* In case you don't want the boxes on your printout... */
+        /*.label {*/
+        /*border: none;*/
+        /*}*/
+        
+        /* Avoid printing hrefs when this class is applied */
+        .nohref a[href]:after {
+        content: "";
+        }
+        }
     </style>
 </head>
 
 <body>
 <div class="container">
-  <div class="text-center"><h1>Georg Walther</h1>
+  <div class="text-center nohref"><h1>Georg Walther</h1>
     <span class="glyphicon glyphicon-home"></span><a href="http://georg.io"> georg.io </a><br/>
     <span class="glyphicon glyphicon-envelope"></span><a href="mailto:contact@georg.io"> contact@georg.io </a>
   </div>
