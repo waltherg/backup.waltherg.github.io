@@ -1,6 +1,6 @@
 ---
 layout: default
-title: georg.io: Natural Language Processing and Text Mining
+title: georg.io - Natural Language Processing and Text Mining
 ---
 
 {% for post in site.posts %}
