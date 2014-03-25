@@ -24,6 +24,7 @@ author:
       url: https://twitter.com/mbgrw
 title: georg.io
 permalink: /:year/:month/:title
+relative_permalink: false
 disqus:
   config:
     - label: disqus_shortname
