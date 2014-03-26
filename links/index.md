@@ -10,6 +10,12 @@ title: georg.io Links
 - [The Open Source Data Science Masters](http://datasciencemasters.org/)
 
 
+# Linux
+
+## Linux Command Line Tools
+- [Command Line Tool Summary](http://www.tldp.org/LDP/GNU-Linux-Tools-Summary/html/GNU-Linux-Tools-Summary.html)
+
+
 # Python
 
 ## Idiomatic Python
