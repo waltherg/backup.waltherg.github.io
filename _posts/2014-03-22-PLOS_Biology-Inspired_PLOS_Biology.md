@@ -2,7 +2,7 @@
 layout: default
 title: "PLOS Biology-Inspired PLOS Biology Articles"
 date: 2014-03-22
-tags: plos graph database
+tags: plos graph database nlp
 ---
 
 # PLOS Biology-Inspired PLOS Biology Articles
