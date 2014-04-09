@@ -16,6 +16,12 @@ title: georg.io Links
 ## Linux Command Line Tools
 - [Command Line Tool Summary](http://www.tldp.org/LDP/GNU-Linux-Tools-Summary/html/GNU-Linux-Tools-Summary.html)
 
+# Programming
+
+## Book Collections
+- [Free Programming Books](https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#professional-development)
+- [reSRC](http://resrc.io/)
+
 
 # Python
 
