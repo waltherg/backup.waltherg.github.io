@@ -8,6 +8,7 @@ title: georg.io Links
 ## Link Collections
 - [A Practical Intro to DS](http://www.zipfianacademy.com/blog/post/46864003608/a-practical-intro-to-data-science)
 - [The Open Source Data Science Masters](http://datasciencemasters.org/)
+- [Great Machine Learning Resources](http://wayfinder.co/pathways/5302a21dfc4065200a000004/great-machine-learning-resources)
 
 
 # Linux
