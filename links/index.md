@@ -36,3 +36,9 @@ These "ways" are called idioms or "the Pythonic way" of doing things.
 - [Gooder's list of idioms](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
 - [Jeff Knupp's book on idioms](http://www.jeffknupp.com/writing-idiomatic-python-ebook/)
 
+
+# arXiv Nuggets
+- [Jonathan Shlens: A Light Discussion and Derivation of Entropy](http://arxiv.org/pdf/1404.1998.pdf)
+- [Jonathan Shlens: Notes on Kullback-Leibler Divergence and Likelihood Theory](http://arxiv.org/pdf/1404.2000.pdf)
+- [Jonathan Shlens: Notes on Generalized Linear Models of Neurons](http://arxiv.org/pdf/1404.1999.pdf)
+- [Jonathan Shlens: A Tutorial on Principal Component Analysis](http://arxiv.org/pdf/1404.1100.pdf)
