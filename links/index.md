@@ -22,6 +22,9 @@ title: georg.io Links
 - [Free Programming Books](https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#professional-development)
 - [reSRC](http://resrc.io/)
 
+## Parallel
+- [Talks on OpenMP, MPI, Xeon Phi](http://terboven.com/2014/04/03/ppces-video-lectures-released/)
+
 
 # Python
 
