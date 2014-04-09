@@ -3,7 +3,7 @@ layout: default
 title: georg.io Links
 ---
 
-# Data Science
+# Machine Learning / Data Science
 
 ## Link Collections
 - [A Practical Intro to DS](http://www.zipfianacademy.com/blog/post/46864003608/a-practical-intro-to-data-science)
