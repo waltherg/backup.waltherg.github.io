@@ -2,17 +2,11 @@
 layout: default
 title: "PLoS Time to Publication"
 date: 2013-10-06
-tags: wip
+tags: plos publishing
 ---
-
-**This post is work in progress**
 
 This blog post is based on an IPython Notebook that I sketched out on
 [GitHub](https://gist.github.com/waltherg/6860035) some time ago.
-
-This post is work in progress since conversion from my original
-IPython Notebook to Markdown (for this post) produced some glitches
-that I need to amend.
 
 # PLoS Time to Publication
 
