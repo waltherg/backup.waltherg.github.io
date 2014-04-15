@@ -2,22 +2,16 @@
 layout: default
 title: "PLoS ONE Time to Publication"
 date: 2013-08-12
-tags: wip
+tags: plos publishing
 ---
-
-**This post is work in progress**
 
 This blog post is based on an IPython Notebook that I sketched out on
 [GitHub](https://gist.github.com/waltherg/6211587) some time ago.
 You can find accompanying data there.
 
-This post is work in progress since conversion from my original
-IPython Notebook to Markdown (for this post) produced some glitches
-that I need to amend.
-
 # PLoS ONE Time to Publication
 
-I recemtly picked up working with PLOS's API and downloaded over 63,000 articles
+I recently picked up working with PLOS's API and downloaded over 63,000 articles
 from PLOS ONE which required about 6 hours, pagination of my requests to the
 API, and around 2.5 GB of hard disk space.
 
@@ -32,7 +26,7 @@ Gist](https://gist.github.com/waltherg/6211587) where you can leave comments at
 the bottom of the page.
 Or shoot me a tweet [on Twitter](https://twitter.com/mbgrw).
 
-If you are interested in the data file I use in this notebook just get in touch.
+If you are interested in the data I use in this notebook just get in touch.
 
 
     import sys
@@ -158,14 +152,14 @@ publications.
     latest submission 10.1371/journal.pone.0052595
 
 
-The earliest submission in our dataset carries a doi ending in **3** and not
-**1** and the most recent submission in our dataset with the doi
+The earliest submission in our data set carries a doi ending in **3** and not
+**1** and the most recent submission in our data set with the doi
 **10.1371/journal.pone.0052595** seems to have mislabeled meta data:
 
 The submission date for this article is August 2, 2013 and its publication date
 is given as  January 28, 2013.
 
-This seems to be the only oddity in our dataset.
+This seems to be the only oddity in our data set.
 
 
     no_annual_publ = {}
@@ -191,7 +185,7 @@ This seems to be the only oddity in our dataset.
     annual published {2006: 137, 2007: 1170, 2008: 2757, 2009: 4631, 2010: 6498, 2011: 13864, 2012: 17287, 2013: 17409}
 
 
-The annual numbers of publications in our dataset follow closely those stated on
+The annual numbers of publications in our data set follow closely those stated on
 [Wikipedia](http://en.wikipedia.org/wiki/PLOS_ONE) -- with the exception of the
 year 2012.
 
@@ -272,9 +266,6 @@ publication.
 
     rta_median
 
-
-
-
     [47.0, 80.0, 83.0, 90.0, 105.0, 110.0, 108.0, 76.0]
 
 
@@ -294,11 +285,7 @@ received (and published) articles.
 
     ea = [len(set(editors_annual[key])) for key in editors_annual.keys()]
 
-
     ea
-
-
-
 
     [153, 532, 637, 807, 1517, 2295, 3381, 2087]
 
@@ -330,9 +317,6 @@ scaled over time.
 
 
     ed_recv_ratio
-
-
-
 
     [1.7320261437908497,
      3.6522556390977443,
@@ -540,7 +524,7 @@ articles handled and the total time to publication for individual articles.
 
 Put another way, the **experience of editors does not appear to alter the total
 time to publication of their handled submissions**: less experienced and more
-experienced editors seem to be largerly indistinguishable from one another.
+experienced editors seem to be largely indistinguishable from one another.
 
 Let us look at the spread of total times between editors in the same class.
 
@@ -561,7 +545,7 @@ to date.
 
 
 The one editor that has handled 441 submissions is **editor 977** in our
-dataset.
+data set.
 
 
     pl.scatter(range(len(durations[ed_id])), durations[ed_id])
@@ -595,7 +579,7 @@ editors irrespective of the number of submissions handled?
 
 
 Here we plot the median total time to publication for each editor in our
-dataset, sorted by that median value.
+data set, sorted by that median value.
 
 There is still a multitude of potentially important factors in this data, such
 as the editor's experience and the scientific field their assigned submissions
