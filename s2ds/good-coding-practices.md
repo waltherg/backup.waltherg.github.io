@@ -156,6 +156,7 @@ A number of properties that distinguish programming languages are:
     * finish a simple version of the whole in a short period of time
     * lean software (few features) initially and add features across
       the entire system so as to keep the whole usable
+      (iterative development process)
     * agile methodologies: scrum, kanban, etc.
 
 ## Human Factor
