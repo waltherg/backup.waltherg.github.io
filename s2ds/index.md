@@ -26,3 +26,5 @@ to relevant information elsewhere.
 You can read more about the course at [s2ds.org](http://www.s2ds.org/) or
 follow the Twitter hash tag for the 2014 intake
 [here](https://twitter.com/search?q=%23S2DS14).
+
+## [Good Coding Practices](/good-coding-practices)
