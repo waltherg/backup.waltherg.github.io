@@ -5,7 +5,7 @@ date: 2014-08-06
 tags: s2ds
 ---
 
-# S2DS
+# Science 2 Data Science
 
 Science 2 Data Science (S2DS) is an industry-sponsored course with the aim
 of leading graduates with a quantitative background into the industry of
