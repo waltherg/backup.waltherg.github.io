@@ -1,33 +1,9 @@
 ---
 layout: default
-title: "Science 2 Data Science Days 1 and 2"
+title: "S2DS Good Coding Practices
 date: 2014-08-05
-tags: s2ds, wip
+tags: s2ds
 ---
-
-# S2DS Day 1
-
-Science 2 Data Science (S2DS) is an industry-sponsored course that aims
-at leading graduates with a quantitative background into the industry of
-data analytics and
-[data science](https://en.wikipedia.org/wiki/Data_science).
-
-The S2DS program has at least two components:
-During the first six days of the program we hear about technologies
-and methodologies that are deemed essential for practicing data science,
-and most of the remaining time we work in small teams on specific projects
-with the industry partners of the program.
-
-My intention with this series of blog posts is to keep a legible record
-of the topics we hear about for future reference.
-
-You can read more about the course at [s2ds.org](http://www.s2ds.org/) or
-follow the Twitter hash tag for the 2014 intake
-[here](https://twitter.com/search?q=%23S2DS14).
-
-[Kim Nilsson](https://twitter.com/kimknilsson) who is a co-organizer of S2DS
-and John Hall of KPMG welcomed the students and discussed a number of
-examples where data science creates value for companies.
 
 # Good Coding Practices
 
