@@ -159,6 +159,9 @@ A number of properties that distinguish programming languages are:
       (iterative development process)
     * agile methodologies: scrum, kanban, etc.
 
+Here is a recent article on how
+[Microsoft switched from a waterfall to an agile approach](http://arstechnica.com/information-technology/2014/08/how-microsoft-dragged-its-development-practices-into-the-21st-century/).
+
 ## Human Factor
 
 - writing software is always a team effort
