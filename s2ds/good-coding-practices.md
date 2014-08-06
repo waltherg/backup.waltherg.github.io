@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "S2DS Good Coding Practices
+title: "S2DS Good Coding Practices"
 date: 2014-08-05
 tags: s2ds
 ---
