@@ -32,7 +32,6 @@ These notes are based on the intro to databases that
 
 ## [Relational Model](https://en.wikipedia.org/wiki/Relational_model)
 
-- we are talking about
 - "schema" and "database" are used interchangeably here
 - a schema is a set of tables
 - "data types" are understood in the sense of C, Java, etc. data types
