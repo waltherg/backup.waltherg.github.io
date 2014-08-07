@@ -30,3 +30,5 @@ follow the Twitter hash tag for the 2014 intake
 ## [Good Coding Practices](/s2ds/good-coding-practices)
 
 ## [Hadoop](/s2ds/hadoop)
+
+## [Introduction to Databases](/s2ds/introduction-to-databases)
