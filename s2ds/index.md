@@ -34,3 +34,5 @@ follow the Twitter hash tag for the 2014 intake
 ## [Introduction to Databases](/s2ds/introduction-to-databases)
 
 ## [NoSQL](/s2ds/nosql)
+
+## [Introduction to Statistics](/s2ds/introduction-to-statistics)
