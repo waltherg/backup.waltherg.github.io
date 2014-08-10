@@ -32,3 +32,5 @@ follow the Twitter hash tag for the 2014 intake
 ## [Hadoop](/s2ds/hadoop)
 
 ## [Introduction to Databases](/s2ds/introduction-to-databases)
+
+## [NoSQL](/s2ds/nosql)
