@@ -36,3 +36,5 @@ follow the Twitter hash tag for the 2014 intake
 ## [NoSQL](/s2ds/nosql)
 
 ## [Introduction to Statistics](/s2ds/introduction-to-statistics)
+
+## [How Data Works in Business](/s2ds/how-data-works-in-business)
