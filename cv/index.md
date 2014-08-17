@@ -120,7 +120,7 @@ Major in biochemistry.
     <tr>
       <td>Programming</td>
       <td>Python</td>
-      <td>Avanced, numerical simulations, database-driven backend development, data analysis, predictive analytics (research projects and work for startups)
+      <td>Avanced, numerical simulations, database-driven backend development, data analysis, predictive analytics (research projects and work for startups)</td>
     </tr>
     <tr>
       <td></td>
