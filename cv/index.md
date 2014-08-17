@@ -91,6 +91,7 @@ For the same project I made extensive use of numerical bifurcation packages such
 Self-designed major in computational biology and biological chemistry with strong focus on numerical analysis and data analytics.
 
 Specific mathematical and computational courses that were part of my curriculum:
+
 * Bioinformatics in-depth & Computational Systems Biology,
 * Numerical Mathematics for CSE,
 * Software Architecture,
