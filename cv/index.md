@@ -120,27 +120,27 @@ Major in biochemistry.
   </thead>
   <tbody>
     <tr>
-      <td>Programming</td>
-      <td>`Python`</td>
+      <td><strong>Programming</strong></td>
+      <td>Python</td>
       <td>Avanced, numerical simulations, database-driven backend development, data analysis, predictive analytics (research projects and work for startups)</td>
     </tr>
     <tr>
       <td></td>
-      <td>`C`</td>
+      <td>C</td>
       <td>Avanced, numerical simulations, stochastic simulations (research projects)</td>
     </tr>
     <tr>
       <td></td>
-      <td>`C++`</td>
+      <td>C++</td>
       <td>Familiar and learning (education and self-taught)</td>
     </tr>
     <tr>
-      <td>Operating Systems</td>
+      <td><strong>Operating Systems</strong></td>
       <td>Linux, Windows</td>
       <td>Advanced user, Python package development and distribution, scripting</td>
     </tr>
     <tr>
-      <td>Databases</td>
+      <td><strong>Databases</strong></td>
       <td>`PostgreSQL`, `MySQL`</td>
       <td>Working knowledge, data modeling, querying, and data integration into time-critical code (work for a startup)</td>
     </tr>
@@ -150,12 +150,12 @@ Major in biochemistry.
       <td>Working knowledge (personal side projects)</td>
     </tr>
     <tr>
-      <td>Project Management and Collaboration</td>
+      <td><strong>Project Management and Collaboration</strong></td>
       <td>`git`</td>
       <td>Advanced, have worked on shared codebase in a startup</td>
     </tr>
     <tr>
-      <td>Communication</td>
+      <td><strong>Communication</strong></td>
       <td>Work communication</td>
       <td>I am comfortable presenting my work in informal and formal settings</td>
     </tr>
