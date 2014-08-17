@@ -141,17 +141,17 @@ Major in biochemistry.
     </tr>
     <tr>
       <td><strong>Databases</strong></td>
-      <td>`PostgreSQL`, `MySQL`</td>
+      <td>PostgreSQL, MySQ`</td>
       <td>Working knowledge, data modeling, querying, and data integration into time-critical code (work for a startup)</td>
     </tr>
     <tr>
       <td></td>
-      <td>`Neo4j`, `Rexster`</td>
+      <td>Neo4j, Rexster</td>
       <td>Working knowledge (personal side projects)</td>
     </tr>
     <tr>
       <td><strong>Project Management and Collaboration</strong></td>
-      <td>`git`</td>
+      <td>git</td>
       <td>Advanced, have worked on shared codebase in a startup</td>
     </tr>
     <tr>
