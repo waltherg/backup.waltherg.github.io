@@ -24,6 +24,8 @@ am now in training to become a data scientist.
 On the technical side I am enthused by data analysis, predictive analytics, and engineering clean code.
 I am also enthusiastic about understanding the business opportunities that data-driven decision making can produce.
 
+***
+
 ## Work Experience
 
 ### Data Scientist at Singular Intelligence (2014), London, United Kingdom
@@ -47,6 +49,8 @@ I also engineered and maintained geolocation code, critical for signal coverage 
 ### Teaching Assistant at ETH Zurich (2008 - 2009), Zurich, Switzerland
 
 Research and preparation of lecture notes, preparation of exercise questions, preparation of exam questions, grading exams.
+
+***
 
 ## Education and Certificates
 
@@ -99,6 +103,74 @@ Specific mathematical and computational courses that were part of my curriculum:
 
 Major in biochemistry.
 
+***
+
+## Skills
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Skills</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Programming</td>
+      <td>Python</td>
+      <td>Avanced, numerical simulations, database-driven backend development, data analysis, predictive analytics (research projects and work for startups)
+    </tr>
+    <tr>
+      <td></td>
+      <td>C</td>
+      <td>Avanced, numerical simulations, stochastic simulations (research projects)</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>C++</td>
+      <td>Familiar and learning (education and self-taught)</td>
+    </tr>
+    <tr>
+      <td>Operating Systems</td>
+      <td>Linux, Windows</td>
+      <td>Advanced user, Python package development, scripting</td>
+    </tr>
+    <tr>
+      <td>Databases</td>
+      <td>PostgreSQL, MySQL</td>
+      <td>Working knowledge, data modeling, querying, and data integration into time-critical code (work for a startup)</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Neo4j, Rexster</td>
+      <td>Working knowledge (personal side projects)</td>
+    </tr>
+    <tr>
+      <td>Project Management and Collaboration</td>
+      <td>git</td>
+      <td>Advanced, have worked on shared codebase in a startup</td>
+    </tr>
+    <tr>
+      <td>Communication</td>
+      <td>Work communication</td>
+      <td>I am comfortable presenting my work in informal and formal settings</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Scientific writing</td>
+      <td>I have authored two scientific articles as lead author</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Technical writing</td>
+      <td>I write technical articles about my side projects at <a href="http://georg.io">http://georg.io</a></td>
+    </tr>
+  </tbody>
+</table>
+
+***
+
 ## Publications and Software
 
 ### GraTeLPy: Graph-Theoretic Linear Stability Analysis
@@ -123,3 +195,5 @@ Bulletin of Mathematical Biology**
 
 I implemented Gillespie's stochastic simulation algorithm in MATLAB and time-critical parts of the code in C.
 I further made extensive use of numerical bifurcation packages XPP/auto and MatCont.
+
+***
