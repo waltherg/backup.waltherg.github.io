@@ -176,9 +176,7 @@ Major in biochemistry.
 
 ### GraTeLPy: Graph-Theoretic Linear Stability Analysis
 
-**Walther GR, Hartley M, Mincheva M (2014):
-GraTeLPy: Graph-Theoretic Linear Stability Analysis,
-BMC Systems Biology**
+**Walther GR, Hartley M, Mincheva M (2014): GraTeLPy: Graph-Theoretic Linear Stability Analysis, BMC Systems Biology**
 (software available at
 [http://github.com/gratelpy](http://github.com/gratelpy))
 
@@ -190,9 +188,7 @@ I further responded to user feedback with extensive testing on Windows, OSX, and
 
 ### Deterministic Versus Stochastic Cell Polarisation Through Wave-Pinning
 
-**Walther GR, Marée AFM, Edelstein-Keshet L, Grieneisen VA (2012):
-Deterministic Versus Stochastic Cell Polarisation Through Wave-Pinning,
-Bulletin of Mathematical Biology**
+**Walther GR, Marée AFM, Edelstein-Keshet L, Grieneisen VA (2012): Deterministic Versus Stochastic Cell Polarisation Through Wave-Pinning, Bulletin of Mathematical Biology**
 
 I implemented Gillespie's stochastic simulation algorithm in MATLAB and time-critical parts of the code in C.
 I further made extensive use of numerical bifurcation packages XPP/auto and MatCont.
