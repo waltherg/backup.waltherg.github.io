@@ -135,7 +135,7 @@ Major in biochemistry.
     <tr>
       <td>Operating Systems</td>
       <td>Linux, Windows</td>
-      <td>Advanced user, Python package development, scripting</td>
+      <td>Advanced user, Python package development and distribution, scripting</td>
     </tr>
     <tr>
       <td>Databases</td>
