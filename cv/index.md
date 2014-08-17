@@ -24,6 +24,8 @@ am now in training to become a data scientist.
 On the technical side I am enthused by data analysis, predictive analytics, and engineering clean code.
 I am also enthusiastic about understanding the business opportunities that data-driven decision making can produce.
 
+In my work approach I am proactive and enjoy both autonomous and collaborative work.
+
 ***
 
 ## Work Experience
