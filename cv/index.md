@@ -165,7 +165,7 @@ Major in biochemistry.
     <tr>
       <td></td>
       <td>Technical writing</td>
-      <td>I write technical articles about my side projects at <a href="http://georg.io">http://georg.io</a></td>
+      <td>I write technical articles about my research and side projects at <a href="http://georg.io">http://georg.io</a></td>
     </tr>
   </tbody>
 </table>
