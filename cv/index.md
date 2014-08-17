@@ -32,19 +32,19 @@ I am also enthusiastic about understanding the business opportunities that data-
 
 As part of the Science 2 Data Science summer school I did work for Singular Intelligence, a startup that helps businesses develop data- and analytics-driven corporate strategies.
 
-As part of my work I did data exploration and visualization in Python with pandas and matplotlib.
-I further employed scikit-learn (linear models and random forests) to develop a predictive model of sales performance as a function of business-relevant features.
+As part of my work I did data exploration and visualization in `Python` with `pandas` and `matplotlib`.
+I further employed `scikit-learn` (linear models and random forests) to develop a predictive model of sales performance as a function of business-relevant features.
 
 ### Software Engineer at WalletSaver (2014), Rome, Italy
 
 WalletSaver is a startup in the space of personalized and data-driven recommendation systems.
 WalletSaver develop an app that measures securely parameters of mobile phone usage and recommends the best mobile phone plan based on cost, signal coverage, and phone carriers called.
 
-I engineered the recommendation engine behind WalletSaver in Python with SQLAlchemy (a SQL object-relation mapper library) and Memcached to speed up data queries.
-I followed a test-driven development methodology for this project and performed timing-based optimization such as precomputing certain data.
+I engineered the recommendation engine behind WalletSaver in `Python` with `SQLAlchemy` (a SQL object-relation mapper library) and `Memcached` to speed up data queries.
+I followed a `test-driven development` methodology for this project and performed `timing-based optimization` such as precomputing certain data.
 I sought actively customer feedback and amended the recommendation engine in response to feedback.
 
-I also engineered and maintained geolocation code, critical for signal coverage analysis, in Python with the requests library.
+I also engineered and maintained geolocation code, critical for signal coverage analysis, in Python with the `requests` library.
 
 ### Teaching Assistant at ETH Zurich (2008 - 2009), Zurich, Switzerland
 
@@ -58,9 +58,9 @@ Research and preparation of lecture notes, preparation of exercise questions, pr
 
 [Science 2 Data Science (S2DS)](http://www.s2ds.org/) is an industry-sponsored summer school that leads graduates with numerical backgrounds into the field of data science.
 
-At this course I learned about Hadoop, SQL databases, NoSQL databases, natural language processng, statistics with R, machine learning with scikit-learn, and data visualization.
+At this course I learned about `Hadoop`, `SQL` databases, `NoSQL` databases, natural language processng (`NLP`), statistics with `R`, `machine learning` with scikit-learn, and `data visualization`.
 
-I further learned about business opportunities that arise from data-enhanced and data-driven business models, economics, marketing, finance, project management, and corporate strategy.
+I further learned about business opportunities that arise from data-enhanced and `data-driven business models`, economics, marketing, finance, project management, and corporate strategy.
 
 I summarize my experience at this school at [http://georg.io/s2ds](/s2ds).
 
@@ -69,22 +69,22 @@ I summarize my experience at this school at [http://georg.io/s2ds](/s2ds).
 My research evolved around modeling cell polarity under a number of complex conditions.
 The formation of poles (e.g. front v. back) is important for cells to know which direction to grow or migrate. Specifically, I studied these equations in extreme environments such as exceptionally large and small cells.
 
-I wrote unit tested code in Python with NetworkX that implements a mathematical framework for bifurcation analysis of large reaction networks.
+I wrote `unit tested code` in Python with `NetworkX` that implements a mathematical framework for bifurcation analysis of large reaction networks.
 Here I had to rephrase a number of combinatorial problems as classical graph-theoretic problems to reduce computational cost.
 One particular graph-theoretic algorithm, the enumeration of all cliques, was not available in NetworkX at the time.
 I implemented a published algorithm for this problem and my implementation has since been added to NetworkX.
 
-I further implemented variants of Crank-Nicolson in Python with NumPy to integrate numerically my specific convection-diffusion-reaction systems.
-I performed timing-supported optimization of my code and added inline C code where necessary for further speed improvement.
+I further implemented variants of Crank-Nicolson in Python with `NumPy` to integrate numerically my specific convection-diffusion-reaction systems.
+I performed timing-supported optimization of my code and added `inline C code` where necessary for further speed improvement.
 
-During my PhD I also wrote numerical simulations of a high-dimensional dynamical system in pure C with support of the GNU Scientific Library.
+During my PhD I also wrote numerical simulations of a high-dimensional dynamical system in pure `C` with support of the `GNU Scientific Library`.
 
 ### Visiting Scholar (2009 - 2010), The University of British Columbia, Vancouver, Canada
 
 Research and write up of Master thesis: Stochastic Simulations of Cell Polarization and Wave Pinning.
 
-For this project I implemented Gillespie's stochastic simulation algorithm where I wrote the simulation setup in MATLAB and time-critical code in C.
-For the same project I made extensive use of numerical bifurcation packages such as XPP/auto and Matcont.
+For this project I implemented Gillespie's stochastic simulation algorithm where I wrote the simulation setup in `MATLAB` and time-critical code in C.
+For the same project I made extensive use of numerical bifurcation packages such as `XPP/auto` and `MatCont`.
 
 ### Master of Science (2010), ETH Zurich, Zurich, Switzerland
 
@@ -119,17 +119,17 @@ Major in biochemistry.
   <tbody>
     <tr>
       <td>Programming</td>
-      <td>Python</td>
+      <td>`Python`</td>
       <td>Avanced, numerical simulations, database-driven backend development, data analysis, predictive analytics (research projects and work for startups)</td>
     </tr>
     <tr>
       <td></td>
-      <td>C</td>
+      <td>`C`</td>
       <td>Avanced, numerical simulations, stochastic simulations (research projects)</td>
     </tr>
     <tr>
       <td></td>
-      <td>C++</td>
+      <td>`C++`</td>
       <td>Familiar and learning (education and self-taught)</td>
     </tr>
     <tr>
@@ -139,17 +139,17 @@ Major in biochemistry.
     </tr>
     <tr>
       <td>Databases</td>
-      <td>PostgreSQL, MySQL</td>
+      <td>`PostgreSQL`, `MySQL`</td>
       <td>Working knowledge, data modeling, querying, and data integration into time-critical code (work for a startup)</td>
     </tr>
     <tr>
       <td></td>
-      <td>Neo4j, Rexster</td>
+      <td>`Neo4j`, `Rexster`</td>
       <td>Working knowledge (personal side projects)</td>
     </tr>
     <tr>
       <td>Project Management and Collaboration</td>
-      <td>git</td>
+      <td>`git`</td>
       <td>Advanced, have worked on shared codebase in a startup</td>
     </tr>
     <tr>
