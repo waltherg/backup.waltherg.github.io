@@ -17,7 +17,7 @@ tags: cv
 
 ## Summary
 
-I am a biochemist \& computational biologist by training,
+I am a biochemist & computational biologist by training,
 have worked as a software engineer for a startup, and
 am now in training to become a data scientist.
 
