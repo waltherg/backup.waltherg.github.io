@@ -152,6 +152,16 @@ Major in biochemistry.
       <td>Advanced, have worked on shared codebase in a startup</td>
     </tr>
     <tr>
+      <td></td>
+      <td>Continuous Integration</td>
+      <td>Working knowledge, have used Jekyll CI to test academic code on Linux and OSX</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Test-Driven Development</td>
+      <td>Working knowledge, I have used TDD in a startup setting</td>
+    </tr>
+    <tr>
       <td><strong>Communication</strong></td>
       <td>Work communication</td>
       <td>I am comfortable presenting my work in informal and formal settings</td>
