@@ -12,7 +12,6 @@ tags: cv
     <span class="fa fa-linkedin"></span><a href="http://uk.linkedin.com/in/georgwalther"> http://uk.linkedin.com/in/georgwalther </a><br/>
     <span class="glyphicon glyphicon-envelope"></span><a href="mailto:contact@georg.io"> contact@georg.io    </a>
     <span class="fa fa-stack-overflow"></span><a href="http://careers.stackoverflow.com/georgwalther"> http://careers.stackoverflow.com/georgwalther </a>
-  </div>
 </center>
 
 ## Summary
