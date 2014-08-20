@@ -60,7 +60,7 @@ Research and preparation of lecture notes, preparation of exercise questions, pr
 
 [Science 2 Data Science (S2DS)](http://www.s2ds.org/) is an industry-sponsored summer school that leads graduates with numerical backgrounds into the field of data science.
 
-At this course I learned about `Hadoop`, `SQL` databases, `NoSQL` databases, natural language processng (`NLP`), statistics with `R`, `machine learning` with scikit-learn, and `data visualization`.
+At this course I learned about `Hadoop`, `SQL` databases, `NoSQL` databases, natural language processing (`NLP`), statistics with `R`, `machine learning` with scikit-learn, and `data visualization`.
 
 I further learned about business opportunities that arise from data-enhanced and `data-driven business models`, economics, marketing, finance, project management, and corporate strategy.
 
@@ -122,12 +122,12 @@ Major in biochemistry.
     <tr>
       <td><strong>Programming</strong></td>
       <td>Python</td>
-      <td>Avanced, numerical simulations, database-driven backend development, data analysis, predictive analytics (research projects and work for startups)</td>
+      <td>Advanced, numerical simulations, database-driven backend development, data analysis, predictive analytics (research projects and work for startups)</td>
     </tr>
     <tr>
       <td></td>
       <td>C</td>
-      <td>Avanced, numerical simulations, stochastic simulations (research projects)</td>
+      <td>Advanced, numerical simulations, stochastic simulations (research projects)</td>
     </tr>
     <tr>
       <td></td>
@@ -141,7 +141,7 @@ Major in biochemistry.
     </tr>
     <tr>
       <td><strong>Databases</strong></td>
-      <td>PostgreSQL, MySQ`</td>
+      <td>PostgreSQL, MySQL`</td>
       <td>Working knowledge, data modeling, querying, and data integration into time-critical code (work for a startup)</td>
     </tr>
     <tr>
