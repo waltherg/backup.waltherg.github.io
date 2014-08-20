@@ -1,0 +1,23 @@
+/* inspired by:
+
+   http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css
+
+*/
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.cv {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .cv {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
