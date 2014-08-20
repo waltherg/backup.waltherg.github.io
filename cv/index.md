@@ -141,7 +141,7 @@ Major in biochemistry.
     </tr>
     <tr>
       <td><strong>Databases</strong></td>
-      <td>PostgreSQL, MySQL`</td>
+      <td>PostgreSQL, MySQL</td>
       <td>Working knowledge, data modeling, querying, and data integration into time-critical code (work for a startup)</td>
     </tr>
     <tr>
