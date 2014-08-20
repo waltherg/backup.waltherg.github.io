@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: cv
 title: "Georg Walther CV"
 date: 2014-08-16
 tags: cv
