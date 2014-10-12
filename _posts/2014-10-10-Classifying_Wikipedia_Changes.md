@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Online Multilabel Classification: Classifying Wikipedia Changes"
+title: "Online Multi-Label Classification: Classifying Wikipedia Changes"
 date: 2014-10-10
 tags: plos nltk
 ---
 
-# Online Multilabel Classification: Classifying Wikipedia Changes
+# Online Multi-Label Classification: Classifying Wikipedia Changes
 
-I recently joined a Kaggle competition on [multilabel text
+I recently joined a Kaggle competition on [multi-label text
 classification](http://www.kaggle.com/c/tradeshift-text-classification)
 and have learned a ton from basic code that one of the competitors
 [shared in the forums](http://www.kaggle.com/c/tradeshift-text-
@@ -20,7 +20,7 @@ It is further well-suited for online learning as it uses the hashing trick to
 one-hot encode boolean, string, and categorial features.
 
 To better understand these methods and tricks I here apply some of them to a
-multilabel problem I chose mostly for the easy access to a constant stream of
+multi-label problem I chose mostly for the easy access to a constant stream of
 training data:
 
 All recent changes on Wikipedia are tracked on [this special
