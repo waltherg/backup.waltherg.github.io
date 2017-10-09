@@ -1,6 +1,6 @@
 safe: true
 lsi: true
-pygments: true
+highlighter: rouge
 markdown: kramdown
 navigation:
   - text: Home
