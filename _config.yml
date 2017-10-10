@@ -32,3 +32,13 @@ disqus:
       value: 'georgio'
 googleanalytics:
   account: UA-45212489-1
+plugins:
+  - jekyll-seo-tag
+twitter:
+  username: mbgrw
+social:
+  name: Georg Walther
+  links:
+    - https://github.com/waltherg
+    - https://twitter.com/mbgrw
+    - https://www.linkedin.com/in/georgwalther
