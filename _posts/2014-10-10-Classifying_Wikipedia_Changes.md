@@ -2,7 +2,7 @@
 layout: default
 title: "Online Multi-Label Classification: Classifying Wikipedia Changes"
 date: 2014-10-10
-tags: plos nltk
+tags: plos nltk popular
 ---
 
 # Online Multi-Label Classification: Classifying Wikipedia Changes

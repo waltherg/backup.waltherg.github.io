@@ -2,7 +2,7 @@
 layout: default
 date: 2014-10-24
 title: "Extracting Text from PDF and HTML: An Online Data Pipeline"
-tags: Python Data Pipeline
+tags: Python Data Pipeline popular
 ---
 
 # Extracting Text from PDF and HTML: An Online Data Pipeline

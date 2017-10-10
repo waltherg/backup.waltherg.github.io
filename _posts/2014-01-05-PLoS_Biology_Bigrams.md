@@ -2,7 +2,7 @@
 layout: default
 title: "PLoS Biology Bigrams"
 date: 2014-01-05
-tags: plos nltk
+tags: plos nltk popular
 ---
 
 # PLoS Biology Bigrams

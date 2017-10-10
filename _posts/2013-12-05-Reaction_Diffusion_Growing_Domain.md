@@ -2,7 +2,7 @@
 layout: default
 date: 2013-12-05
 title: "Reaction-Diffusion System on a Growing Domain"
-tags: wip
+tags: wip popular
 ---
 
 # Reaction-Diffusion Systems on Growing Domains

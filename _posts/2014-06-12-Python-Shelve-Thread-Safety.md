@@ -2,7 +2,7 @@
 layout: default
 title: "Python Shelve Thread Safety"
 date: 2014-06-12
-tags: Python
+tags: Python popular
 ---
 
 # Python Shelve Thread Safety

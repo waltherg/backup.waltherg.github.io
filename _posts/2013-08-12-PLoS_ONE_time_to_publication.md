@@ -2,7 +2,7 @@
 layout: default
 title: "PLoS ONE Time to Publication"
 date: 2013-08-12
-tags: plos publishing
+tags: plos publishing popular
 ---
 
 This blog post is based on an IPython Notebook that I sketched out on

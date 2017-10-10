@@ -2,7 +2,7 @@
 layout: default
 date: 2013-12-04
 title: "The Crank-Nicolson Method for Convection-Diffusion Systems"
-tags: Python Numpy Numerical-Analysis Partial-Differential-Equation
+tags: Python Numpy Numerical-Analysis Partial-Differential-Equation popular
 ---
 
 # The Crank-Nicolson Method for Convection-Diffusion Systems

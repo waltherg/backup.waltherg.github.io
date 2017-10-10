@@ -2,7 +2,7 @@
 layout: default
 date: 2013-12-03
 title: "The Crank-Nicolson Method"
-tags: Python Numpy Numerical-Analysis Partial-Differential-Equation
+tags: Python Numpy Numerical-Analysis Partial-Differential-Equation popular
 ---
 
 # The Crank-Nicolson Method

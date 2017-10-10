@@ -2,7 +2,7 @@
 layout: default
 title: "The Alternating Direction Implicit Method"
 date: 2013-12-03
-tags: wip
+tags: wip popular
 ---
 
 **This post is work in progress**

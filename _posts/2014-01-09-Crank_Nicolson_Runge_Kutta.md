@@ -2,7 +2,7 @@
 layout: default
 title: "Combining Crank-Nicolson and Runge-Kutta to Solve a Reaction-Diffusion System"
 date: 2014-01-09
-tags: Python Numpy Numerical-Analysis Partial-Differential-Equation
+tags: Python Numpy Numerical-Analysis Partial-Differential-Equation popular
 ---
 
 # Combining Crank-Nicolson and Runge-Kutta to Solve a Reaction-Diffusion System
