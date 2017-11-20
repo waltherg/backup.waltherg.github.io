@@ -7,4 +7,4 @@ tags: Bayes Machine-Learning Javascript
 
 # Solving Bayesian problems with JavaScript
 
-<script async src="//jsfiddle.net/waltherg/yqn9ycnb/embed/js,html,result,resource/"></script>
+<script async src="//jsfiddle.net/waltherg/yqn9ycnb/embed/js,html,result,resources/"></script>
